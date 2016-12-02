@@ -1,0 +1,83 @@
+<?php
+/**
+ * @file
+ *
+ * Hook implementations for twitter_post module.
+ */
+
+// Field API definitions.
+require_once 'twitter_post.field.inc';
+
+/**
+ * Implements hook_permission().
+ */
+function twitter_post_permission() {
+  return array(
+    'post to twitter' => array(
+      'title' => t('Post a message to Twitter'),
+      'description' => t('This permission is limited to only allowing the user to post using authenticated accounts that they own, they may not post using a "global" account.'),
+    ),
+    'post to twitter with global account' => array(
+      'title' => t('Post a message to Twitter using a global account'),
+      'description' => t('Ordinarily users are only able to post using their own authenticated accounts. This option allows users to also post using someone else\'s account that is marked as being "global". This permission must be given in addition to @post.', array('@post' => t('Post a message to Twitter'))),
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_entity_insert().
+ *
+ * Intercepts newly created entities and posts notices to Twitter.
+ */
+function twitter_post_entity_insert($entity, $entity_type) {
+  // First we find twitter_post fields.
+  list($id, $vid, $bundle) = entity_extract_ids($entity_type, $entity);
+  $fields_info = field_info_instances($entity_type, $bundle);
+  foreach ($fields_info as $field_name => $value) {
+    $field_info = field_info_field($field_name);
+    if ($field_info['type'] == 'twitter_post') {
+      // Iterate field instances.
+      $items = field_get_items($entity_type, $entity, $field_name);
+      foreach ($items as $delta => $field_instance) {
+        if (is_int($delta) && !empty($field_instance['account'])) {
+          // Extract data out of each field.
+          $status = $field_instance['status'];
+          $message = $field_instance['message'];
+          $twitter_account = entity_load_single('twitter_account', $field_instance['account']);
+
+          global $user;
+          $account = user_load($user->uid);
+          $access_global = user_access('post to twitter with global account', $account);
+
+          // Only allow the tweet to be posted if the Twitter account is either
+          // a global account and the user has access to global accounts, or it
+          // is tied to the current user.
+          if (!(($twitter_account->is_global && $access_global)
+            || $twitter_account->uid == $account->uid)) {
+            return;
+          }
+
+          // Post to Twitter if the status checkbox is active.
+          if ($status) {
+            module_load_include('inc', 'twitter');
+            $message = token_replace($message, array($entity_type => $entity));
+            $status = twitter_set_status($twitter_account, $message);
+            if ($status) {
+              drupal_set_message(t('Successfully posted "%node" to Twitter: <a href="@status" target="_blank">@status</a>', array(
+                '%node' => isset($entity->title) ? $entity->title : '',
+                '@status' => _twitter_status_url($status),
+              )));
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implementation of hook_entity_update().
+ */
+function twitter_post_entity_update($entity, $type) {
+  twitter_post_entity_insert($entity, $type);
+}

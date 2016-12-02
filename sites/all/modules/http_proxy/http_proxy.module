@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Provides an interface for configuring drupal_http_request proxy settings.
+ */
+
+/**
+ * Implements hook_permission().
+ */
+function http_proxy_permission() {
+  return array(
+    'administer http proxy' => array(
+      'title' => t('Administer http proxy'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function http_proxy_menu() {
+  $items['admin/config/system/http-proxy'] = array(
+    'title' => 'HTTP proxy',
+    'description' => 'Configure HTTP proxy server, username, password, user agent, port and exceptions.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('http_proxy_configuration'),
+    'access arguments' => array('administer http proxy'),
+    'file' => 'http_proxy.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_help().
+ */
+function http_proxy_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#http_proxy':
+      $output = '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The HTTP proxy module provides an interface for configuring <a href="@request">drupal_http_request</a> proxy settings. These proxy settings will be used whenever drupal_http_request is called, often to submit or retrieve data from a remove server or service.', array('@request' => 'http://api.drupal.org/api/drupal/includes!common.inc/function/drupal_http_request/7')) . '</p>';
+      $output .= '<h3>' . t('Administering proxy settings') . '</h3>';
+      $output .= '<p>' . t('Users with the <em>Administer http proxy</em> permission can manage proxy settings from the <a href="@http-proxy">HTTP proxy administration page</a>.', array('@http-proxy' => url('admin/config/system/http-proxy'))) . '</p>';
+      return $output;
+    case 'admin/config/system/http-proxy':
+      $output = '<p>' . t('Configure the proxy settings to be used whenever <a href="@request">drupal_http_request</a> is called.', array('@request' => 'http://api.drupal.org/api/drupal/includes!common.inc/function/drupal_http_request/7')) . '</p>';
+      return $output;
+  }
+}

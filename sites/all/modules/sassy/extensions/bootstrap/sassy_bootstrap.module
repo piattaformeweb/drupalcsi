@@ -1,0 +1,91 @@
+<?php
+
+/**
+ * Implementation of hook_sassy_resolve_path_NAMESPACE().
+ */
+function sassy_bootstrap_sassy_resolve_path_bootstrap($filename, $syntax = 'scss') {
+  $path = drupal_get_path('module', 'sassy_bootstrap') . '/bootstrap/lib/';
+  $filename = str_replace(array('.scss', '.sass'), '', trim($filename, ' /._'));
+  switch ($filename) {
+    case '*':
+    case 'bootstrap':
+      return $path . 'bootstrap.scss';
+    case 'forms':
+    case 'mixins':
+    case 'patterns':
+    case 'reset':
+    case 'scaffolding':
+    case 'tables':
+    case 'type':
+    case 'variables':
+      return $path . $filename . '.scss';
+  }
+  drupal_set_message(t('Unrecognised stylesheet "@file" requested. Available files are: bootstrap, forms, mixins, patterns, reset, scaffolding, tables, variables.', array('@file' => $filename)), 'error');
+  return FALSE;
+}
+
+/**
+ * Implementation of hook_library().
+ */
+function sassy_bootstrap_library() {
+  $path = drupal_get_path('module', 'sassy_bootstrap');
+  $return = array();
+  $all = array();
+  foreach (array('alerts', 'dropdown', 'modal', 'popover', 'scrollspy', 'tabs', 'twipsy') as $library) {
+    $return['bootstrap-' . $library] = array(
+      'title' => 'Bootstrap ' . ucwords($library),
+      'website' => 'http://twitter.github.com/bootstrap/javascript.html#' . $library,
+      'version' => '1.3.0',
+      'js' => array($path . '/bootstrap/js/bootstrap-' . $library . '.js'),
+      'css' => array($path . '/bootstrap/lib/patterns.scss'),
+    );
+    $all[$library] = $path . '/bootstrap/js/bootstrap-' . $library . '.js';
+  }
+  $return['bootstrap'] = array(
+    'title' => 'Bootstrap complete',
+    'website' => 'http://twitter.github.com/bootstrap/',
+    'version' => '1.3.0',
+    'js' => $all,
+    'css' => array($path . '/boostrap/lib/bootstrap.scss'),
+  );
+  return $return;
+}
+
+/**
+ * Implements hook_sassy_css_preprocessor_settings_form_alter().
+ * Adds the "bootstrap: Implicit compile" option.
+ */
+function sassy_bootstrap_form_sassy_css_preprocessor_settings_form_alter(&$form, $form_state) {
+  extract($form_state['prepro']);
+  $local += array(
+    'bootstrap_implicit_include' => FALSE
+  );
+
+  $form['bootstrap_implicit_include'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'Include full Bootstrap libraries in every file',
+    '#description' => 'Should the use of Bootstrap be implicit for every SASS/SCSS file? This will slow down compile time.',
+    '#default_value' => $local['bootstrap_implicit_include']
+  );
+
+  return $form;
+}
+
+/**
+ * Adds the bootstrap libraries to all SASS files if the user selected this option in the Prepro admin screen.
+ */
+function sassy_bootstrap_prepro_precompile_sass_alter(&$contents, $file, $local) {
+  if (@$local['bootstrap_implicit_include']) {
+    if (strpos($contents, 'bootstrap/bootstrap') === FALSE && strpos($contents, 'bootstrap/*') === FALSE) {
+      $comment = '/* ' . t('Including bootstrap libraries via implicit include') . ' */';
+      $contents = $comment . "\n@import 'bootstrap/bootstrap';\n\n" . $contents;
+    }
+  }
+}
+
+/**
+ * Adds the bootstrap libraries to all SCSS files if the user selected this option in the Prepro admin screen.
+ */
+function sassy_bootstrap_prepro_precompile_scss_alter(&$contents, $file, $local) {
+  sassy_bootstrap_prepro_precompile_sass_alter($contents, $file, $local);
+}

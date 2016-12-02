@@ -1,0 +1,53 @@
+{
+  "name": "qtip2",
+  "title": "qTip2 - Pretty powerful tooltips",
+  "description": "Introducing... qTip2. The second generation of the advanced qTip plugin for the ever popular jQuery framework.",
+  "version": "2.2.1",
+  "homepage": "http://qtip2.com",
+  "author": "Craig Michael Thompson <craig@craigsworks.com> (http://craigsworks.com/)",
+  "main": "dist/jquery.qtip.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/qTip2/qTip2.git"
+  },
+  "keywords": [
+    "tooltip",
+    "tooltips",
+    "jquery",
+    "jquery-plugin",
+    "qtip",
+    "qtip2",
+    "simpletip",
+    "craig thompson",
+    "craig michael thompson",
+    "craigsworks",
+    "craga89"
+  ],
+  "bugs": {
+    "url": "https://github.com/qTip2/qTip2/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/qTip2/qTip2/blob/master/LICENSE-MIT"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-concat": "~0.5.1",
+    "grunt-contrib-csslint": "~0.4.0",
+    "grunt-contrib-cssmin": "~0.12.3",
+    "grunt-contrib-jshint": "~0.11.2",
+    "grunt-contrib-uglify": "~0.9.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-replace": "~0.9.2",
+    "load-grunt-config": "~0.17.1"
+  },
+  "scripts": {
+    "build": "npm install && grunt",
+    "start": "grunt",
+    "test": "grunt dev"
+  }
+}

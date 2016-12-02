@@ -1,0 +1,432 @@
+/* ------ venobox.css --------*/
+
+.vbox-overlay *, .vbox-overlay *:before, .vbox-overlay *:after{
+    -webkit-backface-visibility: hidden;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+/* ------- overlay: change here background color and opacity ----- */
+.vbox-overlay{
+    background: #fdfdfd;
+    background: rgba(0,0,0,0.85); 
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    opacity: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    right: 0;
+
+}
+
+/* ----- preloader - choose between CIRCLE, IOS, DOTS, QUADS ----- */
+
+/* circle preloader */
+.vbox-preloader{
+    position:fixed; 
+    width:32px; 
+    height:32px;
+    left:50%; 
+    top:50%; 
+    margin-left:-16px; 
+    margin-top:-16px;
+    background-image: url(preload-circle.png);
+    text-indent: -100px;
+    overflow: hidden;
+    -webkit-animation: playload 1.4s steps(18) infinite;
+       -moz-animation: playload 1.4s steps(18) infinite;
+        -ms-animation: playload 1.4s steps(18) infinite;
+         -o-animation: playload 1.4s steps(18) infinite;
+            animation: playload 1.4s steps(18) infinite;
+}
+@-webkit-keyframes playload {
+   from { background-position:    0px; }
+     to { background-position: -576px; }
+}
+@-moz-keyframes playload {
+   from { background-position:    0px; }
+     to { background-position: -576px; }
+}
+@-ms-keyframes playload {
+   from { background-position:    0px; }
+     to { background-position: -576px; }
+}
+@-o-keyframes playload {
+   from { background-position:    0px; }
+     to { background-position: -576px; }
+}
+@keyframes playload {
+   from { background-position:    0px; }
+     to { background-position: -576px; }
+}
+
+
+
+/* ----- navigation ----- */
+.vbox-close{
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    display: block;
+    color: #2bc9cd;
+    overflow: hidden;
+    
+    &:hover {
+	    
+	    color: #2bc9cd;
+	    text-decoration: none;
+	    
+    }
+    
+}
+
+.vbox-next, .vbox-prev{
+    box-sizing: content-box;
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    color: #ffffff;
+    width: 30px;
+    height: 40px;
+    width: 40px;
+    margin-top: -20px;
+    border: 2px solid #ffffff;
+    overflow: hidden;
+    @include border-radius-circle;
+    text-align: center;
+    
+    &:hover {
+	    
+	    color: #ffffff;
+	    text-decoration: none;
+	    
+    }
+    
+}
+
+
+.vbox-prev{
+    left: 20px;
+    
+    
+}
+.vbox-next{
+    right: 20px;
+    
+    
+}
+
+
+.vbox-next:before, .vbox-prev:before {
+      font-family: "governo" !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      text-transform: none !important;
+      speak: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 1.56em;
+      line-height: 40px;
+      text-align: center;
+}
+
+.vbox-close:before {
+      font-family: "governo" !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      text-transform: none !important;
+      speak: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 1.78em;
+      line-height: 40px;
+      text-align: center;
+}
+
+.vbox-next:before {
+  
+  content: "t";
+      text-align: right;
+      padding: 0 0 0 0;
+  
+}
+
+.vbox-prev:before {
+  
+  content: "s";
+      text-align: left;
+      padding: 0 0 0 0;
+  
+}
+
+.vbox-close:before {
+  
+  content: "w";
+      text-align: center;
+      padding: 0 0 0 0;
+  
+}
+
+.vbox-inner-container {
+    width: 100%;
+    text-align: left;   
+    font-size: 1em;
+    color: #fff;
+    padding: 20px 0 20px 0;
+    overflow: hidden;
+    position: fixed;
+    display: block;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #ffffff;
+
+}
+
+.vbox-inner-container {
+    background:rgb(22,22,23);
+    
+    @media (max-width: $screen-xs-max) {
+      display: none !important;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    
+    }
+}
+.vbox-inner-container:nth-child(n) {
+    filter: none;
+}
+
+.vbox-title, .vbox-description {
+  padding: 0 0 0 10%;
+  width: 50%;
+  
+  @media (max-width: $screen-xs-max) {
+    display: none !important;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    
+  }
+  
+}
+
+.vbox-title {
+  
+  font-weight: 700;
+  
+}
+
+.vbox-description {
+  
+  font-size: 0.85em;
+  
+}
+
+.vbox-num{
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: block;
+    color: #fff;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    display: none;
+}
+/* ------- inline window ------ */
+.vbox-inline{
+    width: 420px;
+    height: 315px;
+    padding: 10px;
+    background: #fff;
+    text-align: left;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+/* ------- Video & iFrames window ------ */
+.venoframe{
+    border: none;
+    width: 960px;
+    height: 720px;
+}
+@media (max-width: 992px) {
+    .venoframe{
+        width: 640px;
+        height: 480px;
+    }
+}
+@media (max-width: 767px) {
+    .venoframe{
+        width: 420px;
+        height: 315px;
+    }
+}
+@media (max-width: 460px) {
+    .vbox-inline{
+        width: 100%;
+    }
+
+    .venoframe{
+        width: 100%;
+        height: 260px;
+    }
+}
+
+/* ------- PLease do NOT edit this! (or do it at your own risk) ------ */
+.vbox-open{
+    overflow: hidden;
+}
+.vbox-container{
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.vbox-content{
+    height: 80%;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+    
+}
+.vbox-container img{
+    height: auto;    
+    max-height: 100%;
+    max-width: 100%;
+    padding: 0;
+    vertical-align: middle !important;
+    width: auto;
+}
+
+.vbox-overlay .share_buttons {  
+  position: fixed;
+  z-index: 99999;
+  bottom: 10px;
+  right: 10px;
+	  
+  a {
+	  
+	  span {
+		  
+		  color: $governo-secondary-darker;
+		  background: none;
+		  
+	  }
+	  
+  }
+	  
+}
+
+.vbox-cc {
+  
+  position: fixed;
+  z-index: 99999;
+  top: 20px;
+  left: 20px;
+  width: 42%;
+  
+  color: $governo-link-light;
+  
+  img {
+    
+    width: 30px;
+    height: 30px;
+    margin: 0 5px 0 0;
+    
+  }
+  
+  span {
+    
+    margin-left: 10px;
+    text-decoration: underline;
+    
+    @media (max-width: $screen-xs-max) {
+      display: none;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      
+    }
+    
+  }
+  
+  .link {
+    
+    color: $governo-link-light;
+    
+  }
+  
+}
+
+.vbox-text-close {
+  
+  position: fixed;
+  z-index: 99999;
+  top: 25px;
+  right: 85px;
+  color: #ffffff;
+  width: 40%;
+  text-align: right;
+  font-size: 0.9em;
+  
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
+  
+}
+
+
+/* VBox Override */
+
+@media (max-width: 767px) {
+    .vbox-inner-container{
+        display: block !important;
+    }
+    .vbox-description {
+        display: none !important;
+    }
+    .vbox-title {
+        display:block!important;
+        padding: 0 0 0 5%;
+        width: 50% !important;
+        font-size: 0.85em;
+    }
+    .vbox-num {
+        bottom:auto;
+        top:60px;
+    }
+    .vbox-share{
+	font-size:0.7em !important;
+    }
+
+}
+
+a.vbox-cc-text.link{
+    color: white;
+}
+
+/* End VBox Override */
+

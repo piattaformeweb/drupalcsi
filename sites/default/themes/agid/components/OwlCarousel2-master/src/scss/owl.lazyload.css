@@ -1,0 +1,16 @@
+/* 
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/src\/scss\/owl\.lazyload\.scss}line{font-family:\000039}}
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/src\/scss\/owl\.lazyload\.scss}line{font-family:\0000313}}
+.owl-carousel .owl-item img {
+  transform-style: preserve-3d;
+}

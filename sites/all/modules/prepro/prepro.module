@@ -1,0 +1,352 @@
+<?php
+
+/**
+ * @file
+ * Prepro module.
+ *
+ * Provides an API for modules to offer preprocessing for stylesheets
+ * and javascripts.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function prepro_menu() {
+  $items = array();
+  $items['admin/config/media/prepro'] = array(
+    'title' => 'Preprocessors',
+    'description' => 'Configure media preprocessors',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('prepro_admin_form'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'prepro.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function prepro_theme() {
+  $items = array();
+
+  $items['prepro_admin_form_filetypes'] = array(
+    'render element' => 'form',
+    'file' => 'prepro.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_cron().
+ */
+function prepro_cron() {
+  drupal_static('prepro_is_cron', TRUE);
+}
+
+/**
+ * Implements hook_flush_caches().
+ */
+function prepro_flush_caches() {
+  $is_cron = drupal_static('prepro_is_cron', FALSE);
+
+  // If it's cron, then clearing the map needs to be optional.
+  // If it's not, then clear the map and the files get overwritten on recompile.
+  if (!$is_cron) {
+    $map = cache_get('prepro:map', 'cache_prepro');
+    $map = $map ? $map->data : array();
+
+    if (!empty($map)) {
+      foreach ($map as $item) {
+        $cache_handler = prepro_get_cachers($item['settings']['cache_handler']['type']);
+        if (function_exists($cache_handler['callbacks']['flush cache'])) {
+          $cache_handler['callbacks']['flush cache']($map, $item, $item['settings']['cache_handler']['type']);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_element_info_alter().
+ *
+ * Passes the outgoing stylesheets list to Prepro, via
+ * hook_element_info_alter().
+ * We use this instead of hook_css_alter to allow other modules to alter stuff
+ * before prepro.
+ */
+function prepro_element_info_alter(&$type) {
+  array_unshift($type['styles']['#pre_render'], 'prepro_pre_render');
+}
+
+/**
+ * Implements hook_pre_render().
+ */
+function prepro_pre_render($elements) {
+  _prepro_process_assets('css', $elements['#items']);
+  return $elements;
+}
+
+/**
+ * Helper function for hook_pre_render().
+ */
+function _prepro_process_assets($type, &$items) {
+  $map = cache_get('prepro:map', 'cache_prepro');
+  $map = $map ? $map->data : array();
+  $map_changed = FALSE;
+
+  foreach ($items as $key => $item) {
+    if ($item['type'] != 'file') {
+      continue;
+    }
+
+    $item += array(
+      'recompile' => FALSE,
+      'target_extension' => $type,
+    );
+
+    preg_match('/([^\/]+?)\.([^\.\/]+)$/', $item['data'], $match);
+    // path/to/lol.sass => lol.
+    // $item['basename'] = $name = $match[1];
+    $item['basename'] = $match[1];
+    // path/to/lol.sass => sass.
+    $item['extension'] = $ext = $match[2];
+    $item['settings'] = $settings = prepro_get_filetype_settings($ext);
+
+    foreach (array('cache_handler', 'compile_handler') as $split) {
+      $compile = explode('/', isset($settings[$split]) ? $settings[$split] : '');
+      $item['settings'][$split] = FALSE;
+      if (count($compile) == 2) {
+        $item['settings'][$split] = array(
+          'module' => $compile[0],
+          'type' => $compile[1],
+        );
+      }
+    }
+
+    // If we can't load settings, or this filetype is explicitly not handled.
+    if (!$settings || !$settings['compile_handler']) {
+      continue;
+    }
+
+    // Calculate cache key and file.
+    $item['cache_key'] = preg_replace('/[^a-z0-9_\-\.]+/', '_', drupal_substr($item['data'], 0, -1 - drupal_strlen($ext)));
+    $item['cache_file'] = $item['settings']['cache_path'] . '/' . $item['cache_key'] . '.' . $item['target_extension'];
+
+    $cache_handler = prepro_get_cachers($item['settings']['cache_handler']['type']);
+    if (function_exists($cache_handler['callbacks']['is cached'])) {
+      $item['recompile'] = !$cache_handler['callbacks']['is cached']($item, $item['settings']['cache_handler']['type']);
+    }
+
+    if (!$item['recompile']) {
+      // Allow modules to alter file info here.
+      drupal_alter('prepro_file', $item);
+      if (isset($map[$item['cache_key']])) {
+        $items[$key]['data'] = $map[$item['cache_key']]['cache_file'];
+        continue;
+      }
+
+      if (!isset($map[$item['cache_key']]) || !file_exists($item['cache_file'])) {
+        $item['recompile'] = TRUE;
+      }
+    }
+
+    if ($item['recompile']) {
+      $data = _prepro_compile($item);
+
+      $directory = dirname($item['cache_file']);
+      if (file_prepare_directory($directory, FILE_MODIFY_PERMISSIONS ^ FILE_CREATE_DIRECTORY) && file_put_contents($item['cache_file'], $data) !== FALSE) {
+        $items[$key]['data'] = $item['cache_file'];
+        $map[$item['cache_key']] = $item;
+        $map_changed = TRUE;
+      }
+    }
+  }
+
+  if ($map_changed) {
+    cache_set('prepro:map', $map, 'cache_prepro', CACHE_PERMANENT);
+  }
+  return $items;
+}
+
+/**
+ * Implements hook_preprocessor_cache_info().
+ */
+function prepro_preprocessor_cache_info() {
+  $items = array();
+  $items['onload'] = array(
+    'title' => 'Uncached',
+    'description' => 'Recompiled on every pageload',
+  );
+
+  $items['cache'] = array(
+    'title' => 'Cached',
+    'description' => 'Regenerated on standard Drupal cache clear.',
+  );
+
+  $items['manual'] = array(
+    'title' => 'Cached',
+    'description' => "Manual 'Clear prepro cache' required for regeneration.",
+  );
+
+  return $items;
+}
+
+/**
+ * Callback 'Is cached' for the 'onload' cache method.
+ */
+function prepro_is_cached_onload($file, $type) {
+  if (prepro_get_settings('show_warnings')) {
+    $message = t('Prepro - your @type files are being processed on every page load, this may cause slowdown on production servers. !link',
+      array(
+        '@type' => drupal_strtoupper($file['extension']),
+        '!link' => l(t('Click here to change'), 'admin/config/media/prepro/' . $file['extension']),
+      )
+    );
+    drupal_set_message($message, 'warning', FALSE);
+  }
+  return FALSE;
+}
+
+/**
+ * Callback 'Flush cache' for the 'cache' cache method.
+ */
+function prepro_flush_cache_cache(&$map, $file, $type) {
+  unset($map[$file['cache_key']]);
+  cache_set('prepro:map', $map, 'cache_prepro', CACHE_PERMANENT);
+}
+
+/**
+ * Implements hook_get_settings().
+ */
+function prepro_get_settings($key = FALSE) {
+  $settings = variable_get('prepro', array());
+  $settings += array(
+    'filetypes' => array(),
+    'additional' => array(),
+    'show_warnings' => TRUE,
+  );
+  return $key ? $settings[$key] : $settings;
+}
+
+/**
+ * Get filetype settings.
+ */
+function prepro_get_filetype_settings($ext = FALSE) {
+  $settings = prepro_get_settings('filetypes');
+  if ($ext) {
+    return isset($settings[$ext]) ? $settings[$ext] : FALSE;
+  }
+  return $settings;
+}
+
+/**
+ * Get additional settings.
+ */
+function prepro_get_additional_settings($ext = FALSE) {
+  $settings = prepro_get_settings('additional');
+  if ($ext) {
+    return isset($settings[$ext]) ? $settings[$ext] : FALSE;
+  }
+  return $settings;
+}
+
+/**
+ * Get compilers.
+ */
+function prepro_get_compilers() {
+  return _prepro_hooker('preprocessor_info');
+}
+
+/**
+ * Get cachers.
+ */
+function prepro_get_cachers($key = NULL) {
+  $cachers = _prepro_hooker('preprocessor_cache_info');
+  if (!is_null($key) && isset($cachers[$key])) {
+    return $cachers[$key];
+  }
+  return $cachers;
+}
+
+/**
+ * Helper, returns an inverted list of preprocessors, keyed by filetype.
+ *
+ * @ext
+ *  Return file types for either just 'css' or 'js'.
+ */
+function _prepro_hooker($hook) {
+  $types =& drupal_static(__FUNCTION__ . $hook, array());
+  if (empty($types)) {
+    foreach (module_implements($hook) as $module) {
+      foreach (module_invoke($module, $hook) as $name => $info) {
+        $info['machine_name'] = $name;
+        $info['module'] = $module;
+        switch ($hook) {
+          case 'preprocessor_info':
+            $info += array('callback' => 'preprocess_' . $name);
+            foreach ($info['filetypes'] as $type) {
+              $types += array($type => array());
+              $types[$type][$name] = $info;
+            }
+            break;
+
+          case 'preprocessor_cache_info':
+            $info += array(
+              'callbacks' => array(
+                'is cached' => 'prepro_is_cached_' . $name,
+                'flush cache' => 'prepro_flush_cache_' . $name,
+              ),
+            );
+
+          default:
+            $types[$name] = $info;
+        }
+      }
+    }
+  }
+  return $types;
+}
+
+/**
+ * Compile item.
+ */
+function _prepro_compile($item) {
+  $ext = $item['extension'];
+  $target_ext = $item['target_extension'];
+  $settings = $item['settings'];
+  $compilers = prepro_get_compilers();
+
+  if (!$settings['compile_handler']) {
+    $result = file_get_contents($item['data']);
+  }
+  else {
+    $settings['cache_handler']['settings'] = $settings['additional'] = $local = prepro_get_additional_settings($settings['compile_handler']['type']);
+
+    if (!file_exists($item['data'])) {
+      watchdog('Prepro', 'Prepro could not find the file %file for compilation', array('%file' => $item['data']), WATCHDOG_ERROR);
+      return NULL;
+    }
+
+    $info = $compilers[$ext][$settings['compile_handler']['type']];
+
+    $item['contents'] = file_get_contents($item['data']);
+    drupal_alter('prepro_precompile', $item['contents'], $item, $local);
+    drupal_alter('prepro_precompile_' . $ext, $item['contents'], $item, $local);
+    drupal_alter('prepro_precompile_' . $target_ext, $item['contents'], $item, $local);
+
+    $result = module_invoke($info['module'], $info['callback'], $item, $local, $settings);
+    if ($result) {
+      if ($target_ext === 'css') {
+        _drupal_build_css_path(NULL, base_path() . dirname($item['data']) . '/');
+        $result = preg_replace_callback('/url\([\'"]?(?![a-z]+:|\/+)([^\'")]+)[\'"]?\)/i', '_drupal_build_css_path', $result);
+      }
+    }
+    drupal_alter('prepro_postcompile', $result, $item, $local);
+    drupal_alter('prepro_postcompile_' . $ext, $result, $item, $local);
+    drupal_alter('prepro_postcompile_' . $target_ext, $result, $item, $local);
+  }
+  return $result;
+}

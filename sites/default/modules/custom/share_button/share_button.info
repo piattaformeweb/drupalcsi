@@ -1,0 +1,4 @@
+name = Share button
+description = A block module that show a share button.
+core = 7.x
+package = Agid

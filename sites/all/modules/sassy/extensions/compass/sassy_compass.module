@@ -1,0 +1,150 @@
+<?php
+
+require_once('functions/colors.inc');
+require_once('functions/constants.inc');
+require_once('functions/cross_browser_support.inc');
+require_once('functions/display.inc');
+require_once('functions/enumerate.inc');
+require_once('functions/font_files.inc');
+require_once('functions/gradient_support.inc');
+require_once('functions/image_size.inc');
+require_once('functions/inline_image.inc');
+require_once('functions/lists.inc');
+require_once('functions/selectors.inc');
+require_once('functions/sprites.inc');
+require_once('functions/trig.inc');
+require_once('functions/transitions.inc');
+require_once('functions/urls.inc');
+
+/**
+ * Implementation of hook_sassy_resolve_path_NAMESPACE().
+ */
+function sassy_compass_sassy_resolve_path_compass($filename, $syntax = 'scss') {
+
+  // Check for compass installed as a Library, if not use ours.
+  // The latest Compass build can be found at https://github.com/chriseppstein/compass
+  $path = libraries_get_path('compass') . '/core';
+  if (!file_exists($path)) {
+    $path = drupal_get_path('module', 'sassy_compass');
+  }
+
+  if ($filename == '*') {
+    $filename = 'compass';
+  }
+
+  $filename = str_replace(array('.scss', '.sass'), '', $filename);
+  $split = explode('/', $filename);
+  if ($split[0] != 'compass' && $split[0] != 'lemonade') {
+    array_unshift($split, 'compass');
+  }
+  $last = array_pop($split) . '.scss';
+  if (substr($last, 0, 1) != '_') {
+    $last = '_' . $last;
+  }
+  array_unshift($split, 'stylesheets');
+  array_unshift($split, $path);
+  $filename = str_replace('/_', '/', implode('/', $split)) . '/' . $last;
+
+  return $filename;
+}
+
+/**
+ * Implementation of hook_sassy_functions().
+ * Lists all functions defined by the Compass library.
+ */
+function sassy_compass_sassy_functions() {
+  $functions  = 'if resolve-path ';
+  $functions .= 'adjust-lightness scale-lightness adjust-saturation scale-saturation scale-color-value ';
+  $functions .= 'is-position is-position-list opposite-position ';
+  $functions .= '-webkit -moz -o -ms -svg -pie -css2 owg prefixed prefix ';
+  $functions .= 'elements-of-type ';
+  $functions .= 'enumerate ';
+  $functions .= 'font-files ';
+  $functions .= 'image-width image-height ';
+  $functions .= 'inline-image inline-font-files ';
+  $functions .= 'blank compact -compass-nth -compass-list -compass-list -compass-space-list -compass-list-size -compass-slice first-value-of ';
+  $functions .= 'nest append-selector headers ';
+  $functions .= 'pi sin cos tan ';
+  $functions .= 'comma-list prefixed-for-transition ';
+  $functions .= 'stylesheet-url font-url image-url';
+  $output = array();
+  $functions = explode(' ', $functions);
+  foreach ($functions as $function) {
+    $function = preg_replace('/[^a-z0-9_]/', '_', $function);
+    $output[$function] = array(
+      'name' => $function,
+      'callback' => 'sassy_compass__' . $function,
+    );
+  }
+  return $output;
+}
+
+/**
+ * Defines the "if" function, used like: if(condition, if_true, if_false)
+ */
+function sassy_compass__if($condition, $if_true, $if_false) {
+  return ($condition ? $if_true : $if_false);
+}
+
+/**
+ * Resolves requires to the compass namespace (eg namespace/css3/border-radius)
+ */
+function sassy_compass__resolve_path($file) {
+  if ($file{0} == '/') {
+    return $file;
+  }
+  if (!$path = realpath($file)) {
+    $path = SassScriptFunction::$context->node->token->filename;
+    $path = substr($path, 0, strrpos($path, '/')) . '/';
+    $path = $path . $file;
+    $last = '';
+    while ($path != $last) {
+      $last = $path;
+      $path = preg_replace('`(^|/)(?!\.\./)([^/]+)/\.\./`', '$1', $path);
+    }
+    $path = realpath($path);
+  }
+  if ($path) {
+    return $path;
+  }
+  return false;
+}
+
+/**
+ * Implements hook_sassy_css_preprocessor_settings_form_alter().
+ * Adds the "Compass: Implicit compile" option.
+ */
+function sassy_compass_form_sassy_css_preprocessor_settings_form_alter(&$form, $form_state) {
+  extract($form_state['prepro']);
+  $local += array(
+    'compass_implicit_include' => FALSE
+  );
+
+  $form['compass_implicit_include'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'Include full Compass libraries in every file',
+    '#description' => 'Should the use of Compass be implicit for every SASS/SCSS file? This will slow down compile time.',
+    '#default_value' => $local['compass_implicit_include']
+  );
+
+  return $form;
+}
+
+/**
+ * Adds the Compass libraries to all SASS files if the user selected this option in the Prepro admin screen.
+ */
+function sassy_compass_prepro_precompile_sass_alter(&$contents, $file, $local) {
+  if (@$local['compass_implicit_include']) {
+    if (strpos($contents, 'compass/compass') === FALSE && strpos($contents, 'compass/*') === FALSE) {
+      $comment = '/* ' . t('Including Compass libraries via implicit include') . ' */';
+      $contents = $comment . "\n@import 'compass/compass';\n\n" . $contents;
+    }
+  }
+}
+
+/**
+ * Adds the Compass libraries to all SCSS files if the user selected this option in the Prepro admin screen.
+ */
+function sassy_compass_prepro_precompile_scss_alter(&$contents, $file, $local) {
+  sassy_compass_prepro_precompile_sass_alter($contents, $file, $local);
+}

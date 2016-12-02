@@ -1,0 +1,246 @@
+<?php
+
+include 'sassy.admin.inc';
+
+/**
+ * Implements hook_preprocessor_info().
+ */
+function sassy_preprocessor_info() {
+  return array(
+    'sassy' => array(
+      'label' => 'Sassy PHPSass',
+      'callback' => 'parse',
+      'filetypes' => array('sass', 'scss')
+    )
+  );
+}
+
+
+/**
+ * Parse a SCSS string and transform it into CSS.
+ *
+ * @param $data
+ *   A SCSS string.
+ * @param $file
+ *   The SASS or SCSS file that $data belongs to described by an array.
+ * @param $syntax
+ *   The syntax (SASS or SCSS) of the file contents. This information is needed
+ *   by the parser.
+ *
+ * @return
+ *   The transformed CSS as a string.
+ */
+function sassy_parse($file, $local, $global) {
+  $local += array(
+    'style' => 'nested',
+    'debug' => false,
+    'watchdog' => false,
+    'errors' => 'watchdog'
+  );
+  extract ($local);
+
+  $path = libraries_get_path('phpsass');
+  if (!file_exists($path)) {
+    $path = libraries_get_path('phamlp');
+  }
+
+  $library = $path . '/SassParser.php';
+  if ($path && file_exists($library)) {
+    try {
+      require_once ($library);
+      $options = array(
+        'style' => $style,
+        'cache' => FALSE,
+        'syntax' => $file['extension'],
+        'debug' => FALSE,
+        'debug_info' => $debug,
+        'load_paths' => array(dirname($file['data'])),
+        'filename' => $file['data'],
+        'load_path_functions' => array('sassy_load_callback'),
+        'functions' => sassy_get_functions(),
+        'callbacks' => array(
+          'warn' => $watchdog ? 'sassy_watchdog_warn' : NULL,
+          'debug' => $watchdog ? 'sassy_watchdog_debug' : NULL,
+        ),
+      );
+      // Execute the compiler.
+      $parser = new SassParser($options);
+      $result = $parser->toCss($file['contents'], false);
+      return $result;
+    }
+    catch (Exception $e) {
+      if ($errors == 'watchdog') {
+        watchdog_exception('sassy', $e);
+        if (user_access('administer site configuration')) {
+          drupal_set_message(t('An error occured while processing !stylesheet. Please consult your !watchdog for a detailed error description.', array('!stylesheet' => l(basename($file['data']), $file['data']), '!watchdog' => l('log messages', 'admin/reports/dblog'))), 'error');
+        }
+      }
+      else if ($errors == 'output') {
+        return theme_render_template(drupal_get_path('module', 'sassy') . '/sassy_error.tpl.php', array('error' => $e));
+      }
+    }
+  }
+}
+
+/**
+ * Callback for @warn directive.
+ */
+function sassy_watchdog_warn($message, $context) {
+  _sassy_watchdog($message, $context, 'warn', WATCHDOG_WARNING);
+}
+
+/**
+ * Callback for @debug directive.
+ */
+function sassy_watchdog_debug($message, $context) {
+  _sassy_watchdog($message, $context, 'debug', WATCHDOG_DEBUG);
+}
+
+/**
+ * Handler for @warn/@debug directive callbacks.
+ */
+function _sassy_watchdog($message, $context, $type, $level) {
+  $vars = array(
+    '%type' => '@' . $type,
+    '%line' => $context->node->token->line,
+    '%message' => $message,
+  );
+  $message = '%type on line %line: %message';
+  $file = $context->node->token->filename;
+  watchdog('Sassy', $message, $vars, $level, l($file, $file));
+}
+
+/**
+ * Returns all functions to be used inside the parser.
+ * @author Joon Park (dvessel), richthegeek, fubhy
+ */
+function sassy_get_functions() {
+  $functions =& drupal_static(__FUNCTION__);
+
+  if (!isset($functions)) {
+    foreach (module_invoke_all('sassy_functions') as $info) {
+      $info = (object) $info;
+      $functions[$info->name] = $info->callback;
+    }
+    foreach (array_merge($GLOBALS['base_theme_info'], array($GLOBALS['theme_info'])) as $theme) {
+      $function = $theme->name . '_sassy_functions';
+      if (function_exists($function) && $data = $function()) {
+        foreach ($data as $info) {
+          $info = (object) $info;
+          $functions[$info->name] = $info->callback;
+        }
+      }
+    }
+  }
+  return $functions;
+}
+
+/**
+ * Called from inside SassParser when a file is trying to be loaded.
+ *
+ * @param $file
+ *    The file trying to be loaded, eg 'myfile/bla.scss'
+ *
+ * @return
+ *    An array of 0 - n filenames to load.
+ *    If no valid files are found return array() or FALSE
+ */
+function sassy_load_callback($file) {
+  $file = explode('/', $file, 2);
+  $namespace = '';
+  
+  // Don't reduce the file array if there is only one element and no namespace
+  if (count($file) >= 2) {
+    $namespace = preg_replace('/[^0-9a-z]+/', '_', strtolower(array_shift($file)));
+  }
+  
+  # check for implementing modules specific to namespace and invoke looking for a paths array.
+  foreach (module_implements('sassy_resolve_path_' . $namespace) as $module) {
+    $hook = $module . '_sassy_resolve_path_' . $namespace;
+    if (function_exists($hook) && $paths = call_user_func($hook, $file[0])) {
+      return (array) $paths;
+    }
+  }
+  # check for implenting modules for the generic hook, looking for a path array.
+  foreach (module_implements('sassy_resolve_path') as $module) {
+    $hook = $module . '_sassy_resolve_path';
+    if (function_exists($hook) && $paths = call_user_func($hook, $file, $namespace)) {
+      return (array) $paths;
+    }
+  }
+  # check for modules or themes named $namespace and try directly finding a file.
+  if ($namespace != 'general' && $namespace != 'sprites' && $namespace != 'typography' && $namespace != 'links' && $namespace != 'lists' && $namespace != 'utilities' && $namespace != 'css' && $namespace != 'text' && $namespace != 'css3' && $namespace != 'tables' && $namespace != 'color' ) {
+    $module_exists_in_filesystem = (bool) drupal_get_filename('module', $namespace, NULL, FALSE);
+    if ($module_exists_in_filesystem) {
+      $path = drupal_get_path('theme', $namespace);
+    } else {
+      $theme_exists_in_filesystem = (bool) drupal_get_filename('theme', $namespace, NULL, FALSE);
+      if ($theme_exists_in_filesystem) {
+        $path = drupal_get_path('theme', $namespace);
+      } else {
+        $path = false;
+      }
+    }
+  } else {
+    $path = NULL;
+  }
+  if (!$path && $namespace == 'public') {
+    $path = 'public:/';
+  }
+  if ($path) {
+    $path = $path . '/' . $file[0];
+    if (file_exists($path)) {
+      $path = drupal_realpath($path);
+      return array($path);
+    }
+  }
+  return FALSE;
+}
+
+/**
+ * Implementation of hook_sassy_resolve_path_NAMESPACE().
+ */
+function sassy_sassy_resolve_path_sassy($file) {
+  return sassy_registered_includes(basename($file));
+}
+
+/**
+ * Fetches, caches and returns all SASS / SCSS libraries from all enabled
+ * modules and the theme trail.
+ *
+ * @return
+ *   An array of all library files, sorted by their basename.
+ */
+function sassy_registered_includes($base = NULL) {
+  $includes = &drupal_static(__FUNCTION__);
+  if (!isset($includes)) {
+    if ($cache = cache_get('sassy_libraries:' . $GLOBALS['theme_key'])) {
+      $includes = $cache->data;
+    }
+    else {
+      $includes = array();
+      // Load libraries from all enabled modules and themes.
+      foreach (array_merge(module_list(), $GLOBALS['base_theme_info'], array($GLOBALS['theme_info'])) as $info) {
+        $type = is_object($info) ? 'theme' : 'module';
+        $name = $type == 'theme' ? $info->name : $info;
+        $info = $type == 'theme' ? $info->info : system_get_info('module', $name);
+        if (!empty($info['sassy'])) {
+          foreach ($info['sassy'] as $include) {
+            $path = drupal_get_path($type, $name) . '/' . $include;
+            if (is_file($path)) {
+              $includes[basename($path)][] = $path;
+            }
+          }
+        }
+      }
+      drupal_alter('sassy_includes', $includes);
+      cache_set('sassy_includes:' . $GLOBALS['theme_key'], $includes);
+    }
+  }
+  if (isset($base) && isset($includes[$base])) {
+    return $includes[$base];
+  }
+  else if (!isset($base)) {
+    return $includes;
+  }
+}

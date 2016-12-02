@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * @file
+ * Install, uninstall and update the module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function prepro_schema() {
+  $schema = array();
+  $schema['cache_prepro'] = drupal_get_schema_unprocessed('system', 'cache');
+  $schema['cache_prepro']['description'] = 'Cache table for the Prepro module.';
+
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function prepro_install() {
+  $directory = 'public://prepro';
+  file_prepare_directory($directory, FILE_MODIFY_PERMISSIONS ^ FILE_CREATE_DIRECTORY);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function prepro_uninstall() {
+  $cache = cache_get('prepro:map', 'cache');
+  if (isset($cache, $cache->data) && $cache = $cache->data) {
+    foreach ($cache as $file) {
+      file_unmanaged_delete($file);
+    }
+  }
+  variable_del('prepro');
+}
+
+/**
+ * Add 'cache_prepro' table.
+ */
+function prepro_update_7000() {
+  $schema = array();
+  $schema['cache_prepro'] = drupal_get_schema_unprocessed('system', 'cache');
+  $schema['cache_prepro']['description'] = 'Cache table for the Prepro module.';
+  db_create_table('cache_prepro', $schema['cache_prepro']);
+}
+
+/**
+ * Update settings variable.
+ */
+function prepro_update_7101() {
+  if (module_exists('sassy')) {
+    $settings = array(
+      'additional' => array('sassy' => array('errors' => 'watchdog', 'style' => 'nested')),
+      'filetypes' => array(
+        'sass' => array(
+          'compile_handler' => 'sassy/sassy',
+          'cache_handler' => 'prepro/cache',
+          'cache_path' => 'public://prepro',
+        ),
+        'scss' => array(
+          'compile_handler' => 'sassy/sassy',
+          'cache_handler' => 'prepro/cache',
+          'cache_path' => 'public://prepro',
+        ),
+        'show_warnings' => TRUE,
+      ),
+    );
+    variable_set('prepro', $settings);
+  }
+}

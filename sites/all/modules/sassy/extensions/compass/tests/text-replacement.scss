@@ -1,0 +1,21 @@
+@import "compass/typography/text/replacement";
+
+.text-replacement {
+  @include replace-text('misc/druplicon.png');
+}
+
+.text-replacement-offset {
+  @include replace-text('misc/druplicon.png', 25%, 35%);
+}
+
+.text-replacement-dimensions {
+  @include replace-text-with-dimensions('misc/druplicon.png');
+}
+
+.hide-text {
+  @include hide-text;
+}
+
+.squish-text {
+  @include squish-text;
+}

@@ -1,0 +1,152 @@
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\000037}}
+pre {
+  overflow-y: hidden;
+  margin-bottom: 2rem;
+  background: #f8f8f8;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\0000313}}
+.hljs {
+  display: block;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+  padding: 2rem;
+  line-height: 1.4;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\0000321}}
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #B9B9B9;
+  font-style: italic;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\0000329}}
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\0000341}}
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #099;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\0000347}}
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+  color: #bd240d;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\0000354}}
+.hljs-title,
+.hljs-id,
+.coffeescript .hljs-params,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\0000362}}
+.javascript .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.hljs-subst {
+  font-weight: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\0000369}}
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\0000377}}
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\0000385}}
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #008080;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\0000391}}
+.hljs-regexp {
+  color: #009926;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\0000395}}
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #333333;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\00003103}}
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+  color: #0086b3;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\00003109}}
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\00003119}}
+.hljs-deletion {
+  background: #fdd;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\00003123}}
+.hljs-addition {
+  background: #dfd;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\00003127}}
+.diff .hljs-change {
+  background: #0086b3;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/docs_src\/assets\/scss\/highlight\.scss}line{font-family:\00003131}}
+.hljs-chunk {
+  color: #aaa;
+}

@@ -1,0 +1,68 @@
+name = Agid Bootstrap (SASS)
+description = Tema basato su Bootstrap 3.x rispondente alle "Linee guida di design per i siti web della PA" di Agid
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[top_header]    		= 'Top Header'
+regions[top_header_right]   = 'Top Header Right'
+regions[header]             = 'Header'
+regions[navigation]         = 'Navigation'
+regions[banner]             = 'Banner'
+regions[highlighted]        = 'Highlighted'
+regions[promoted]           = 'Promoted Area'
+regions[help]               = 'Help'
+regions[content]            = 'Content'
+regions[sidebar_first]      = 'Sidebar Left'
+regions[sidebar_second]     = 'Sidebar Right'
+regions[gallery_first]     	= 'Gallery First'
+regions[gallery_second]     = 'Gallery Second'
+regions[gallery_third]     	= 'Gallery Third'
+regions[gallery_fourth]     = 'Gallery Fourth'
+regions[gallery_fifth]     	= 'Gallery Fifth'
+regions[footer_first]       = 'Footer First'
+regions[footer_second]      = 'Footer Second'
+regions[footer_third]       = 'Footer Third'
+regions[footer_fourth]      = 'Footer Fourth'
+regions[footer]             = 'Footer'
+regions[page_top]           = 'Page top'
+regions[page_bottom]        = 'Page bottom'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+;stylesheets[all][] = css/style.css
+;stylesheets[all][] = bootstrap/assets/stylesheets/bootstrap.scss
+;stylesheets[all][] = scss/main.scss
+;stylesheets[all][] = css/spid-button.min.css
+
+stylesheets[all][] = css/main.css
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = 'bootstrap/assets/javascripts/bootstrap.min.js'
+scripts[] = 'js/vendor/modernizr-2.6.2.min.js'
+
+; Disable the CDN provider so compiled source files can be used.
+settings[bootstrap_cdn] = ''
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Color Settings
+;;;;;;;;;;;;;;;;;;;;;
+
+; Set default colors
+settings[color_gallery_first]	= "section_gray"
+settings[color_gallery_second]	= "section_white"
+settings[color_gallery_third]	= "section_gray"
+settings[color_gallery_fourth]	= "section_gray_darker"
+settings[color_gallery_fifth]	= "section_blue"

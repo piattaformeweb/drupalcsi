@@ -1,0 +1,59 @@
+<?php
+/**
+ * @file
+ * Module file for the Delete Tab.
+ */
+
+/**
+ * Implements hook_menu_alter().
+ */
+function delete_tab_menu_alter(&$items) {
+  $items['node/%node/delete']['context'] = MENU_CONTEXT_INLINE | MENU_CONTEXT_PAGE;
+
+  $items['taxonomy/term/%taxonomy_term/delete'] = array(
+    'title' => 'Delete',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('delete_tab_taxonomy_term_confirm_delete', 2),
+    'access callback' => 'taxonomy_term_edit_access',
+    'access arguments' => array(2),
+    'weight' => 11,
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'taxonomy.admin.inc',
+    'file path' => drupal_get_path('module', 'taxonomy'),
+  );
+}
+
+/**
+ * Delete tabs for taxonomy term.
+ */
+function delete_tab_taxonomy_term_confirm_delete($form, &$form_state, $term) {
+
+  $tid = $term->tid;
+
+  if (isset($term->vid)) {
+    $form['#vocabulary'] = taxonomy_vocabulary_load($term->vid);
+  }
+
+  // Cloned from taxonomy_term_confirm_delete and modify cancel action path.
+  $term = taxonomy_term_load($tid);
+
+  // Always provide entity id in the same form key as in the entity edit form.
+  $form['tid'] = array('#type' => 'value', '#value' => $tid);
+
+  $form['#term'] = $term;
+  $form['type'] = array('#type' => 'value', '#value' => 'term');
+  $form['name'] = array('#type' => 'value', '#value' => $term->name);
+  $form['vocabulary_machine_name'] = array('#type' => 'value', '#value' => $term->vocabulary_machine_name);
+  $form['delete'] = array('#type' => 'value', '#value' => TRUE);
+  return confirm_form($form,
+    t('Are you sure you want to delete the term %title?',
+      array('%title' => $term->name)),
+    'taxonomy/term/' . $term->tid,
+    t('Deleting a term will delete all its children if there are any. This action cannot be undone.'),
+    t('Delete'),
+    t('Cancel'));
+}
+
+function delete_tab_taxonomy_term_confirm_delete_submit($form, &$form_state) {
+  taxonomy_term_confirm_delete_submit($form, $form_state);
+}

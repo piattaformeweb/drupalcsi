@@ -1,0 +1,169 @@
+<?php
+
+/**
+ * @file
+ * Provides a weight field that allows entities to be ordered.
+ */
+
+/**
+ * Implements hook_field_info().
+ */
+function weight_field_info() {
+  return array(
+    'weight' => array(
+      'label' => t('Weight'),
+      'description' => t('Weight Field'),
+      'instance_settings' => array(
+        'range' => 20,
+      ),
+      'default_widget' => 'weight_selector',
+      'default_formatter' => 'number_integer',
+      'property_type' => 'integer',
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_widget_info().
+ */
+function weight_field_widget_info() {
+  return array(
+    'weight_selector' => array(
+      'label' => t('Weight Selector'),
+      'field types' => array('weight'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_widget_settings_form().
+ */
+function weight_field_widget_settings_form($field, $instance) {
+  $settings = $instance['widget']['settings'];
+
+  $form['range'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Range'),
+    '#description' => t('The range of weights available to select. For
+      example, a range of 20 will allow you to select a weight between -20
+      and 20.'),
+    '#default_value' => isset($settings['range']) ? $settings['range'] : 20,
+    '#size' => 5,
+  );
+
+  return $form;
+}
+
+/**
+ * Implements hook_field_widget_form().
+ */
+function weight_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  if (!empty($instance['widget']['settings'])) {
+    $range = $instance['widget']['settings']['range'];
+  }
+  else {
+    $range = 20;
+  }
+
+  $element += array(
+    '#type' => 'select',
+    '#options' => _weight_get_options($range),
+    '#default_value' => isset($items[$delta]) ? $items[$delta] : 0,
+    '#element_validate' => array('weight_selector_validate'),
+  );
+
+  return array('value' => $element);
+}
+
+/**
+ * Validation for weight_selector widget.
+ */
+function weight_selector_validate($element, &$form_state) {
+  form_set_value($element, $element['#value'], $form_state);
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function weight_field_formatter_info() {
+  return array(
+    'weight_integer' => array(
+      'label' => t('Default'),
+      'field types' => array('weight'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function weight_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  foreach ($items as $delta => $item) {
+    $element[$delta] = array('#markup' => $item['value']);
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_field_is_empty().
+ */
+function weight_field_is_empty($item, $field) {
+  if (empty($item)) {
+    return TRUE;
+  }
+  else {
+    return FALSE;
+  }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function weight_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'weight') . '/views',
+  );
+}
+
+/**
+ * Implementes hook_preprocess_views_view_table().
+ */
+function weight_preprocess_views_view_table(&$variables) {
+  $weight_selector = FALSE;
+
+  // Check for a weight selector field.
+  foreach ($variables['view']->field as $field) {
+    if (isset($field->options['weight_selector'])) {
+      $weight_selector = TRUE;
+      break;
+    }
+  }
+
+  if ($weight_selector) {
+    // Add the tabledrag attributes.
+    foreach ($variables['rows'] as $key => $row) {
+      $variables['row_classes'][$key][] = 'draggable';
+    }
+    $table_id = 'weight-table-' . $variables['id'];
+    $variables['attributes_array']['id'] = $table_id;
+
+    drupal_add_tabledrag($table_id, 'order', 'sibling', 'weight-selector');
+  }
+}
+
+/**
+ * Get weight range options.
+ */
+function _weight_get_options($range) {
+  $options = array();
+
+  for ($i = -$range; $i <= $range; $i++) {
+    $options[$i] = $i;
+  }
+
+  return $options;
+}

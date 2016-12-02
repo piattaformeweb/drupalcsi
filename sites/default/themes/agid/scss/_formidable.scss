@@ -1,0 +1,35 @@
+/***** Formidable Wordpress Plugin *****/
+
+.frm_hidden { display: none !important; }
+
+.frm_form_fields {  }
+
+.frm_forms a { color: $link-color; }
+
+.frm_forms input[type=text], .frm_forms input[type=email], .frm_forms textarea, .frm_forms input[type=tel], .frm_forms input[type=number] {  }
+
+.frm_forms input[type=checkbox] { margin: 0 5px 0 0; }
+.frm_ajax_loading { display: none !important; }
+.frm_form_field { margin: 0 0 18px 0; }
+
+.frm_error { font-weight: 700; }
+.frm_top_container .frm_primary_label { display: block; clear: both; }
+
+.frm_forms textarea {  }
+
+#frm_loading { position: relative !important; z-index: 0 !important; background: none !important; }
+#frm_loading h3 { margin: 0 !important; padding: 15px 0 10px 0 !important; clear: both !important; }
+#frm_loading_content { position: relative !important; z-index: 0 !important; border: none !important; background: none !important; padding: 0 !important; top: auto !important; width: 100% !important; margin: 0 !important; left: auto !important; text-align: left !important; }
+#frm_loading_content img { display: block !important; width: 60% !important; clear: both !important; }
+
+.frm_description {  }
+.frm_primary_label { font-weight: 700; }
+.frm_privacy { margin: 0 0 0 0; line-height: 15px; }
+.frm_privacy .frm_opt_container { margin-bottom: 4px; }
+
+.frm_forms input[type=submit]:hover, form#commentform input[type="submit"]:hover { color: $link-hover-color; }
+
+.frm_hidden_container label.frm_primary_label { display: none; }
+.frm_forms .form_text { padding: 5px 0 0 0; margin: 0; clear: both; }
+
+.frm_forms input[type=submit], form#commentform input[type="submit"] {  }

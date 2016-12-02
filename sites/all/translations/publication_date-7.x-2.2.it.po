@@ -1,0 +1,26 @@
+# Italian translation of Publication Date (7.x-2.2)
+# Copyright (c) 2015 by the Italian translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Publication Date (7.x-2.2)\n"
+"POT-Creation-Date: 2015-03-09 08:16+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Node"
+msgstr "Nodo"
+msgid "Format: %time. Leave blank to use the time of form submission."
+msgstr ""
+"Formato: %time. Lascia in bianco per utilizzare la data di inserimento "
+"del contenuto."
+msgid "Date Popup Configuration"
+msgstr "Configurazione Date Popup"
+msgid "Date published"
+msgstr "Data di pubblicazione"
+msgid "Starting year"
+msgstr "Anno di inizio"

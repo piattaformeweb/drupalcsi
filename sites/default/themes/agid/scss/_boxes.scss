@@ -1,0 +1,1450 @@
+/* Box Text */
+
+
+.box_text {
+  
+  
+  h4 {
+    
+    font-weight: 700;
+    
+  }
+  
+  h3, .h3 {
+    
+    font-size: 1.16em;
+    
+  }
+  
+  &.box_text_large {
+	  
+	  padding: 24px;
+    
+    h1 {
+      
+      a {
+        
+        display: block;
+        color: #000000;
+        
+      }
+      
+    }
+    
+    h2 {
+      
+      &.title_large {
+        
+        font-size: 2.667em;
+        
+        @media (max-width: $screen-xs-max) {
+          font-size: 1.778em;
+          line-height: 1.2;
+        }
+
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+          font-size: $font-size-h1 / 1.2;
+        }
+        
+      }
+      
+      a {
+        
+        color: #000000;
+        display: block;
+        
+        &:focus {
+        
+          @include focus-box;
+          
+        }
+        
+      }
+      
+    }
+    
+    h6, .h6 {
+	    
+      margin-top: 20px;
+      
+    }
+    
+    p {
+      
+      color: $governo-secondary-light;
+      font-size: 1.778em;
+      line-height: 1.2;
+      margin-bottom: 50px;
+      
+      @media (max-width: $screen-xs-max) {
+        font-size: 1.12em;
+        line-height: 1.4;
+        margin-bottom: 12px;
+      }
+
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        font-size: 1.38em;
+        line-height: 1.3;
+        margin-bottom: 25px;
+      }
+      
+      
+      &.h6 {
+        
+        font-size: 0.85em;
+        margin-top: 0px;
+        margin-bottom: 25px;
+        
+        @media (max-width: $screen-xs-max) {
+          margin-bottom: 12px;
+        }
+        
+        
+      }
+      
+    }
+    
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 10px;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      margin-bottom: 30px;
+    }
+    
+  }
+  
+  
+  
+  &.box_text_small {
+    background: #ffffff;
+    overflow: hidden;
+    
+    @include box-shadow(0px 1px 2px 0px rgba(50, 50, 50, 0.35));
+    
+    @include rounded-corners-base;
+    
+    a {
+      
+      display: block;
+      
+    }
+    
+    .box_text_thumb {
+      overflow: hidden;
+      position: relative;
+      z-index: 0;
+      
+    }
+    
+    .box_text_thumb_icon {
+      
+      display: block;
+      position: absolute;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      color: #ffffff;
+      top: 0;
+      left: 0;
+      
+      i, span.icon {
+        
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        z-index: 100;
+        text-align: center;
+        font-size: 3.78em;
+        margin-top: -34px;
+      }
+      
+    }
+    
+    .box_text_thumb img {
+      
+      width: 100%;
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 0;
+          
+    }
+    
+    .box_text_container {
+      
+      padding: 32px 24px 24px 24px;
+      
+      
+      p {
+	      
+	      line-height: 1.5;
+	      
+      }
+      
+    }
+    
+    h4, .h4 {
+			      
+      font-size: 1.16em;
+      font-weight: 400;
+      line-height: 1.3;
+      
+      a {
+        
+        &:focus {
+        
+          @include focus-box;
+          
+        }
+        
+      }
+      
+    }
+    
+    p {
+      
+      color: $governo-secondary-light;
+      font-size: 1em;
+      
+      &.box_text_small_date {
+        
+        font-size: 0.85em;
+        font-weight: 400;
+        
+      }
+      
+      &.h6 {
+        
+        font-size: 0.85em;
+        
+        a {
+          
+          display: inline-block;
+          
+        }
+        
+      }
+      
+    }
+    
+    h3, .h3 {
+      
+      font-size: 1.16em;
+      font-weight: 400;
+      margin-bottom: 25px;
+      line-height: 1.3;
+      
+      a {
+        
+        color: #000000;
+        
+        &:focus {
+        
+          @include focus-box;
+          
+        }
+        
+      }
+      
+      &.link_blue {
+        
+        a {
+          
+          color: $governo-primary;
+          font-weight: 700;
+          text-decoration: underline;
+          
+          &:hover {
+    
+            color: #003366;
+            
+          }
+          
+          &:visited {
+            
+            color: #6464db;
+            
+          }
+          
+          &:active {
+            
+            color: #b50000;
+            
+          }
+          
+        }
+        
+      }
+      
+    }
+    
+    .title_name {
+      
+      margin-bottom: 4px;
+      
+    }
+    
+    &.box_text_twitter {
+      
+      h5, .h5 {
+        
+        font-size: $font-size-h6;
+        font-weight: 400;
+        
+      }
+      
+      h6, .h6 {
+        
+        margin-bottom: 4px;
+        
+      }
+      
+      h3, .h3 {
+        
+        a {
+          
+          color: $governo-primary;
+          text-decoration: underline;
+          
+          &:hover {
+    
+            color: #003366;
+            
+          }
+          
+          &:visited {
+            
+            color: #6464db;
+            
+          }
+          
+          &:active {
+            
+            color: #b50000;
+            
+          }
+          
+        }
+        
+      }
+      
+      .box_tools {
+        
+        ul {
+          
+          li {
+            
+            display: inline-block;
+            
+          }
+          
+        }
+        
+        padding: 10px 0 0 0;
+        
+        a {
+          
+          height: auto;
+          width: auto !important;
+          padding: 0;
+          margin: 0 8px 0 0;
+          line-height: inherit;
+          
+          display: inline-block;
+          
+        }
+        
+      }
+      
+      .footer_social {
+        
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        right: 20px;
+        
+      }
+      
+      .box_text_container {
+      
+        position: relative;
+        z-index: 0;
+      
+      }
+      
+    }
+    
+    &.box_text_small_alt {
+    
+      h6, .h6 {
+        
+        color: $governo-secondary-light;
+        
+        a {
+          
+          color: $governo-secondary-light;
+          
+        }
+        
+      }
+      
+    }
+    
+    
+  }
+
+  &.box_text_side {
+    
+    img {
+      
+      width: 100%;
+      height: auto;
+      
+    }
+    
+    h3, .h3 {
+      
+      font-weight: 500;
+      margin-bottom: 0px;
+      
+    }
+    
+    .box_text_side_content {
+      
+      padding: 32px 20px 0 0;
+      border-top: 1px solid #cccccc;
+      
+      @media (max-width: $screen-xs-max) {
+        padding-bottom: 40px;
+      }
+      
+      h3 {
+        
+        font-size: $font-size-h3;
+        
+        a {
+          
+          display: block;
+          
+          &:focus {
+        
+            @include focus-box;
+            
+          }
+          
+        }
+        
+      }
+      
+    }
+    
+  }
+  
+  &.box_text_context {
+    
+    padding-right: 40px;
+    
+    .h4 {
+      
+      font-weight: 700;
+      
+    }
+    
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      margin-bottom: 40px;
+    }
+
+    
+    p {
+      
+      color: $governo-secondary-light;
+      
+    }
+    
+  }
+  
+  &.box_text_larger {
+    
+    h1, .h1 {
+      
+      font-size: 4.1em;
+      padding-right: 10%;
+      font-weight: 300;
+      
+      @media (max-width: $screen-xs-max) {
+        font-size: 2.1em;
+      }
+
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        font-size: 2.7em;
+      }
+
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        font-size: 3.89em;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        
+      }
+      
+      
+    }
+    
+    p {
+      
+      color: $governo-secondary-light;
+      font-size: 1.7em;
+      line-height: 1.2;
+      margin-bottom: 50px;
+      
+      @media (max-width: $screen-xs-max) {
+        font-size: 1.22em;
+      }
+
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        font-size: 1.55em;
+      }
+
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        font-size: 1.667em;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        
+      }
+    }
+    
+  }
+  
+  &.box_text_archive {
+    
+    border-top: 1px solid #d9dfe2; 
+    padding: 40px 0 40px 0;
+    
+    
+    h6, .h6 {
+      
+      margin-bottom: 5px;
+      
+    }
+    
+    h5, .h5 {
+      
+      color: $governo-secondary-light;
+      font-weight: 400;
+      
+    }
+    
+    .h5 {
+      
+      font-size: 1em;
+      margin-bottom: 25px;
+      
+    }
+    
+    h4, .h4 {
+      
+      font-size: 1.33em;
+      
+    }
+    
+    .h4 {
+      
+      font-weight: 700;
+      margin-bottom: 20px;
+      
+      a {
+        
+        display: block;
+        
+        &:focus {
+        
+          @include focus-box;
+          
+        }
+        
+      }
+      
+    }
+    
+    p {
+      
+      margin: 0;
+      color: $governo-secondary-light;
+      
+    }
+    
+    &:last-child {
+      
+      border-bottom: 1px solid #d9dfe2;
+      margin-bottom: 40px;
+      
+    }
+    
+    .box_tools {
+      
+      ul {
+        
+        margin-bottom: 0px;
+        
+      }
+      
+    }
+    
+  }
+  
+  
+  &.box_text_with_thumb {
+    
+    padding-top: 20px;
+    
+    h3, .h3 {
+      
+      &.title {
+        
+        color: $governo-primary;
+        text-decoration: underline;
+        margin-bottom: 5px;
+        
+      }
+      
+      font-size: 1.38em;
+      margin: 0 0 8px 0;
+      
+    }
+    
+    h4, .h4 {
+      
+      font-weight: 700;
+      
+    }
+    
+    h4, .h4 {
+      
+      font-size: 1.38em;
+      margin: 0;
+      
+    }
+    
+    p {
+      
+      color: $governo-secondary-light;
+      padding-top: 20px;
+      
+      &.h3 {
+        
+        margin-bottom: 0px;
+        
+      }
+      
+      &.h4 {
+        
+        margin: 0;
+        padding-top: 0px;
+        color: #000000;
+        
+      }
+      
+    }
+    
+  }
+  
+  .box_text_date {
+    
+    margin-top: 0px;
+    font-size: 0.85em !important;
+    font-weight: 400;
+    color: $governo-secondary-light;
+    margin-bottom: 25px !important;
+    
+  }
+  
+  
+  &.box_stripe {
+    
+    padding-top: 25px;
+    border-top: 15px solid #555555;
+    
+    p {
+      
+      font-size: 1.22em;
+      color: $governo-secondary-light;
+      padding-right: 2%;
+      
+    }
+    
+    h3 {
+      
+      margin-bottom: 20px;
+      
+    }
+    
+    
+  }
+  
+  
+  
+}
+
+
+.archive_large {
+  
+  .box_text_archive {
+    
+    &:last-child {
+      
+      border-bottom: none !important;
+      
+    }
+    
+  }
+  
+}
+
+.col-md-4 .box_text.box_text_side {
+  
+  h3 {
+    
+    font-size: 1.38em;
+    
+    margin-bottom: 0px;
+    
+  }
+  
+  h6, .h6 {
+    
+    margin-bottom: 15px;
+    
+  }
+  
+  .box_text_side_content {
+    
+    padding: 20px 15px 0 0;
+    
+  }
+  
+}
+
+
+.carousel-theme {
+  
+  .box_text_small {
+    
+    margin-bottom: 5px;
+    
+    h6, .h6 {
+      
+      color: $governo-secondary-light;
+      
+      a {
+        
+        color: $governo-secondary-light;
+        
+      }
+      
+    }
+    
+  }
+  
+}
+
+
+
+
+
+
+.box_tools {
+  
+  padding-top: 20px;
+  
+  ul {
+          
+    li {
+      
+      display: inline-block;
+      
+    }
+    
+  }
+  
+  a {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: $governo-primary;
+    position: relative;
+    z-index: 0;
+    padding-top: 0px;
+    overflow: hidden;
+    
+    &:hover {
+      text-decoration: none;
+    }
+    
+    &:hover {
+    
+      color: #003366;
+      
+    }
+    
+    &:visited {
+      
+      color: #6464db;
+      
+    }
+    
+    &:active {
+      
+      color: #b50000;
+      
+    }
+    
+    
+    i, span.icon {
+      display: block;
+      color: $governo-primary;
+      font-size: 1.67em;
+      line-height: 45px;
+      position: relative;
+      z-index: 0;
+    }
+    
+    em {
+      display: block;
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      right: 0;
+      background: $governo-primary;
+      color: #ffffff;
+      width: 24px;
+      height: 24px;
+      font-size: 0.72em;
+      line-height: 22px;
+      text-align: center;
+      @include border-radius-circle;
+      font-style: normal;
+      margin: 0 0 0 0;
+      display: none !important;
+    }
+  }
+  
+}
+
+
+
+.box_media {
+  
+  background: $governo-secondary-dark;
+  padding: 15px;
+  
+  .box_media_details {
+    
+    padding-top: 15px;
+    
+    .box_tools {
+      padding: 0;
+      width: 38%;
+      float: right;
+      text-align: right;
+      
+      ul {
+          
+        li {
+          
+          display: inline-block;
+          
+        }
+        
+      }
+      
+      
+      a {
+        
+        i, span.icon {
+          
+          color: #ffffff;
+          
+        }
+        
+        em {
+          
+          background: $governo-link-light;
+          color: $governo-secondary-dark;
+          font-weight: 700;
+          display: none !important;
+          
+        }
+        
+        
+        
+      }
+      
+    }
+    
+  }
+  
+  .box_media_details_text {
+    
+    width: 60%;
+    float: left;
+    
+    h6, .h6 {
+      
+      color: $governo-link-light;
+      margin: 0 0 5px 0;
+      
+      a {
+        
+        color: $governo-link-light;
+        
+      }
+      
+    }
+    
+    p {
+      
+      color: #ffffff;
+      font-size: 0.88em;
+      margin: 0;
+      
+    }
+    
+  }
+  
+}
+
+
+.thumb_container {
+  
+  img {
+    
+    width: 100%;
+    height: auto;
+    display: block;
+    
+  }
+  
+  &.thumb_half {
+    
+    @media (max-width: $screen-xs-max) {
+      padding-right: 50%;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      padding-right: 50%;
+    }
+    
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      padding-right: 40%;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      padding-right: 40%;
+    }
+    
+  }
+  
+}
+
+
+.image_container {
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 0%;
+  
+  @media (max-width: $screen-xs-max) {
+    height: 200px;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    height: 300px;
+  }
+  
+}
+
+
+
+/* fisso img presidente */
+.image_container{
+    background-attachment:initial !important;
+}
+
+
+
+
+
+/* Box Links */
+
+.box_simple_icon {
+  
+  @include rounded-corners-base;
+  @include box-shadow(0px 1px 2px 0px rgba(50, 50, 50, 0.35));
+  
+  background: $governo-primary;
+  
+  color: #ffffff;
+  
+  padding: 10px;
+  
+  position: relative;
+  z-index: 0;
+  
+  .box_simple_icon_thumb {
+    
+    width: 12%;
+    height: auto;
+    
+    float: left;
+    
+    @media (max-width: $screen-xs-max) {
+      width: 30px;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0 0 0 0;
+    }
+    
+  }
+  
+  .box_simple_icon_text {
+    
+    width: 85%;
+    float: right;
+    
+    .h3, h3 {
+      
+      font-size: 1.16em;
+      
+      a {
+        
+        &:focus {
+        
+          @include focus-box;
+          
+        }
+        
+      }
+      
+    }
+    
+    h4, .h3, h3 {
+      
+      margin: 0;
+      padding: 10px 0 0 0;
+      color: #ffffff;
+      font-weight: 700;
+      
+      @media (max-width: $screen-xs-max) {
+        padding-top: 3px;
+      }
+
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        padding-top: 3px;
+      }
+      
+      a {
+        
+        color: #ffffff;
+        
+      }
+      
+    }
+    
+  }
+  
+  @media (max-width: $screen-xs-max) {  
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    margin-bottom: 20px;
+  }
+  
+}
+
+
+
+/* Box Simple Rounded */
+
+.box_simple_rounded {
+  
+  @include rounded-corners-base;
+  @include box-shadow(0px 1px 2px 0px rgba(50, 50, 50, 0.35));
+  
+  background: $governo-primary;
+  
+  color: #ffffff;
+  
+  padding: 10px;
+  
+  position: relative;
+  z-index: 0;
+  
+  &:first-child {
+    
+    margin-bottom: 16px;
+    
+  }
+  
+  h3, .h3 {
+      
+    margin: 10px 40px 56px 18px;
+    
+    @media (max-width: $screen-xs-max) {  
+      margin: 10px;
+    }
+    
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      margin: 10px;
+    }
+    
+    a {
+      
+      color: #ffffff;
+      display: inline-block;
+      
+      &:focus {
+        
+        @include focus-box;
+        
+      }
+      
+    }
+    
+  }
+  
+  h4, .h4 {
+      
+    margin: 10px 20px 26px 18px;
+    font-weight: 700;
+    font-size: 1.4em;
+    
+    @media (max-width: $screen-xs-max) {  
+      margin: 10px;
+      
+      font-size: 1.0em;
+    }
+    
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      margin: 10px;
+      font-size: 1.2em;
+    }
+    
+    a {
+      
+      color: #ffffff;
+      
+      &:focus {
+        
+        @include focus-box;
+        
+      }
+      
+    }
+    
+  }
+  
+  &.match_height {
+    
+    h3, .h3 {
+      
+      margin-bottom: 120px;
+      
+      @media (max-width: $screen-xs-max) {  
+        margin: 10px;
+      }
+      
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        margin: 10px;
+      }
+      
+    }
+    
+  }
+  
+  @media (max-width: $screen-xs-max) {  
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    margin-bottom: 20px;
+  }
+  
+}
+
+
+
+/* Box Text Simple */
+
+
+.box_text_simple {
+  color: $governo-secondary-darker;
+  border-top: 1px solid $governo-secondary-darker;
+  
+  padding: 35px 0 0 0;
+  
+  @media (max-width: $screen-xs-max) {
+    padding: 15px 0 15px 0;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    padding: 15px 0 15px 0;
+  }
+  
+  h3, .h3 {
+    
+    font-size: 1.16em;  
+    margin-bottom: 64px;
+    
+    a {
+      
+      &:focus {
+        
+        @include focus-box;
+        
+      }
+      
+    }
+    
+  }
+  
+  h4, .h4, h3, .h3 {
+    
+    color: $governo-secondary-darker; 
+    padding: 0 20% 0 0;
+    
+    @media (max-width: $screen-xs-max) {
+      padding: 0;
+      margin: 0;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      margin: 0;
+    }
+    
+  }
+  
+  a {
+    
+    display: inline-block;
+    
+    color: $governo-secondary-darker;
+    
+    &:after {
+        
+      font-family: "governo" !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      text-transform: none !important;
+      speak: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 0.88em;
+      content: "t";
+      text-align: right;
+      padding: 0 0 0 10px;
+
+    }
+    
+  }
+  
+  &.box_text_utility {
+    
+    padding: 30px 0 0 0;
+    
+    @media (max-width: $screen-xs-max) {
+      padding: 20px 0 20px 0;
+    }
+    
+    
+    h4, .h4, h3, .h3 {
+    
+      padding: 0;
+      font-weight: 400;
+    
+    }
+    
+  }
+  
+}
+
+
+
+
+.box_text_simple_noicon {
+  
+  border-top: 1px solid #d8d8d8;
+  padding-top: 30px;
+  
+  h3, .h3 {
+    
+    margin-bottom: 25px;
+    
+    a {
+    
+      color: $governo-secondary-darker;
+      display: block;
+      
+      &:focus {
+        
+        @include focus-box;
+        
+      }
+    
+    }
+        
+  }
+  
+  .box_tools {
+    
+    padding-top: 0px;
+    margin-top: 0px;
+    
+    a {
+      
+      display: inline-block !important;
+      
+    }
+    
+  }
+  
+}
+
+
+.pin_event {
+  font-size: 0.88em;
+  font-weight: 700;  
+  padding-top: 12px;
+  
+  i, span.icon {   
+    color: $governo-primary;
+    font-size: 1.67em;
+    font-weight: normal;
+  }
+  
+  a {
+    
+    display: inline-block !important;
+    
+  }
+  
+}
+
+
+
+/* Box Article */
+
+.box_article {
+  
+  border-top: 1px solid #dddddd;
+  padding: 25px 40px 0 10px;
+  
+  
+  h4, .h4 {
+    
+    font-size: 1.3em;
+    
+  }
+  
+  .h4 {
+    
+    font-weight: 700;
+    
+    a {
+      
+      display: block;
+      
+      &:focus {
+        
+        @include focus-box;
+        
+      }
+      
+    }
+    
+  }
+  
+  p {
+    
+    color: $governo-secondary-light;
+    
+  }
+  
+  h5, .h5 {
+    
+    color: $governo-secondary-light;
+    font-weight: 400;
+    font-size: 0.85em;
+    
+  }
+  
+  h6, .h6 {
+    
+    margin-bottom: 5px;
+    @include clearfix;
+    
+  }
+  
+}
+
+
+/* Box 404 */
+
+.box_404 {
+  
+  margin-bottom: 50px;
+  
+  h1 {
+    
+    font-size: 11.12em;
+    color: $governo-primary;
+    font-weight: 400;
+    margin: 0;
+    line-height: 0.95em;
+    
+  }
+  
+  h2 {
+    
+    font-size: 3.34em;
+    color: $governo-primary;
+    margin: 0 0 40px 0;
+    
+  }
+  
+  a {
+    
+    text-decoration: underline;
+    
+  }
+  
+  p {
+    
+    margin-bottom: 30px;
+    
+  }
+  
+  .btn {
+    
+    text-decoration: none;
+    
+  }
+  
+}

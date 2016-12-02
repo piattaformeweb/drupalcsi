@@ -1,0 +1,19 @@
+name = Media Library
+description = Restricts the media library to only designated files.
+package = Media
+core = 7.x
+
+dependencies[] = file_entity
+
+test_dependencies[] = admin_views
+
+files[] = media_library.test
+
+configure = admin/config/media/media-library
+
+; Information added by Drupal.org packaging script on 2015-07-15
+version = "7.x-1.1"
+core = "7.x"
+project = "media_library"
+datestamp = "1436985540"
+

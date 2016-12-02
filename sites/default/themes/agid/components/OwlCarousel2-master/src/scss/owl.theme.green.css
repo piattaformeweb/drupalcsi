@@ -1,0 +1,69 @@
+/* 
+ * 	Green theme - Owl Carousel CSS File
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/src\/scss\/_theme\.scss}line{font-family:\000034}}
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/src\/scss\/_theme\.scss}line{font-family:\000039}}
+.owl-theme .owl-nav [class*='owl-'] {
+  color: #FFF;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/src\/scss\/_theme\.scss}line{font-family:\0000319}}
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: #4DC7A0;
+  color: #FFF;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/src\/scss\/_theme\.scss}line{font-family:\0000325}}
+.owl-theme .owl-nav .disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/src\/scss\/_theme\.scss}line{font-family:\0000332}}
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/src\/scss\/_theme\.scss}line{font-family:\0000335}}
+.owl-theme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/src\/scss\/_theme\.scss}line{font-family:\0000339}}
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/src\/scss\/_theme\.scss}line{font-family:\0000344}}
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -ms-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/Y\:\/htdocs\/web\/sites\/default\/themes\/agid\/components\/OwlCarousel2-master\/src\/scss\/_theme\.scss}line{font-family:\0000357}}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #4DC7A0;
+}

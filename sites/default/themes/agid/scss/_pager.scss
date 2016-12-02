@@ -1,0 +1,83 @@
+/* Pager */
+
+@mixin pager_arrow() {
+  width: 29px;
+  height: 20px;
+  line-height: 20px;
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  @include border-radius-circle;
+}
+
+.pager {
+  
+  line-height: 25px;
+  display: table;
+  margin: 0 auto 0 auto;
+  color: #000000;
+  font-size: 0.78em;
+  padding: 20px 0 40px 0;
+  
+  span {
+    
+    display: inline-block;
+    line-height: 25px;
+    padding: 0 2px 0 2px;
+    display: table-cell;
+    vertical-align: middle;
+     
+  }
+  
+  a {
+    
+    display: inline-block;
+    line-height: 25px;
+    padding: 0 2px 0 2px;
+    display: table-cell;
+    vertical-align: middle;
+    color: #000000;
+    
+    
+    &.pager_left {
+      @include pager_arrow;
+      
+      i, span.icon {
+        margin-top: 3px;
+        display: inline-block;
+      }
+    
+    }
+  
+    &.pager_right {
+      @include pager_arrow;
+      
+      i, span.icon {
+        margin-top: 3px;
+        display: inline-block;
+      }
+    }
+
+    &.inactive {
+      
+      opacity: 0.5 !important;
+      
+    }
+    
+  }
+  
+  .pager_first {
+    
+    padding-left: 10px;
+    
+  }
+  
+  .pager_last {
+    
+    padding-right: 10px;
+    
+  }
+  
+}

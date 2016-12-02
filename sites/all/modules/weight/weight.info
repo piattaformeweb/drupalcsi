@@ -1,0 +1,16 @@
+name = Weight
+description = Provides a weight field that allows entities to be ordered.
+core = 7.x
+package = Fields
+
+dependencies[] = field
+dependencies[] = entity
+
+files[] = views/views_handler_weight_selector.inc
+
+; Information added by Drupal.org packaging script on 2015-12-09
+version = "7.x-3.1"
+core = "7.x"
+project = "weight"
+datestamp = "1449686351"
+

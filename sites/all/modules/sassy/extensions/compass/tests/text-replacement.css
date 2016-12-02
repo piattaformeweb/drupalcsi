@@ -1,0 +1,35 @@
+.text-replacement {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url('misc/druplicon.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+
+.text-replacement-offset {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url('misc/druplicon.png');
+  background-repeat: no-repeat;
+  background-position: 25% 35%; }
+
+.text-replacement-dimensions {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url('misc/druplicon.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 88px;
+  height: 100px; }
+
+.hide-text {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.squish-text {
+  font: 0 serif;
+  text-shadow: none;
+  color: rgba(0, 0, 0, 0); }
