@@ -9600,7 +9600,7 @@ h2.title_row span a {
 
 @media (min-width: 992px) {
   #main section.block {
-    padding-top: 64px; } }
+    padding-top: 2em; } }
 
 @media (max-width: 991px) {
   .section .box_article {
@@ -9774,6 +9774,8 @@ article .field.field-name-field-carica {
   font-size: 2.667em; }
 article .field.field-name-field-area-tematica {
   margin-bottom: 25px; }
+article .field.field-name-field-allegati {
+  margin-top: 25px; }
 article .post_content img {
   margin-bottom: 0;
   margin-top: 0; }
@@ -10026,3 +10028,8 @@ fieldset legend {
         display: inline; }
   .view-tweets .box_text.box_text_small a {
     display: inline; }
+
+.node span.date-created {
+  margin-bottom: 2em;
+  font-weight: 700;
+  display: block; }

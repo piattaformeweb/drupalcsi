@@ -957,9 +957,9 @@ h2 {
 
 		&.block {
 
-		@media (min-width: $screen-md-min) {
-			padding-top: 64px;
-		}
+			@media (min-width: $screen-md-min) {
+				padding-top: 2em;
+			}
 
 		}
 
@@ -1386,7 +1386,6 @@ article {
 
 	} //article-side
 
-
 	// dettaglio scheda (evento, sindaco, ecc..)
 	.article-main {
 	
@@ -1409,25 +1408,25 @@ article {
 	//generico campo Field
 	.field  {
 
-			.field-label {
-				font-size: $font-size-h3;
-				font-weight:normal;
-			}
-			
-			.field-item {}
-			
-			
-			&.field-name-field-carica {
-			
-				font-size: $font-size-h2;
-			
-			}
-			
-			&.field-name-field-area-tematica {
-			
-				margin-bottom:$space;
-			
-			}
+		.field-label {
+			font-size: $font-size-h3;
+			font-weight:normal;
+		}
+
+		.field-item {}
+
+
+		&.field-name-field-carica {
+			font-size: $font-size-h2;
+		}
+
+		&.field-name-field-area-tematica {
+			margin-bottom:$space;
+		}
+
+		&.field-name-field-allegati {
+			margin-top: $space;
+		}
 				
 
 	}
@@ -1844,3 +1843,10 @@ fieldset {
 
 }
 
+.node {
+	span.date-created {
+		margin-bottom: 2em;
+		font-weight: 700;
+		display: block;
+	}
+}

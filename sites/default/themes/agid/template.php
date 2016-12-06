@@ -123,6 +123,8 @@ function agid_preprocess_page(&$variables) {
 	$footer_second = $variables['page']['footer_second'];
 	$footer_third = $variables['page']['footer_third'];
 	$footer_fourth = $variables['page']['footer_fourth'];
+
+    $color_gallery_first =
 	
 	$variables['top_header_grid_class'] = 'col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2';
 	$variables['top_header_right_grid_class'] = 'col-md-2 col-xs-2';

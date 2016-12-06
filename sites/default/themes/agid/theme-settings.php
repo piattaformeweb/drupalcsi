@@ -78,5 +78,42 @@ function agid_form_system_theme_settings_alter(&$form, &$form_state) {
     '#default_value' => theme_get_setting('color_gallery_third'),
   );
 
+    $form['agid_color_settings']['tabs']['gallery_fourth'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Fourth gallery'),
+        '#collapsible' => TRUE,
+        '#collapsed' => TRUE,
+    );
+
+    $form['agid_color_settings']['tabs']['gallery_fourth']['color'] = array(
+        '#type'          => 'radios',
+        '#title'         => t('Choose color'),
+        '#options'       => array(
+            'section_white'         =>t('White'),
+            'section_gray'          =>t('Gray'),
+            'section_gray_darker'   =>t('Gray darker'),
+            'section_blue'          =>t('Blue'),
+        ),
+        '#default_value' => theme_get_setting('color_gallery_fourth'),
+    );
+
+    $form['agid_color_settings']['tabs']['gallery_fifth'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Fifth gallery'),
+        '#collapsible' => TRUE,
+        '#collapsed' => TRUE,
+    );
+
+    $form['agid_color_settings']['tabs']['gallery_fifth']['color'] = array(
+        '#type'          => 'radios',
+        '#title'         => t('Choose color'),
+        '#options'       => array(
+            'section_white'         =>t('White'),
+            'section_gray'          =>t('Gray'),
+            'section_gray_darker'   =>t('Gray darker'),
+            'section_blue'          =>t('Blue'),
+        ),
+        '#default_value' => theme_get_setting('color_gallery_fifth'),
+    );
 
 }
