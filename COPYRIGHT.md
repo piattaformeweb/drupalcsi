@@ -1,0 +1,29 @@
+COPYRIGHT
+=========
+
+**CityWeb is Copyright 2016 by CSI-Piemonte – mail andrea.dipizio@csi.it - C.so Unione Sovietica 216, 10134, Turin, Italy.**
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this program as the file LICENSE.txt; if not, please see http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.
+CityWeb includes or interacts with works under other copyright notices and distributed according to the terms of the GNU General Public License or a compatible license, or under compatible conditions, including:
+
+Drupal
+Bootstrap
+Font Titillium Web
+Font Awesome
+JQuery
+JQuery Easing
+JPushMenu
+JQuery Navgoco
+OwlCarousel2
+Packery (open source)
+Venobox
+JQuery matchHeight
+JQuery ScrollTo
+QTip2
+FitVids.js
+iScroll
+Modernizr
+Html5Shiv
+Respond
