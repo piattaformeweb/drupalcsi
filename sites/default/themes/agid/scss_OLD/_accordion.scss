@@ -1,0 +1,65 @@
+.accordion-container {  }
+
+.accordion-header {
+  cursor: pointer;
+  
+  h3 {
+    
+    
+    margin: 0 0 20px 0;
+    font-size: 1.16em;
+    
+    a {
+      
+      color: #000000;
+      
+      &:focus {
+        
+        @include focus-box;
+        
+      }
+      
+    }
+    
+  }
+  
+  .h6 {
+    
+    margin-bottom: 20px;
+    
+  }
+  
+}
+
+.active-header { }
+
+.inactive-header {  }
+
+.active-header, .inactive-header { padding: 0; }
+
+.accordion-content {
+  display: none;  
+  padding-top: 5px;
+  
+  h5, .h5 {
+    
+    font-weight: 400;
+    color: $governo-secondary-light;
+    font-size: 16px;
+    
+  }
+  
+}
+
+
+.accordion-wrapper {
+  
+  background: #ffffff;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 20px 20px 0 20px;
+    
+  @include box-shadow(0px 1px 2px 0px rgba(50, 50, 50, 0.35)); 
+  @include rounded-corners-base;
+
+}

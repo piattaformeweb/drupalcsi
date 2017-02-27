@@ -1,0 +1,515 @@
+/* Calendar */
+
+.section_calendar_simple_title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: $governo-primary-darker;
+  color: #ffffff;
+  
+  a {
+    
+    color: #ffffff;
+    
+    &:hover {
+      
+      color: #f2f2f2;
+      
+    }
+    
+  }
+  
+  h2, .h2, h3, .h3 {
+    
+    color: #ffffff;
+    margin-bottom: 0px;
+    
+  }
+  
+  h4, .h4 {
+    
+    color: #ffffff;
+    margin: 10px 0 0 0;
+  }
+  
+  @media (max-width: $screen-xs-max) {
+    
+    .container-smaller {
+    
+      .title_row {
+      
+        h2, .h2, h3, .h3 {
+        
+          text-align: center;
+        
+          &.pull-right {
+          
+            float: none !important;
+            
+            margin-top: 10px;
+          
+          }
+        
+        }
+      
+      }
+    
+    }
+    
+  }
+  
+  
+}
+
+
+
+
+.section_calendar_simple_days {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: $governo-primary-dark;
+  color: #ffffff;
+  position: relative;
+  @include box-shadow(0px 2px 5px 0px rgba(50, 50, 50, 0.55));
+  
+  a {
+    
+    color: #ffffff;
+    
+    &:hover {
+      
+      color: #f2f2f2;
+      
+    }
+    
+  }
+  
+  .container-smaller {
+	  
+	  @media (max-width: $screen-xs-max) {
+		  
+		  padding-left: 20%;
+		  padding-right: 20%;
+		  
+	  }
+	  
+	  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		  
+		  padding-left: 8%;
+		  padding-right: 8%;
+		  
+	  }
+	  
+  }
+  
+}
+
+
+
+
+.section_calendar_simple_events {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: $governo-primary-lighter;
+  color: #1f1f1f;
+  overflow: hidden;
+  height: auto !important;
+  
+  a {
+    
+    color: #1f1f1f;
+    
+    &:hover {
+      
+      color: #333333;
+      
+    }
+    
+  }
+  
+  h5, .h5 { font-weight: 400; }
+  
+  h4, .h4 { margin-bottom: 0; }
+  
+  &.hide_content {
+    
+    height: 0px !important;
+    
+  }
+  
+  .container-smaller {
+    
+    margin-top: 30px;
+    margin-bottom: 20px;
+    
+  }
+  
+  &.section_calendar_simple_events_hidden {
+    
+    height: 0px !important;
+    
+  }
+  
+}
+
+
+.calendar_simple_event {
+  
+  a {
+    
+    display: inline-block;
+    
+  }
+  
+  border-right: 1px solid $governo-primary-light;
+  
+  padding: 0 40px 50px 25px;
+  
+  @media (max-width: $screen-xs-max) {
+    border-right: none;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    
+  }
+  
+}
+
+
+
+
+.events_tab .owl-stage {
+  overflow: hidden;
+}
+
+.events_tab, .events_tab .owl-stage {
+  height: 0px !important;
+}
+
+.events_tab.current, .events_tab.current .owl-stage {
+  height: auto !important;
+}
+
+.events_tab .owl-nav {
+  
+  display: none;
+  
+}
+
+.events_tab.current .owl-nav {
+  
+  display: block;
+  
+}
+
+
+.date_day {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 0;
+  
+  &.oggi {    
+    font-weight: 700;
+  }
+  
+  &:hover {
+    
+    background: #003367;
+    
+  }
+  
+  &.current {    
+    background: #003367;
+  }
+  
+}
+
+.date_day_no_events {
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  @include opacity (0.5);  
+}
+
+.date_day .toggle_event_tab, .date_day_no_events .toggle_event_tab {
+  display: none;
+}
+
+.date_day.current .toggle_event_tab {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  
+  &:before {
+        
+    font-family: "governo" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.83em;
+    content: "p";
+    text-align: center;
+    
+  }
+  
+  &:hover {
+      
+    text-decoration: none;
+      
+  }
+  
+  
+}
+
+.date_day.current .toggle_event_tab.inactive {
+  
+  &:before {
+    content: "q";
+  }
+  
+}
+
+.carousel_agenda_events {
+  
+  .item {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-right: 1px solid #d9dfe2 !important;
+    
+    @media (max-width: $screen-xs-max) {
+		  
+		  max-width: 536px;
+		  border: none !important;
+		  margin-left: auto;
+		  margin-right: auto;
+		  
+		  .box_text {
+  		  
+  		  &.box_text_small {
+    		  
+    		  .box_text_container {
+      		  
+      		  padding-left: 16px;
+      		  padding-right: 16px;
+      		  
+    		  }
+    		  
+  		  }
+  		  
+		  }
+		  
+	  }
+	  
+	  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		  
+		  width: 536px;
+		  border: none !important;
+		  margin-left: auto;
+		  margin-right: auto;
+		  
+		  .box_text {
+  		  
+  		  &.box_text_small {
+    		  
+    		  .box_text_container {
+      		  
+      		  padding-left: 16px;
+      		  padding-right: 16px;
+      		  
+    		  }
+    		  
+  		  }
+  		  
+		  }
+		  
+		  
+		  
+	  }
+    
+  }
+  
+  .box_text_small {
+    
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    
+    h5, .h5 {
+      
+      font-size: 2em;
+      color: $governo-secondary-light;
+      font-weight: 400;
+      
+    }
+    
+    h3 {
+	    
+	    font-weight: 700;
+	    
+    }
+    
+  }
+  
+}
+
+
+.section_agenda_days {
+  
+  background: $governo-primary-darker;
+  color: #ffffff;
+  
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+  .owl-nav {
+    
+    margin: 0;
+    
+  }
+  
+  .date_day {
+    
+    cursor: default;
+    
+    border-right: 1px solid #4d6a84;
+    
+    padding: 10px 0 0 0;
+    
+    @media (max-width: $screen-xs-max) {
+      border-right: none;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      border-right: none;
+    }
+    
+    &:hover {
+      
+      background: $governo-primary-darker;
+      
+    }
+    
+  }
+  
+  .date_day_no_events {
+    
+    border-right: 1px solid #4d6a84;
+    
+    padding: 10px 0 0 0;
+    
+  }
+  
+}
+
+
+
+.section_agenda_events {
+	
+	padding-top: 0px;
+	padding-bottom: 0px;
+	
+}
+
+
+/* Filters Buttons */
+
+.filters_btns {
+	
+	.btn {
+		
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
+		text-align: center;
+		background: $gray-lighter;
+		color: $governo-secondary-dark;
+		margin-bottom: 15px;
+		
+		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+			font-size: 12px;
+		}
+		
+		&:hover, .active {
+			
+			background: #004a4d;
+			color: #65dde0;
+			
+		}
+		
+	}
+	
+}
+
+.filters_btn_wrapper {
+  
+  margin-top: 45px;
+  
+}
+
+
+
+.datepicker_wrapper, .filters_btn_wrapper {
+  
+  @media (max-width: $screen-xs-max) {
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}
+
+
+.datepicker_wrapper {
+  
+  @media (max-width: $screen-xs-max) {
+    
+    .h6 {
+      
+      &.strong {
+        
+        margin-top: 30px;
+        display: block;
+        
+      }
+      
+    }
+    
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    
+    .h6 {
+      
+      &.strong {
+        
+        margin-top: 30px;
+        display: block;
+        
+      }
+      
+    }
+    
+  }
+  
+}
+

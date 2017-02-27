@@ -1,0 +1,1426 @@
+/* NAV */
+
+
+
+/* Menu Nav Trigger */
+
+.burger_wrapper {
+  position: absolute;
+  z-index: 300;
+  top: 0;
+  left: 16px;
+  
+  display: table;
+  height: 192px;
+  transition: all 0.3s ease;
+  
+  
+  @media (max-width: $screen-xs-max) {
+    height: 100px;
+    left: 18px;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    height: 125px;
+  }
+  
+}
+
+.burger_container {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  
+  
+  @media (max-width: $screen-xs-max) {
+    height: 30px;
+  }
+  
+}
+
+.toggle-menu {
+  
+  width: 64px;
+  height: 64px;
+  display: block;
+  padding: 0px;
+  cursor: pointer;
+  
+  
+  @media (max-width: $screen-xs-max) {
+    width: 30px;
+    height: 30px;
+    
+  }
+  
+  @include transition (right 0.3s);
+  
+  .bar {
+    
+    height: 4px;
+    width: 40px;
+    background: #ffffff;
+    position: absolute;
+    left: 12px;
+    top: 30px;
+    
+    
+    @media (max-width: $screen-xs-max) {
+      width: 30px;
+      top: 13px;
+      left: 0px;
+    }
+    
+    @include transition (all 0.3s cubic-bezier(0.35, 0.085, 0.305, 1.005));
+       
+    &:first-child {
+	    
+	    top: 15px;
+	    
+	    @media (max-width: $screen-xs-max) {
+        top: 3px;
+      }
+	    
+	  }
+    
+    
+    &:last-child {
+      top: 45px;
+      
+      @media (max-width: $screen-xs-max) {
+        top: 23px;
+      }
+      
+    }
+    
+  }
+  
+  &.menu-active .bar {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ms)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+    position: absolute;
+    top: 30px;
+    height: 4px;
+    background: $governo-link-light;
+    
+    @media (max-width: $screen-xs-max) {
+      top: 12px;
+    }
+    
+    @include transition (all 0.3s cubic-bezier(0.35, 0.085, 0.305, 1.005));
+  }
+  
+  
+  &.menu-active .bar:first-child {
+    @include rotate (45deg);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ms)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+    background: $governo-link-light;
+  }
+  
+  &.menu-active .bar:last-child {
+    @include rotate (-45deg);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ms)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+    background: $governo-link-light;
+  }
+  
+  
+}
+
+
+
+.logo_container {
+  margin: 0;
+  margin: 48px 0 0 120px;
+  position: relative;
+  z-index: 0;
+  
+  @media (max-width: 419px) {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 210px;
+    display: block;
+  }
+  
+  @media (min-width: 420px) and (max-width: $screen-xs-max) {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    display: block;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    margin-top: 25px;
+    margin-left: 80px;
+  }
+
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    margin-top: 55px;
+    margin-left: 80px;
+  }
+  
+}
+
+.logo_wrapper {
+  width: 74px;
+  height: auto;
+  display: block;
+  position: absolute;
+  z-index: 100;
+  top: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+  
+  a {
+    
+    display: block;
+    
+  }
+  
+  @media (max-width: $screen-xs-max) {
+    width: 52px;
+    top: 4px;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    width: 52px;
+    top: 6px;
+  }
+
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    width: 65px;
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    margin: 0 0 0 0;
+    transition: all 0.3s ease;
+  }
+  
+}
+
+
+
+.logo_text {
+  padding: 0 0 0 100px;
+  
+
+  @media (max-width: 419px) {
+    padding-left: 64px;
+    padding-top: 6px;
+  }
+  
+  @media (min-width: 420px) and (max-width: $screen-xs-max) {
+    padding-left: 64px;
+    padding-top: 12px;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    padding-left: 68px;
+  }
+
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    padding-left: 80px;
+  }
+  
+  
+  h1, .h1, h2, .h2 {
+  
+    font-size: 1.778em;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: #ffffff;
+    display: block;
+    margin: 8px 0 0 0;
+    letter-spacing: -0.5pt;
+    
+    
+    @media (max-width: 419px) {
+      font-size: 0.84em;
+      line-height: 1.2em;
+      font-weight: 400;
+      margin-top: 0px;
+    }
+  
+    @media (min-width: 420px) and (max-width: $screen-xs-max) {
+      font-size: 0.84em;
+      line-height: 1.2em;
+      font-weight: 400;
+      margin-top: 0px;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      font-size: 1.39em;
+      line-height: 1.2em;
+      margin-top: 5px;
+    }
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      font-size: 1.68em;
+      line-height: 1.2em;
+      margin-top: 4px;
+    }
+    
+  }
+  
+  
+
+  @media (max-width: 419px) {
+    
+  }
+
+  @media (min-width: 420px) and (max-width: $screen-xs-max) {
+    strong {
+      
+      display: block;
+      
+    }
+  }
+  
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    strong {
+      
+      display: block;
+      
+    }
+  }
+  
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    strong {
+      
+      display: block;
+      
+    }
+  }
+  
+  @media (min-width: $screen-lg-min) {
+    strong {
+      
+      display: block;
+      
+    }
+  }
+     
+  
+
+}
+
+
+
+
+
+.nav_tools {
+  padding: 0 24px 0 0;  
+}
+
+.nav_social {
+  
+  color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  text-align: right;
+  display: block;
+  
+  b {
+    
+    @include image-replacement;
+    
+  }
+  
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    display: none;
+  }
+  
+  span {
+    padding: 0 15px 0 0;    
+  }
+  
+  span.icon {    
+    padding: 0; 
+  }
+  
+  a {
+    background: #ffffff;
+    display: inline-block;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    line-height: 36px;
+    margin: 0 2px 0 2px;
+    @include border-radius-circle;
+    
+    &:hover {
+      background: $link-hover-color;
+      color: #ffffff;
+      text-decoration: none;
+    }    
+    
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      width: 22px;
+      height: 22px;
+      line-height: 26px;
+      font-size: 0.78em;
+    }
+
+  }
+  
+}
+
+
+.flag_container {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  width: 100%;
+  clear: both;
+  transition: all 0.4s ease;
+  top: 184px;
+  
+  @media (max-width: $screen-xs-max) {
+    top: 92px;
+    
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    top: 120px;
+  }
+  
+  div {
+    width: (100% / 3);
+    height: 8px;
+    overflow: hidden;
+    float: left;
+    
+    &.green {
+      background: #009246;
+    }
+    &.white {
+      background: #ffffff;
+    }
+    &.red {
+      background: #ce2b37;
+    }
+  }
+  
+  
+}
+
+
+
+.sub_nav {
+  background: $governo-primary-light;
+  position: absolute;
+  z-index: 0;
+  top: 190px;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s ease;
+  font-weight: 200;
+  
+  
+  @media (max-width: $screen-xs-max) {
+    top: 96px;
+    display: none;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    top: 128px;
+  }
+  
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding: 22px 0 18px 0;
+    
+    @media (max-width: $screen-xs-max) {
+      padding: 12px 0 12px 0;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      padding: 15px 0 15px 0;
+    }
+    
+    
+    li {
+      display: inline-block;
+      margin: 0 0 0 0;
+      padding: 0 40px 0 40px;
+      font-size: 1.18em;
+      line-height: 21px;
+      
+      @media (max-width: $screen-xs-max) {
+        font-size: 0.72em;
+        line-height: 16px;
+        padding: 0 4px 0 4px;
+      }
+
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        font-size: 1em;
+        line-height: 18px;
+        padding: 0 20px 0 20px;
+      }
+      
+      a {
+        color: #ffffff;        
+      }
+      
+    }
+  }
+}
+
+
+
+.main_nav {
+  position: relative;
+  z-index: 1;
+  height: 192px;
+  background: $governo-primary;
+  transition: all 0.4s ease;
+  
+  &.main_nav_border_color {
+    
+    border-bottom: 8px solid #cccccc;
+    
+  }
+  
+  @media (max-width: $screen-xs-max) {
+    height: 100px;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    height: 125px;
+  }
+  
+}
+
+
+.main_nav_container {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background: $governo-primary;
+  
+  
+  .main_nav {
+	    
+    .container {
+	    
+	    @media (min-width: 1440px) and (max-width: 1679px) {
+		    
+		    width: 100%;
+		    
+		    .nav_social {
+			    
+			    float: none;
+			    clear: both;
+			    
+		    }
+		    
+		    .nav_search {
+			    
+			    width: 365px;
+			    float: right;
+			    
+		    }
+		    
+	    }
+	       
+	    @media (min-width: 1680px) {
+		    
+		    width: 1680px;
+		    
+		    .nav_social {
+			    
+			    float: none;
+			    clear: both;
+			    
+		    }
+		    
+		    .nav_search {
+			    
+			    width: 365px;
+			    float: right;
+			    
+		    }
+		    
+	    }
+	    
+    }
+    
+  }
+  
+  &.menu_sticky {
+    
+    .sub_nav {
+      
+      top: -64px;
+      
+    }
+
+    .main_nav {     
+      height: 64px; 
+      border: none !important;    
+    }
+    
+    .burger_wrapper {
+      height: 64px;
+    }
+      
+    .logo_container {     
+      margin-top: 0px;    
+    }
+    
+    .nav_tools {
+      
+      .nav_social {      
+        display: none;     
+      }
+         
+    }
+    
+    .flag_container {      
+      top: -195px;
+    }
+    
+    .logo_wrapper {
+      
+      width: 45px;
+      margin-top: 4px;
+      
+    }
+    
+    .logo_text {
+      
+      padding-left: 72px;
+      height: 64px;
+      line-height: 64px;
+      
+      
+      @media (max-width: 419px) {
+        padding-left: 64px;
+        padding-top: 9px;
+      }
+  
+      @media (min-width: 420px) and (max-width: $screen-xs-max) {
+        padding-left: 64px;
+      }
+      
+      
+      h1, .h1, h2, .h2 {
+        
+        font-size: 1em;
+        line-height: 64px;
+        font-weight: 400;
+        margin-top: 0px !important;
+        
+        
+        @media (max-width: 419px) {
+          font-size: 0.84em;
+          line-height: 15px;
+          margin-top: 0px !important;
+        }
+  
+        @media (min-width: 420px) and (max-width: $screen-xs-max) {
+          font-size: 0.84em;
+          line-height: 20px;
+          margin-top: 0px !important;
+        }
+        
+      }
+    
+      
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        strong {
+          
+          display: inline;
+          padding-right: 10px;
+          
+        }
+      }
+      
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        
+        strong {
+          
+          display: inline;
+          padding-right: 10px;
+          
+        }
+        
+      }
+      
+      @media (min-width: $screen-lg-min) {
+        
+        strong {
+          
+          display: inline;
+          padding-right: 10px;
+          
+        }
+        
+      }
+      
+    }
+    
+    
+  }
+  
+}
+
+
+
+
+.nav_search input[type=submit] {
+  font-family: "governo";
+  font-size: 1.39em;
+  border: 0px;
+  padding: 0;
+  margin: 0;
+  color: #000;
+  cursor: pointer;
+  background: none;
+  
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    font-size: 1em;
+  }
+}
+
+.nav_search {
+  display: block;
+  position: relative;
+  z-index: 0;
+  
+  @media (max-width: $screen-xs-max) {
+    margin-top: 12px;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    margin-top: 40px;
+  }
+  
+  input[type="text"] {
+    padding-right: 64px;
+    position: relative;
+    z-index: 0;
+    
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      padding-right: 42px;
+    }
+    
+  }
+  
+  input.form-control {
+    
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      height: 42px;
+      font-size: 0.89em;
+      line-height: 42px !important;
+    }
+    
+  }
+  
+  input[type="submit"] {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    margin: 0;
+    background: $governo-primary-light;
+    color: #ffffff;
+    
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      width: 42px;
+      height: 42px;
+    }
+    
+  }
+}
+
+.menu_sticky .nav_search {
+  
+  margin-top: 12px;
+  
+  input.form-control {
+    
+    height: 42px;
+    font-size: 0.89em;
+    line-height: 42px !important;
+  }
+  
+  input[type="submit"] {
+    width: 42px;
+    height: 42px;
+    
+    
+  }
+  
+}
+
+
+.cbp-spmenu {
+  
+  .nav_search {
+    
+    margin-top: 0px;
+    
+    input.form-control {
+      height: 42px;
+      font-size: 0.89em;
+      line-height: 42px !important;
+      background: $gray-lighter;
+    }
+    
+    input[type="submit"] {
+      width: 42px;
+      height: 42px;
+    
+    }
+    
+    
+  }
+  
+}
+
+
+
+
+
+
+
+.top_nav {
+  
+  background: $governo-primary-darker;
+  color: #ffffff;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  font-size: 1.2em;
+  
+  @media (max-width: $screen-xs-max) {
+    font-size: 0.7em;
+    height: 32px;
+    text-align: center;
+    
+  }
+  
+  a {
+    
+    color: #ffffff;
+    
+  }
+  
+  p {
+    
+    margin-top: 16px;
+    
+    @media (max-width: $screen-xs-max) {
+      
+      margin-top: 6px;
+      margin-bottom: 0px;
+      
+      span {
+        
+        display: none;
+        
+      }
+      
+    }
+    
+    strong {
+      
+      margin-right: 10px;
+      
+      @media (max-width: $screen-xs-max) {
+        
+        
+        
+      }
+      
+    }
+    
+  }
+  
+  ul {
+    
+    margin-top: 14px;
+    
+    @media (max-width: $screen-xs-max) {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    li {
+      
+      display: inline-block;
+      margin: 0 40px 0 40px;
+      
+      @media (max-width: $screen-xs-max) {
+        margin: 0 5px 0 5px;
+      }
+      
+    }
+    
+  }
+  
+}
+
+
+.fp_main_nav_container {
+  
+  .main_nav {
+    
+    margin-top: 64px;
+    
+    @media (max-width: $screen-xs-max) {
+      margin-top: 32px;
+    }
+    
+  }
+  
+  .burger_wrapper {
+      
+    height: 252px;
+    
+    
+    @media (max-width: $screen-xs-max) {
+      height: 132px;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      height: 185px;
+    }
+    
+    .toggle-menu {
+        
+      margin-top: 60px;
+      
+      @media (max-width: $screen-xs-max) {
+        margin-top: 30px;
+      }
+       
+    }
+      
+  }
+  
+  .logo_container {
+    
+    .logo_text {
+      
+      @media (max-width: 419px) {
+        
+        
+        strong {
+          
+          display: block;
+          
+        }
+        
+      }
+    
+      @media (min-width: 420px) and (max-width: $screen-xs-max) {
+        strong {
+          
+          display: block;
+          
+        }
+      }
+      
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        strong {
+          
+          display: inline;
+          
+        }
+        
+        span {
+          
+          display: block;
+          
+        }
+      }
+      
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        strong {
+          
+          display: inline;
+          
+        }
+        
+        span {
+          
+          display: block;
+          
+        }
+        
+      }
+      
+      @media (min-width: $screen-lg-min) {
+        strong {
+          
+          display: inline;
+          
+        }
+        
+        span {
+          
+          display: block;
+          
+        }
+        
+      }
+      
+    }
+    
+    @media (max-width: 419px) {
+      padding-left: 20px;
+      width: 235px;
+      
+      .logo_text {
+        
+        padding-top: 10px;        
+        
+      }
+      
+      h1, .h1 {
+        
+        font-size: 0.84em;
+        line-height: 15px;
+        
+      }
+      
+      .logo_wrapper {
+        
+        margin-left: 20px;
+        
+      }
+      
+    }
+    
+    @media (min-width: 420px) and (max-width: $screen-xs-max) {
+    
+      width: 320px;
+      
+      .logo_text {
+        
+        padding-top: 6px;
+        
+      }
+    
+    }
+
+  }
+  
+  
+  &.menu_sticky {
+    
+    .top_nav {
+      
+      height: 4px;
+      
+      .container {
+        
+        display: none;
+        
+      }
+      
+    }
+    
+    .main_nav {
+      
+      margin-top: 0px;
+      
+    }
+    
+    .burger_wrapper {
+      
+      height: 64px;
+      
+      .toggle-menu {
+        
+        margin-top: 0px;
+        
+      }
+      
+    }
+    
+    .logo_text {
+      
+      @media (max-width: 419px) {
+        
+        padding-top: 4px;
+        padding-left: 55px;
+        
+        h1, .h1 {
+          
+          line-height: 16px;
+          
+        }
+        
+        strong {
+          
+          display: block;
+          
+        }
+        
+      }
+    
+      @media (min-width: 420px) and (max-width: $screen-xs-max) {
+        
+        padding-top: 8px;
+        
+        h1, .h1 {
+          
+          line-height: 16px;
+          
+        }
+        
+        
+        strong {
+          
+          display: block;
+          
+        }
+      }
+      
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        
+        strong {
+          
+          display: inline;
+          padding-right: 4px;
+          
+        }
+        
+        span {
+          
+          display: inline;
+          
+        }
+      }
+      
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        strong {
+          
+          display: inline;
+          padding-right: 4px;
+          
+        }
+        
+        span {
+          
+          display: inline;
+          
+        }
+        
+      }
+      
+      @media (min-width: $screen-lg-min) {
+        strong {
+          
+          display: inline;
+          padding-right: 4px;
+          
+        }
+        
+        span {
+          
+          display: inline;
+          
+        }
+        
+      }
+      
+
+      h1, .h1, h2, .h2 {
+        
+        @media (max-width: 419px) {
+          
+          margin-top: 4px !important;
+        }
+        
+      }
+      
+    }
+    
+  }
+  
+}
+
+
+
+
+
+.sb-search {
+  display: none;
+	position: fixed;
+	width: 100%;
+	top: 100px;
+	left: 0;
+	z-index: 250;
+	background: $governo-primary-light;
+	height: 0px;
+	padding: 0px;
+	
+	@media (max-width: $screen-xs-max) {
+    display: block;
+  }
+	
+}
+
+.sb-search-input {
+	position: relative;
+	border: none;
+	outline: none !important;
+	background: #fff;
+	width: 100%;
+	height: 48px;
+	margin: 0;
+	padding: 0px 55px 0px 20px;
+	font-family: inherit;
+	font-size: 20px;
+	
+	display: none;
+}
+
+
+.sb-icon-search,
+.sb-search-submit  {
+	width: 48px;
+	height: 48px;
+	display: block;
+	padding: 0;
+	margin: 0;
+	line-height: 48px;
+	text-align: center;
+	cursor: pointer;
+	outline: none !important;
+}
+
+.sb-search-submit {
+	color: $governo-primary;
+	border: none;
+	outline: none;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	
+	z-index: 10;
+	display: none;
+	
+	background: none !important;
+	
+	color: #555555;
+	font-size: 1.4em;
+	
+	font-family: "governo" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sb-icon-search {
+	color: #fff;
+	background: $governo-primary-light;
+	z-index: 90;
+	position: absolute;
+	top: -78px;
+	right: 16px;	
+	font-size: 1.4em;
+	line-height: 2.2;
+}
+
+.sb-icon-search:before {
+	
+	font-family: "governo" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  content: "h";
+	
+}
+
+/* Open state */
+
+
+
+.sb-search.sb-search-open .sb-search-input, .sb-search.sb-search-open .sb-search-submit {
+  
+  display: block;
+  
+}
+
+.sb-search.sb-search-open {
+  
+  top: 100px;
+  height: auto;
+  padding: 10px;
+  
+}
+
+.main_nav_container {
+  
+  &.fp_main_nav_container {
+    
+    .sb-icon-search {
+      
+      top: -43px;
+      
+    }
+    
+    .sb-search.sb-search-open {
+  
+      top: 132px;
+      
+    }
+    
+  }
+  
+  &.menu_sticky {
+    
+    .sb-search.sb-search-open {
+  
+      top: 63px;
+      
+    }
+    
+    .sb-icon-search {
+      
+      top: -91px;
+      
+    }
+    
+  }
+  
+  .sb-search.sb-search-open {
+      
+    .sb-icon-search {
+      
+      display: none;
+      
+    }
+    
+  }
+  
+}
+
+
+
+
+.cbp-spmenu-right {
+  
+  ul {
+    
+    font-size: 0.84em;
+    
+    li {
+      
+      border-bottom: 1px solid #d8d8d8;
+      position: relative;
+      z-index: 0;
+      
+      a {
+        
+        display: block;
+        padding: 16px 64px 16px 16px;
+        text-decoration: underline;
+        position: relative;
+        z-index: 0;
+        
+      }
+      
+      &.active-trail {
+        
+        background: #00c4c9;
+        
+        a {
+          
+          color: #003e54;
+          
+        }
+        
+      }
+      
+      &.has-submenu {
+        
+        a {
+          
+          font-weight: 500;
+          
+        }
+        
+        &:before {
+          font-family: "governo" !important;
+          font-style: normal !important;
+          font-weight: normal !important;
+          font-variant: normal !important;
+          text-transform: none !important;
+          speak: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          
+          content: "q";
+          
+          position: absolute;
+          z-index: 1;
+          top: 50%;
+          right: 24px;
+          height: 100%;
+          margin-top: -5px;
+          
+          color: $brand-primary;
+          
+        }
+        
+      }
+      
+    }
+    
+  }
+  
+}
+
+
+
+
+
+
