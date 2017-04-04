@@ -1,4 +1,4 @@
-CMS Drupal 7 per i siti web dei Comuni
+Cityweb – CMS per siti web istituzionali dei comuni italiani
 ============================================================
 Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.– piattaformeweb@csi.it
 

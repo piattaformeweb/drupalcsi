@@ -1,0 +1,14 @@
+name = Magnific Popup
+description = Provides Magnific Popup formatter for File Entity and Image fields.
+package = "Media"
+core = 7.x
+dependencies[] = libraries
+dependencies[] = file_entity
+dependencies[] = jquery_update
+
+; Information added by Drupal.org packaging script on 2016-04-20
+version = "7.x-1.2"
+core = "7.x"
+project = "magnific_popup"
+datestamp = "1461170055"
+

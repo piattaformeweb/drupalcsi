@@ -1,23 +1,4 @@
 @charset "UTF-8";
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by  the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
- * You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/
- */
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* NORMALIZE v3.0.2 */
 @import url(../css/spid-button.min.css);
 html {
@@ -207,10 +188,6 @@ textarea:focus,
 button:focus {
   outline: none; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* PRINT */
 @media print {
   *,
@@ -282,10 +259,6 @@ button:focus {
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important; } }
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 @font-face {
   font-family: "governo";
   src: url("../fonts/governo.eot");
@@ -433,10 +406,6 @@ button:focus {
 .icon-icon-right:before {
   content: "\74"; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* BASIC SETTINGS */
 * {
   -webkit-box-sizing: border-box;
@@ -523,10 +492,6 @@ hr {
 [role="button"] {
   cursor: pointer; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* TYPOGRAPHY */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -929,10 +894,6 @@ address {
   font-style: normal;
   line-height: 1.42857; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* GRID */
 .container {
   margin-right: auto;
@@ -1673,10 +1634,6 @@ address {
   .col-lg-offset-12 {
     margin-left: 100%; } }
 /* END GRID */
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* TABLES */
 table {
   background-color: transparent; }
@@ -1884,10 +1841,6 @@ table th[class*="col-"] {
         .table-responsive > .table-bordered > tfoot > tr:last-child > td {
           border-bottom: 0; } }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* FORMS */
 fieldset {
   padding: 0;
@@ -2360,10 +2313,6 @@ select[multiple].input-lg {
 .form-item.form-type-checkbox label.option {
   margin: 0 0 0 4px; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* BUTTONS */
 .btn, .action input.form-submit {
   display: inline-block;
@@ -2576,10 +2525,6 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* JPUSH MENU */
 .cbp-spmenu {
   position: fixed;
@@ -2761,10 +2706,6 @@ input[type="button"].btn-block {
 .menu_sticky .cbp-close {
   top: 64px; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* Navgoco */
 .navgoco, .navgoco ul, .navgoco li {
   list-style: none; }
@@ -2939,10 +2880,6 @@ ul.navgoco {
   padding-left: 6em; }
 
 /* End Navgoco */
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* Carousel */
 /* 
  *  Core Owl Carousel CSS File
@@ -3248,10 +3185,6 @@ ul.navgoco {
   .carousel-theme.carousel_album .media_container .media_content h2 {
     font-size: 1.1em; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* ------ venobox.css --------*/
 .vbox-overlay *, .vbox-overlay *:before, .vbox-overlay *:after {
   -webkit-backface-visibility: hidden;
@@ -3578,10 +3511,6 @@ a.vbox-cc-text.link {
   color: white; }
 
 /* End VBox Override */
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 .qtip {
   position: absolute;
   left: -28000px;
@@ -3961,10 +3890,6 @@ x:-o-prefocus, .qtip .qtip-tip {
   background: #b4efef;
   cursor: pointer; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* UTILITIES */
 .clearfix:before, .clearfix:after {
   content: " ";
@@ -4013,10 +3938,6 @@ x:-o-prefocus, .qtip .qtip-tip {
 .affix {
   position: fixed; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* RESPONSIVE UTILITIES */
 @-ms-viewport {
   width: device-width; }
@@ -4195,10 +4116,6 @@ x:-o-prefocus, .qtip .qtip-tip {
 @media print {
   .hidden-print {
     display: none !important; } }
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* COLORS */
 /* Backgrounds */
 .bg_color_red_pink {
@@ -4322,10 +4239,6 @@ x:-o-prefocus, .qtip .qtip-tip {
 .border_color_green {
   border-color: #22ac41 !important; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* ELEMENTI CUSTOM */
 /**
  * Hide elements from all users.
@@ -5222,10 +5135,6 @@ li.parent_book {
 li.parent_book a {
   color: #ffffff; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* Sections */
 @media (max-width: 767px) {
   .section_archive_list .half_base {
@@ -5595,10 +5504,6 @@ li.parent_book a {
   overflow: hidden;
   width: 100%; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* Box Text */
 .box_text h4 {
   font-weight: 700; }
@@ -6278,10 +6183,6 @@ li.parent_book a {
   .box_404 .btn {
     text-decoration: none; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* Isotope Grid */
 .grid {
   margin: 0 -10px 0 -10px; }
@@ -6359,10 +6260,6 @@ li.parent_book a {
   margin: 0 1% 20px 1%; }
 
 /* End Recupero style gallery */
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* Share Buttons */
 @media (min-width: 1440px) {
   .share_buttons_container {
@@ -6607,10 +6504,6 @@ li.parent_book a {
   -o-transform: translate(0px, 0px) !important;
   transform: translate(0px, 0px) !important; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* Media Gallery */
 .media_container {
   margin: 4px 2px 4px 2px; }
@@ -6819,10 +6712,6 @@ li.parent_book a {
       .media_foto .media_foto_buttons a.media_foto_right {
         right: 20px; } }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* Calendar */
 .section_calendar_simple_title {
   padding-top: 20px;
@@ -7068,10 +6957,6 @@ li.parent_book a {
     margin-top: 30px;
     display: block; } }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* Map */
 .map_small_container {
   background-repeat: no-repeat;
@@ -7111,10 +6996,6 @@ li.parent_book a {
       .map_small_container .map_text {
         text-align: center; } }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* Footer */
 .footer_container h3, .footer_container .h3 {
   font-size: 1.33em; }
@@ -7374,10 +7255,6 @@ li.parent_book a {
         color: #000000;
         font-size: 1.39em; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* Post Content */
 .post_content {
   line-height: 1.60em; }
@@ -7497,10 +7374,6 @@ li.parent_book a {
   max-width: 100% !important;
   height: auto !important; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* Sidebar */
 aside.sidebar h4, aside.sidebar .h4 {
   font-weight: 700;
@@ -7560,10 +7433,6 @@ aside.sidebar .sidebar_links {
   aside.sidebar {
     margin-bottom: 20px; } }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* Pager */
 .pager {
   line-height: 25px;
@@ -7622,10 +7491,6 @@ aside.sidebar .sidebar_links {
   .pager .pager_last {
     padding-right: 10px; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* CLNDR */
 .mini-clndr {
   margin: 0 0 0 0;
@@ -7720,10 +7585,6 @@ aside.sidebar .sidebar_links {
 .datepicker_wrapper .h6.strong {
   padding-left: 3em; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 .accordion-header {
   cursor: pointer; }
   .accordion-header h3 {
@@ -7760,10 +7621,6 @@ aside.sidebar .sidebar_links {
   -moz-border-radius: 4px;
   border-radius: 4px; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /* NAV */
 /* Menu Nav Trigger */
 .burger_wrapper {
@@ -8474,10 +8331,6 @@ aside.sidebar .sidebar_links {
       margin-top: -5px;
       color: #337ab7; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 a:focus {
   background: #ff8c00;
   outline: #ff8c00 solid 0px;
@@ -8525,10 +8378,6 @@ select:focus {
   outline: #ff8c00 solid 3px;
   background: #65dbde; }
 
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
@@ -9344,10 +9193,6 @@ button.close {
 @media (min-width: 992px) {
   .modal-lg {
     width: 900px; } }
-/**
- * Cityweb ÔÇô CMS per siti web istituzionali dei comuni italiani
- * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.ÔÇô piattaformeweb@csi.it
- */
 /** Drupal-boostrap optimized **/
 body {
   color: #000; }

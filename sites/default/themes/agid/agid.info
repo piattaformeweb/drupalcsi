@@ -1,11 +1,3 @@
-;; CMS Drupal 7 per i siti web dei Comuni
-;; Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.– piattaformeweb@csi.it
-;; This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by  the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-;; This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-;; You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/
-
-
-
 name = Agid Bootstrap (SASS)
 description = Tema basato su Bootstrap 3.x rispondente alle "Linee guida di design per i siti web della PA" di Agid
 core = 7.x
@@ -62,3 +54,15 @@ scripts[] = 'js/vendor/modernizr-2.6.2.min.js'
 
 ; Disable the CDN provider so compiled source files can be used.
 settings[bootstrap_cdn] = ''
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Color Settings
+;;;;;;;;;;;;;;;;;;;;;
+
+; Set default colors
+settings[color_gallery_first]	= "section_gray"
+settings[color_gallery_second]	= "section_white"
+settings[color_gallery_third]	= "section_gray"
+settings[color_gallery_fourth]	= "section_gray_darker"
+settings[color_gallery_fifth]	= "section_blue"
