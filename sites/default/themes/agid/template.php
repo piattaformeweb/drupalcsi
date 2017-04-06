@@ -13,6 +13,14 @@ function agid_preprocess_html(&$variables) {
 		'scope' => 'header'
 	));
 
+	// Caricamento script del motore di ricerca mobile...
+    drupal_add_js(drupal_get_path('theme', 'agid') . '/js/search.js', array(
+        'type' => 'file',
+        'group' => JS_THEME,
+        'scope' => 'footer',
+        'weight' => 35
+    ));
+
 	// Caricamento script del tema...
 	drupal_add_js(drupal_get_path('theme', 'agid') . '/js/scripts-min.js', array(
 		'type' => 'file',

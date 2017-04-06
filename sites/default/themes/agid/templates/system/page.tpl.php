@@ -61,49 +61,42 @@
 			<div class="main_nav clearfix">     
 				<div class="container-fluid">       
 					<div class="row">
-						<!--div class="col-md-8 col-sm-9 col-xs-12"-->
-							<div class="logo_container clearfix col-lg-9 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-7 col-sm-offset-2 col-xs-7 col-xs-offset-2">
-							
-								<div class="logo_wrapper clearfix">
-								<?php if ($logo):?>
-									<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> <img src="<?php print $logo; ?>" class="logo" alt="<?php print t('Home'); ?>" /> </a>
-								<?php endif; ?>
-								</div>
-								
-								<div class="logo_text clearfix">
-								<?php if ($site_name && $is_front): ?>
-									<h1 id="site-name">
-										<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-									</h1>
-								<?php elseif ($site_name && !$is_front) : ?>
-									<p id="site-name" class="h1">
-										<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-									</p>
-								<?php endif; ?>
-								</div>
-					
-								<?php if ($page['header']) :?>
-								<?php print render($page['header']); ?>
-								<?php endif; ?> 
+                        <div class="logo_container clearfix col-lg-9 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-7 col-sm-offset-2 col-xs-7 col-xs-offset-2">
 
-					
-							</div><!-- /logo_container -->
-							<div id="sb-search" class="sb-search">
-								<form>
-									<input class="sb-search-input" placeholder="Cerca" type="text" value="" name="search" id="search" tabindex="-1">
-									<input class="sb-search-submit" type="submit" value="" tabindex="-1">
-									<span class="sb-icon-search"></span>
-								</form>
-							</div>
-						<!--</div> /col-md-8 -->
-                
+                            <div class="logo_wrapper clearfix">
+                            <?php if ($logo):?>
+                                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> <img src="<?php print $logo; ?>" class="logo" alt="<?php print t('Home'); ?>" /> </a>
+                            <?php endif; ?>
+                            </div>
+
+                            <div class="logo_text clearfix">
+                            <?php if ($site_name && $is_front): ?>
+                                <h1 id="site-name">
+                                    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+                                </h1>
+                            <?php elseif ($site_name && !$is_front) : ?>
+                                <p id="site-name" class="h1">
+                                    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+                                </p>
+                            <?php endif; ?>
+                            </div>
+
+                            <?php if ($page['header']) :?>
+                            <?php print render($page['header']); ?>
+                            <?php endif; ?>
+
+                        </div><!-- /logo_container -->
+
+                        <div id="sb-search" class="sb-search">
+                            <?php $form = drupal_get_form('search_block_form'); ?>
+                            <?php print render($form); ?>
+                        </div>
+
 						<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs">
-
 							<?php if ($page['navigation']) :?>
 							<?php print render($page['navigation']); ?>
 							<?php endif; ?>
-
-						</div><!-- /col-md-4 -->        
+						</div><!-- /col-md-4 -->
 					</div><!-- /row --> 
 				</div><!-- /container -->
 			</div><!-- /main_nav -->
