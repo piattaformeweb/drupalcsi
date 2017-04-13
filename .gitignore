@@ -6,5 +6,5 @@ sites/*/files
 sites/*/private
 
 *.zip
-
+*.git
 *.idea
