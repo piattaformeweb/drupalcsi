@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Agid su Xampp">
+  <component name="PublishConfigData" serverName="agid">
     <serverData>
       <paths name="Agid su Xampp">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="agid" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="agid">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="ftpcsi">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
