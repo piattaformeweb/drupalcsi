@@ -109,7 +109,7 @@ Usato per creare moduli interattivi, come sondaggi, form di contatto etc.
 
 ### Installazione manuale
 
-1. Scaricare l&#39;archivio compresso .zip
+1. Scaricare l&#39;archivio compresso .zip (fare click in alto a destra "Clone or download")
 2. Scompattarlo nella cartella di destinazione
 3. Scompattare e caricare lo schema db.sql.zip sul DB (eliminare poi i due file site.tar.gz e db.sql.zip)
 4. Duplicare il file /sites/default/default.settings.php in settings.php
