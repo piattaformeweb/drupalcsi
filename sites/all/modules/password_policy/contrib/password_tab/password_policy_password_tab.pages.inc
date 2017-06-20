@@ -104,15 +104,6 @@ function password_policy_password_tab_submit($form, &$form_state) {
 
   if (variable_get('password_policy_password_tab_redirect', '') && !preg_match('/[?&]destination=/', $form['#action'])) {
     $redirect = drupal_parse_url(strtr(variable_get('password_policy_password_tab_redirect', ''), array('%uid' => $user->uid)));
-    $opts = array();
-
-    if (!empty($redirect['fragment'])) {
-      $opts['fragment'] = $redirect['fragment'];
-    }
-    if (!empty($redirect['query'])) {
-      parse_str($redirect['query'], $params);
-      $opts['query'] = $params;
-    }
     $form_state['redirect'] = array($redirect['path'], $redirect);
   }
 }

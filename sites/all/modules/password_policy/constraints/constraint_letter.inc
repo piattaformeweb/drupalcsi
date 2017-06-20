@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Password policy constraint callbacks.
@@ -45,7 +46,7 @@ function password_policy_constraint_letter_js($constraint, $account) {
 
     var i = 0;
     var num = 0;
-    var chr = "";
+    var chr = '';
     while (i < value.length) {
       chr = value.charAt(i);
       if (chr.toUpperCase() != chr.toLowerCase()) {
@@ -54,7 +55,7 @@ function password_policy_constraint_letter_js($constraint, $account) {
       i++;
     }
     if (num < $constraint) {
-      strength = "low";
+      strength = 'low';
       msg.push(translate.constraint_letter);
     }
 JS;

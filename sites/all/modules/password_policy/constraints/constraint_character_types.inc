@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Password policy constraint callbacks.
@@ -63,7 +64,7 @@ function password_policy_constraint_character_types_js($constraint, $account) {
     var lower = 0;
     var digit = 0;
     var punct = 0;
-    var chr = "";
+    var chr = '';
     while (i < value.length) {
       chr = value.charAt(i);
       if (chr.toUpperCase() != chr.toLowerCase()) {
@@ -74,17 +75,17 @@ function password_policy_constraint_character_types_js($constraint, $account) {
           lower = 1;
         }
       }
-      else if ("1234567890".indexOf(chr) != -1) {
+      else if ('1234567890'.indexOf(chr) != -1) {
         digit = 1;
       }
-      else if (chr.toUpperCase() == chr.toLowerCase() && "1234567890".indexOf(chr) == -1 && chr != ' ') {
+      else if (chr.toUpperCase() == chr.toLowerCase() && '1234567890'.indexOf(chr) == -1 && chr != ' ') {
         punct = 1;
       }
       i++;
     }
     num = upper + lower + digit + punct;
     if (num < $constraint) {
-      strength = "low";
+      strength = 'low';
       msg.push(translate.constraint_character_types);
     }
 JS;

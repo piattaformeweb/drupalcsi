@@ -6,6 +6,7 @@
  *
  * @link https://drupal.org/node/316768
  *
+ * @codingStandardsIgnoreLine
  * @author David Kent Norman (https://deekayen.net/)
  */
 
@@ -43,7 +44,7 @@ function password_policy_constraint_digit_placement_validate($password, $constra
     }
   }
   if ($num < (int) $constraint) {
-    return preg_match("/^(\d+)|(\d+)$/", $password) != 1;
+    return preg_match('/^(\d+)|(\d+)$/', $password) != 1;
   }
   return TRUE;
 }
@@ -78,7 +79,7 @@ function password_policy_constraint_digit_placement_js($constraint, $account) {
       num += substr_count(value, i);
     }
     if (num < $constraint && value.match(/^(\d+)|(\d+)$/) != null) {
-      strength = "low";
+      strength = 'low';
       msg.push(translate.constraint_digit_placement);
     }
 JS;

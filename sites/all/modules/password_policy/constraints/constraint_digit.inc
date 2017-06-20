@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Password policy constraint callbacks.
@@ -44,16 +45,16 @@ function password_policy_constraint_digit_js($constraint, $account) {
 
     var i = 0;
     var num = 0;
-    var chr = "";
+    var chr = '';
     while (i < value.length) {
       chr = value.charAt(i);
-      if ("1234567890".indexOf(chr) != -1) {
+      if ('1234567890'.indexOf(chr) != -1) {
         num++;
       }
       i++;
     }
     if (num < $constraint) {
-      strength = "low";
+      strength = 'low';
       msg.push(translate.constraint_digit);
     }
 JS;

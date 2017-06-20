@@ -6,9 +6,20 @@
 
 /**
  * Helper function to check for modules to fix.
+ *
+ * @param bool $return
+ *        If we are to return to rows or just print the list.
  */
-function module_missing_message_fixer_check_modules() {
-  $rows = array();
+function module_missing_message_fixer_check_modules($return = FALSE) {
+  // Header setup.
+  if (!$return) {
+    $rows[] = array(
+      'name' => 'Name',
+      'type' => 'Type',
+      'filename' => 'Filename',
+    );
+  }
+
   // These are special modules that have their own patches already.
   // This will help eliminate some of the brute force of this module.
   $special = array(
@@ -55,7 +66,15 @@ function module_missing_message_fixer_check_modules() {
       }
     }
   }
-  return $rows;
+
+  // Return the rows for the fixer here.
+  if ($return) {
+    return $rows;
+  }
+
+  // Print Table here instead of in the hook_command.
+  $output = count($rows) > 1 ? drush_format_table($rows, TRUE) : 'No Missing Modules Found!!!';
+  drush_print($output);
 }
 
 /**
@@ -81,19 +100,7 @@ function module_missing_message_fixer_drush_command() {
     'aliases' => array(
       'mmmfl',
     ),
-    'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_FULL,
-    'engines' => array(
-      'outputformat' => array(
-        'default' => 'table',
-        'pipe-format' => 'json',
-        'field-labels' => array(
-          'name' => 'Name',
-          'type' => 'Type',
-          'filename' => 'Filename',
-        ),
-        'require-engine-capability' => array('format-table'),
-      ),
-    ),
+    'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_FULL
   );
   $items['module-missing-message-fixer-fix'] = array(
     'description' => dt('Fixes modules that have missing messages.'),
@@ -106,19 +113,7 @@ function module_missing_message_fixer_drush_command() {
     'options' => array(
       'all' => dt('Fixes all module missing messages'),
     ),
-    'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_FULL,
-    'engines' => array(
-      'outputformat' => array(
-        'default' => 'table',
-        'pipe-format' => 'json',
-        'field-labels' => array(
-          'name' => 'Name',
-          'type' => 'Type',
-          'filename' => 'Filename',
-        ),
-        'require-engine-capability' => array('format-table'),
-      ),
-    ),
+    'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_FULL
   );
   return $items;
 }
@@ -129,8 +124,7 @@ function module_missing_message_fixer_drush_command() {
  * Displays a list of modules that have missing messages.
  */
 function drush_module_missing_message_fixer_list() {
-  $rows = module_missing_message_fixer_check_modules();
-  return $rows;
+  module_missing_message_fixer_check_modules();
 }
 
 /**
@@ -142,7 +136,7 @@ function drush_module_missing_message_fixer_list() {
 function drush_module_missing_message_fixer_fix($name = NULL) {
   $module = array();
   if (drush_get_option('all') !== NULL) {
-    $rows = module_missing_message_fixer_check_modules();
+    $rows = module_missing_message_fixer_check_modules(TRUE);
     foreach ($rows as $row) {
       $modules[] = $row['name'];
     }
