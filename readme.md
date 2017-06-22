@@ -1,6 +1,6 @@
 # CMS Drupal 7 per i siti web dei comuni
 
-Documento aggiornato al 20/06/2017
+Documento aggiornato al 20/06/2017 - [Sito dimostrativo](http://www-cityweb3.portali.csi.it/web)
 
 ## Fornitore
 
