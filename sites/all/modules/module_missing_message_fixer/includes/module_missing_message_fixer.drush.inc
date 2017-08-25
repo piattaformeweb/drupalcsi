@@ -137,8 +137,10 @@ function drush_module_missing_message_fixer_fix($name = NULL) {
   $module = array();
   if (drush_get_option('all') !== NULL) {
     $rows = module_missing_message_fixer_check_modules(TRUE);
-    foreach ($rows as $row) {
-      $modules[] = $row['name'];
+    if (!empty($rows)) {
+      foreach ($rows as $row) {
+        $modules[] = $row['name'];
+      }
     }
   }
   elseif ($name !== NULL) {
