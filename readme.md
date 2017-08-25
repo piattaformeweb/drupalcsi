@@ -1,6 +1,16 @@
 # CMS Drupal 7 per i siti web dei comuni
 
-Documento aggiornato al 20/06/2017 - [Sito dimostrativo](http://www-cityweb3.portali.csi.it/web)
+Documento aggiornato al 20/06/2017 - [Demo](http://www-cityweb3.portali.csi.it/web)
+
+## Descrizione
+
+Un CMS Drupal 7 per la gestione dei siti web delle PA locali realizzato secondo la prima versione delle linee guida di design di AgID. Il prodotto, utilizzato in prima istanza per lo sviluppo del sito web del Comune di Biella, è una distribuzione Open Source, rilasciata sotto licenza GPL3, sviluppata in conformità agli standard di usabilità e alla normativa italiana di accessibilità. 
+
+## Amministrazioni che utilizzano il software
+
+- [Comune di Biella](http://www.comune.biella.it)
+
+- [Comune di Vercelli](http://www.comune.vercelli.it)
 
 ## Fornitore
 
@@ -8,18 +18,13 @@ CSI Piemonte, C.so Unione Sovietica, 216 - 10134, Torino
 
 [piattaformeweb@csi.it](mailto:piattaformeweb@csi.it)
 
-## Responsabile del progetto
+## Contatti
 
-Andrea Muraca
- [andrea.muraca@csi.it](mailto:andrea.muraca@csi.it)
+Vincenzo Mania [vincenzo.mania@csi.it](mailto:vincenzo.mania@csi.it)
 
-## Riferimenti tecnici del progetto
+## Riferimenti tecnici
 
-Carlo Sacripante
- [carlo.sacripante@csi.it](mailto:carlo.sacripante@csi.it)
-
-Andrea Di Pizio
- [andrea.dipizio@csi.it](mailto:andrea.dipiio@csi.it)
+Andrea Di Pizio [andrea.dipizio@csi.it](mailto:andrea.dipiio@csi.it)
 
 ## Licenza
 
