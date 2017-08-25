@@ -111,7 +111,7 @@ Usato per creare moduli interattivi, come sondaggi, form di contatto etc.
 
 1. Scaricare l&#39;archivio compresso .zip (fare click in alto a destra "Clone or download")
 2. Scompattarlo nella cartella di destinazione
-3. Scompattare e caricare lo schema db.sql.zip sul DB (eliminare poi i due file site.tar.gz e db.sql.zip)
+3. Scompattare e caricare lo schema drupalcsi.sql.zip sul DB (eliminare poi i due file site.tar.gz e db.sql.zip)
 4. Duplicare il file /sites/default/default.settings.php in settings.php
 5. Modificare le impostazioni relative al DB nel file /sites/default/settings.php
 6. Loggarsi sul sistema come _admin/P@ssw0rd!_ e modificare le impostazioni del filesystem all'url /admin/config/media/file-system in particolare configurando la cartella dei file pubblici, quella dei file privati e quella temporanea.
