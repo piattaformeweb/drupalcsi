@@ -7,3 +7,6 @@ sites/*/private
 
 .idea
 .idea/*
+
+.zip
+.tar
