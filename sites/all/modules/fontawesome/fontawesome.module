@@ -8,8 +8,8 @@
 define('FONTAWESOME_LIBRARY', 'fontawesome');
 define('FONTAWESOME_NAME', 'Font Awesome');
 define('FONTAWESOME_URL', 'http://fontawesome.io');
-define('FONTAWESOME_CDN_URL', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
-define('FONTAWESOME_DOWNLOAD_URL', 'https://github.com/FortAwesome/Font-Awesome/archive/v4.6.3.zip');
+define('FONTAWESOME_CDN_URL', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+define('FONTAWESOME_DOWNLOAD_URL', 'https://github.com/FortAwesome/Font-Awesome/archive/v4.7.0.zip');
 define('FONTAWESOME_PREFIX', 'fa');
 
 /**
