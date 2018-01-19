@@ -1844,6 +1844,16 @@ function _file_entity_query_file_entity_access_alter($query, $type) {
     return;
   }
 
+  // A conflict with og_query_og_membership_alter() causes a fatal error
+  // if both hooks alter the query.
+  if (module_exists('og') && $query->hasTag('og_membership')) {
+    foreach($query->getMetaData('entity_field_query')->fields as $field) {
+      if (og_is_group_audience_field($field['field_name'])) {
+        return;
+      }
+    }
+  }
+
   $tables = $query->getTables();
   $base_table = $query->getMetaData('base_table');
   // Do not use the base table for general entity queries unless this is

@@ -311,7 +311,12 @@ function media_wysiwyg_token_to_markup($match, $wysiwyg = FALSE, $langcode = NUL
     drupal_add_js(array('mediaDataMap' => array($file->fid => $data)), 'setting');
     $element['#attributes']['data-fid'] = $file->fid;
     $element['#attributes']['data-media-element'] = '1';
-    $element['#attributes']['class'][] = 'media-element';
+    if (is_array($element['#attributes']['class'])) {
+      $element['#attributes']['class'][] = 'media-element';
+    }
+    else {
+      $element['#attributes']['class'] .= 'media-element';
+    }
   }
   else {
     // Display the field elements.
