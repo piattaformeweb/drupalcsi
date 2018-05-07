@@ -56,7 +56,7 @@ function password_policy_password_tab($form, &$form_state, $account) {
     }
   }
 
-  $form['pass'] = array(
+  $form['account']['pass'] = array(
     '#type' => 'password_confirm',
     '#size' => 25,
     '#required' => TRUE,

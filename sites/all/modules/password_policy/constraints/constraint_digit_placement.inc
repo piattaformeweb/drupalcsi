@@ -39,7 +39,7 @@ function password_policy_constraint_digit_placement_validate($password, $constra
   $chars = drupal_strlen($password);
   $num = 0;
   for ($i = 0; $i < $chars; ++$i) {
-    if (ctype_digit(drupal_substr($password, $i, 1))) {
+    if (preg_match('/[0-9]/', drupal_substr($password, $i, 1))) {
       $num++;
     }
   }

@@ -10,9 +10,8 @@ files[] = fontawesome.module
 
 files[] = tests/fontawesome.test
 
-; Information added by Drupal.org packaging script on 2017-11-18
-version = "7.x-2.7"
+; Information added by Drupal.org packaging script on 2018-04-17
+version = "7.x-2.8"
 core = "7.x"
 project = "fontawesome"
-datestamp = "1511036887"
-
+datestamp = "1523983084"
