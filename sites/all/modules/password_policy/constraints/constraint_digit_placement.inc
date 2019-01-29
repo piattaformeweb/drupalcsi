@@ -5,9 +5,6 @@
  * Restrict placement of digits in passwords.
  *
  * @link https://drupal.org/node/316768
- *
- * @codingStandardsIgnoreLine
- * @author David Kent Norman (https://deekayen.net/)
  */
 
 /****************************************************************************/
@@ -36,13 +33,8 @@ function password_policy_constraint_digit_placement_error($constraint) {
  * Password validation.
  */
 function password_policy_constraint_digit_placement_validate($password, $constraint, $account) {
-  $chars = drupal_strlen($password);
-  $num = 0;
-  for ($i = 0; $i < $chars; ++$i) {
-    if (preg_match('/[0-9]/', drupal_substr($password, $i, 1))) {
-      $num++;
-    }
-  }
+  $matches = array();
+  $num = preg_match_all('/[0-9]/', $password, $matches);
   if ($num < (int) $constraint) {
     return preg_match('/^(\d+)|(\d+)$/', $password) != 1;
   }

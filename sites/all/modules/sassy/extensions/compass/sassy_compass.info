@@ -1,0 +1,14 @@
+name = Sassy Compass integration
+description = Adds the compass namespace to Sassy @import statements
+package = 'Theming Tools'
+core = 7.x
+dependencies[] = sassy
+
+files[] = sassy_compass.test
+
+; Information added by Drupal.org packaging script on 2016-08-26
+version = "7.x-2.20"
+core = "7.x"
+project = "sassy"
+datestamp = "1472242441"
+

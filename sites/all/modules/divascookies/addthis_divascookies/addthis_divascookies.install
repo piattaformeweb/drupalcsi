@@ -1,0 +1,9 @@
+<?php
+/**
+ * @file
+ * Divas Cookies manager: this disables cookies from AddThis.
+ *
+ * Date: 30 giu 2015 15:24:44
+ * File: addthis_divascookies.install
+ * Author: stefano.
+ */

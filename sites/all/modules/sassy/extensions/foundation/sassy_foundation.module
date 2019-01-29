@@ -1,0 +1,95 @@
+<?php
+
+/**
+ * Implementation hook_sassy_resolve_path_NAMESPACE().
+ */
+function sassy_foundation_sassy_resolve_path_foundation($filename) {
+  if (substr($filename, 0, 7) == 'images/') {
+    return drupal_get_path('module', 'sassy_foundation') . '/foundation/' . $filename;
+  }
+
+  $path = drupal_get_path('module', 'sassy_foundation') . '/foundation/stylesheets/';
+  $filename = str_replace(array('.scss', '.sass', '.css'), '', trim($filename, ' /._'));
+  $files = array('shared/_settings', 'shared/_colors', 'shared/_mixins', '_buttons', '_forms', '_globals', '_grid', '_mobile', '_orbit', '_reveal', '_typography', '_ui');
+
+  # if asking for all of foundation, return corrected filenames
+  if (!$filename || $filename == '*' || $filename == 'foundation') {
+    foreach ($files as $k => $file) {
+      $files[$k] = $path . $file . '.sass';
+    }
+    return $files;
+  }
+
+  # otherwise check that it's a corrected file.
+  if (in_array($filename, $files)) {
+    return url($path . $filename . '.sass');
+  }
+
+  // TODO: fix the bug that causes $available to be undefined.
+  // Set $available and have it return an empty string.
+  $available = '';
+  drupal_set_message(t('Unrecognised stylesheet "@file" requested. Available files are: @list', array('@list' => implode(', ', $files), '@file' => $filename)), 'error');
+  return FALSE;
+}
+
+/**
+ * Implementation of hook_library().
+ */
+function sassy_foundation_library() {
+  $path = drupal_get_path('module', 'sassy_foundation') . '/foundation/';
+  return array(
+    'foundation-orbit' => array(
+      'title' => 'Foundation Orbit',
+      'version' => '1.3.0',
+      'website' => 'http://foundation.zurb.com/docs/orbit.php',
+      'js' => array($path . 'javascripts/jquery.orbit-1.3.0.js'),
+      'css' => array($path . 'stylesheets/_orbit.sass'),
+    ),
+    'foundation-reveal' => array(
+      'title' => 'Foundation Reveal',
+      'version' => '2.0.3',
+      'website' => 'http://foundation.zurb.com/docs/reveal.php',
+      'js' => array($path . 'javascripts/jquery.reveal.js'),
+      'css' => array($path . 'stylesheets/_reveal.sass'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_sassy_css_preprocessor_settings_form_alter().
+ * Adds the "foundation: Implicit compile" option.
+ */
+function sassy_foundation_form_sassy_css_preprocessor_settings_form_alter(&$form, $form_state) {
+  extract($form_state['prepro']);
+  $local += array(
+    'foundation_implicit_include' => FALSE
+  );
+
+  $form['foundation_implicit_include'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'Include full Foundation stylesheets in every file',
+    '#description' => 'Should the use of Foundation be implicit for every SASS/SCSS file? Will add multiple files as @import\'s',
+    '#default_value' => $local['foundation_implicit_include']
+  );
+
+  return $form;
+}
+
+/**
+ * Adds the foundation libraries to all SASS files if the user selected this option in the Prepro admin screen.
+ */
+function sassy_foundation_prepro_precompile_sass_alter(&$contents, $file, $local) {
+  if (@$local['foundation_implicit_include']) {
+    if (strpos($contents, 'foundation/foundation') === FALSE && strpos($contents, 'foundation/*') === FALSE) {
+      $comment = '/* ' . t('Including foundation libraries via implicit include') . ' */';
+      $contents = $comment . "\n@import 'foundation/foundation';\n\n" . $contents;
+    }
+  }
+}
+
+/**
+ * Adds the foundation libraries to all SCSS files if the user selected this option in the Prepro admin screen.
+ */
+function sassy_foundation_prepro_precompile_scss_alter(&$contents, $file, $local) {
+  sassy_foundation_prepro_precompile_sass_alter($contents, $file, $local);
+}

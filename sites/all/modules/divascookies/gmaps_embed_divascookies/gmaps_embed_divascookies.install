@@ -1,0 +1,9 @@
+<?php
+/**
+ * @file
+ * Divas Cookies manager: this disables cookies from Google Maps.
+ *
+ * Date: 14 lug 2015 11:52:08
+ * File: gmaps_embed_divascookies.install
+ * Author: stefano.
+ */

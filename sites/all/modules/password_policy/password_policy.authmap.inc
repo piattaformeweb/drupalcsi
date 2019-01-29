@@ -52,12 +52,7 @@ function _password_policy_load_policy_excluded_authentication_modules(array &$po
  *   Authentication modules.
  */
 function _password_policy_get_authentication_modules_for_user($account) {
-  $authentication_modules = array();
-  $authmaps = user_get_authmaps($account->name);
-  if ($authmaps) {
-    $authentication_modules = array_keys($authmaps);
-  }
-  return $authentication_modules;
+  return db_query("SELECT module FROM {authmap} WHERE uid = :uid", array(':uid' => $account->uid))->fetchCol();
 }
 
 /**

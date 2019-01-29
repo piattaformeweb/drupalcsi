@@ -1,0 +1,9 @@
+<?php
+/**
+ * @file
+ * Divas Cookies manager: this disables cookies from Google Ananlytics.
+ *
+ * Date: 04 lug 2015 19:23:52
+ * File: googleanalytics_divascookies.install
+ * Author: stefano.
+ */

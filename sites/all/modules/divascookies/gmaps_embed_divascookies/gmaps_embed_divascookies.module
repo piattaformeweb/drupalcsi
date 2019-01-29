@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ * Divas Cookies manager: this disables cookies from Google Maps embedded.
+ *
+ * Date: 14 lug 2015 11:55:58
+ * File: gmaps_embed_divascookies.module
+ * Author: stefano.
+ */
+
+/**
+ * Implements hook_divascookies_scripts().
+ *
+ * SC 30 giu 2015 15:34:19 stefano.
+ */
+function gmaps_embed_divascookies_divascookies_script_stop() {
+  $foo = array(
+    'regex' => array(
+      "@(<iframe.+?src\s*=.+?maps\.google.+?/iframe>)@im"
+    ),
+    'type' => array(
+      'externalattr'
+    )
+  );
+
+  return $foo;
+}

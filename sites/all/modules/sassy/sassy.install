@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * Implementation of hook_requirements().
+ */
+function sassy_requirements($phase) {
+  $t = get_t();
+  $requirements = array();
+
+  $github = 'https://github.com/richthegeek/phpsass/zipball/master';
+  if ($phase == "runtime") {
+    if (module_exists('libraries') && $libraries = @libraries_get_libraries()) {
+      if (isset($libraries['phpsass'])) {
+        $version = _sassy_check_phpsass_version();
+        if ($version > 0) {
+          $requirements['phpsass']['title'] = $t('Sassy - PHPSass');
+          $requirements['phpsass']['value'] = $t('PHPSass is installed and up to date.');
+          $requirements['phpsass']['severity'] = REQUIREMENT_OK;
+        } else if ($version == 0) {
+          $requirements['phpsass']['title'] = $t('Sassy - PHPSsass');
+          $requirements['phpsass']['value'] = $t('PHPSass is installed, but there is a newer version.');
+          $requirements['phpsass']['description'] = $t('Please download and replace the existing library with the latest version from !github.', array('!github' => l($github, $github)));
+          $requirements['phpsass']['severity'] = REQUIREMENT_ERROR;
+        } else {
+          $requirements['phpsass']['title'] = $t('Sassy - PHPSsass');
+          $requirements['phpsass']['value'] = $t('PHPSass is installed, but it is unable to fetch new version info.');
+          $requirements['phpsass']['description'] = $t('There may be a newer version available, but automated checking failed. Please download and replace the existing library from !github if there is a newer version.', array('!github' => l($github, $github)));
+          $requirements['phpsass']['severity'] = REQUIREMENT_WARNING;          
+        }
+      }
+      else {
+        $requirements['phpsass']['title'] = $t('Sassy - PHPSass');
+        $requirements['phpsass']['value'] = $t('PHPSass is not installed.');
+        $requirements['phpsass']['severity'] = REQUIREMENT_ERROR;
+        $requirements['phpsass']['description'] = $t('Please download the PHPSass library from !github and extract it into sites/all/libraries/phpsass', array('!github' => l($github, $github)));
+      }
+    } else {
+      $requirements['libraries']['title'] = $t('Libraries');
+      $requirements['libraries']['value'] = $t('Libraries is not installed.');
+      $requirements['libraries']['description'] = $t('Please download and enable the libraries module (!url) before enabling this module.', array('!url' => 'http://drupal.org/project/libraries'));
+      $requirements['libraries']['severity'] = REQUIREMENT_ERROR;
+    }
+  }
+
+  return $requirements;
+}
+
+function _sassy_check_phpsass_version() {
+  $url =  'https://raw.github.com/richthegeek/phpsass/master/VERSION';
+  $pattern = '/^Version ([0-9]+)/';
+
+  $result = drupal_http_request($url);
+  if ($result && $result->code == 200 && preg_match($pattern, $result->data, $matches))  {
+    $remote = intval($matches[1], 10);
+  } else {
+    return -1;
+  }
+
+  if (!$path = libraries_get_path('phpsass')) {
+    $path = libraries_get_path('phamlp');
+  }
+
+  $local = @file_get_contents($path . '/VERSION');
+
+  if (preg_match($pattern, $local, $matches)) {
+    $local = intval($matches[1], 10);
+    return ($local >= $remote) ? 1 : 0;
+  }
+
+  return 0;
+}

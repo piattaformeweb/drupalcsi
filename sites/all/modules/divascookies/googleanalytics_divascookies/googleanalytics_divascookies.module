@@ -1,0 +1,56 @@
+<?php
+/**
+ * @file
+ * Divas Cookies manager: this disables cookies from Google Ananlytics.
+ *
+ * Date: 04 lug 2015 19:18:16
+ * File: googleanalytics_divascookies.module
+ * Author: stefano.
+ */
+
+/**
+ * Implements hook_divascookies_scripts().
+ *
+ * SC 30 giu 2015 15:34:19 stefano.
+ */
+function googleanalytics_divascookies_divascookies_script_stop() {
+  $file = 'googleanalytics.js';
+
+  // Finds the filename of the aggregated contents of the js files.
+  //
+  // SC 15 lug 2015 01:14:57 stefano.
+  //
+  $map = variable_get('drupal_js_cache_files', array());
+
+  $path = drupal_get_path('module', 'googleanalytics') . '/' . $file;
+
+  $key = hash('sha256', serialize(array(
+    $path
+  )));
+
+  if (array_key_exists($key, $map)) {
+    $foo_file = preg_replace(array(
+      '@^.+/js/(.+)$@i',
+      '@\.@'
+    ), array(
+      '$1',
+      '\.'
+    ), $map[$key]);
+  }
+  else {
+    $foo_file = 'googleanalytics\.js';
+  }
+
+  $foo = array(
+    'regex' => array(
+      "@(<script.+?src\s*=.+?" . $foo_file . ".+?/script>)@i",
+      "@(<script.+?src\s*=.+?google-analytics\.com/analytics\.js.+?/script>)@im"
+    ),
+    'type' => array(
+      'externalscript',
+      'inlinescript'
+    )
+  );
+
+  return $foo;
+}

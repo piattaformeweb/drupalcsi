@@ -1,0 +1,1122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8754f7de-2b1a-43ee-ae85-a2473f0e18f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/drupalcsi.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/file.phar.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc/typo3/drupal-security/PharExtensionInterceptor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc/typo3/phar-stream-wrapper/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc/typo3/phar-stream-wrapper/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc/typo3/phar-stream-wrapper/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc/typo3/phar-stream-wrapper/src/Assertable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc/typo3/phar-stream-wrapper/src/Behavior.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc/typo3/phar-stream-wrapper/src/Exception.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc/typo3/phar-stream-wrapper/src/Helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc/typo3/phar-stream-wrapper/src/Interceptor/PharExtensionInterceptor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc/typo3/phar-stream-wrapper/src/Manager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc/typo3/phar-stream-wrapper/src/PharStreamWrapper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/simpletest/files/phar-1.phar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_theme/theme-settings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu_toolbar/admin_menu_toolbar-rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/CHANGELOG.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/tests/BmTestBase.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/tests/BmTestBasics.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/tests/BmTestProfiles.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/ckeditor/tests/ckeditor.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/addthis_divascookies/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/addthis_divascookies/addthis_divascookies.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/addthis_divascookies/addthis_divascookies.install" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/addthis_divascookies/addthis_divascookies.module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/divascookies.admin.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/divascookies.api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/divascookies.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/divascookies.install" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/divascookies.module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/divascookies.variable.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/gmaps_embed_divascookies/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/gmaps_embed_divascookies/gmaps_embed_divascookies.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/gmaps_embed_divascookies/gmaps_embed_divascookies.install" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/gmaps_embed_divascookies/gmaps_embed_divascookies.module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/googleanalytics_divascookies/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/googleanalytics_divascookies/googleanalytics_divascookies.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/googleanalytics_divascookies/googleanalytics_divascookies.install" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/divascookies/googleanalytics_divascookies/googleanalytics_divascookies.module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/css/eu_cookie_compliance-rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/css/eu_cookie_compliance.bare-rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/css/eu_cookie_compliance.bare.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/css/eu_cookie_compliance.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/eu_cookie_compliance.admin.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/eu_cookie_compliance.api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/eu_cookie_compliance.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/eu_cookie_compliance.install" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/eu_cookie_compliance.module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/eu_cookie_compliance.variable.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/images/gradient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/js/eu_cookie_compliance.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/js/jquery.cookie-1.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/plugins/consent_storage/basic.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/theme/eu-cookie-compliance-popup-agreed.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/theme/eu-cookie-compliance-popup-info.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/eu_cookie_compliance/theme/eu-cookie-compliance-withdraw.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/file_entity/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/libraries/css/libraries.admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/libraries/libraries.theme.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/bootstrap-1.4.0.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/bootstrap-1.4.0.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/css/docs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/ico/bootstrap-apple-114x114.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/ico/bootstrap-apple-57x57.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/ico/bootstrap-apple-72x72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/ico/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/img/bird.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/img/browsers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/img/example-diagram-01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/img/example-diagram-02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/img/example-diagram-03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/img/grid-18px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/img/twitter-logo-no-bird.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/js/application.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/js/google-code-prettify/prettify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/assets/js/google-code-prettify/prettify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/docs/javascript.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/examples/container-app.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/examples/fluid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/examples/hero.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/bootstrap-alerts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/bootstrap-buttons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/bootstrap-dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/bootstrap-modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/bootstrap-popover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/bootstrap-scrollspy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/bootstrap-tabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/bootstrap-twipsy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/tests/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/tests/unit/bootstrap-alerts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/tests/unit/bootstrap-buttons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/tests/unit/bootstrap-dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/tests/unit/bootstrap-modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/tests/unit/bootstrap-popover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/tests/unit/bootstrap-scrollspy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/tests/unit/bootstrap-tabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/tests/unit/bootstrap-twipsy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/tests/vendor/qunit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/js/tests/vendor/qunit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/lib/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/lib/forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/lib/mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/lib/patterns.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/lib/reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/lib/scaffolding.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/lib/tables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/lib/type.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/bootstrap/lib/variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/sassy_bootstrap.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/bootstrap/sassy_bootstrap.module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/colors.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/constants.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/cross_browser_support.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/display.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/enumerate.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/font_files.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/gradient_support.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/image_size.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/inline_image.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/lists.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/selectors.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/sprites.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/transitions.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/trig.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/functions/urls.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/sassy_compass.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/sassy_compass.module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/sassy_compass.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/_compass.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/_lemonade.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/_css3.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/_layout.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/_reset-legacy.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/_reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/_support.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/_typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_appearance.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_background-clip.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_background-origin.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_background-size.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_border-radius.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_box-shadow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_box-sizing.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_box.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_columns.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_deprecated-support.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_filter.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_font-face.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_hyphenation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_images.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_inline-block.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_opacity.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_pie.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_regions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_shared.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_text-shadow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_transform-legacy.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_transform.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/css3/_user-interface.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/layout/_grid-background.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/layout/_sticky-footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/layout/_stretching.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/reset/_utilities-legacy.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/reset/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/_links.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/_lists.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/_text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/_units.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/_vertical_rhythm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/links/_hover-link.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/links/_link-colors.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/links/_unstyled-link.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/lists/_bullets.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/lists/_horizontal-list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/lists/_inline-block-list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/lists/_inline-list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/text/_ellipsis.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/text/_force-wrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/text/_nowrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/typography/text/_replacement.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/_color.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/_general.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/_links.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/_lists.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/_print.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/_sprites.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/_tables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/_text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/color/_brightness.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/color/_contrast.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/general/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/general/_float.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/general/_hacks.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/general/_min.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/general/_reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/general/_tabs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/general/_tag-cloud.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/links/_hover-link.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/links/_link-colors.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/links/_unstyled-link.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/lists/_bullets.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/lists/_inline-block-list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/lists/_inline-list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/sprites/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/sprites/_sprite-img.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/tables/_borders.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/tables/_scaffolding.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/text/_ellipsis.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/text/_nowrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/stylesheets/compass/utilities/text/_replacement.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/tests/compass.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/tests/compass.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/tests/image-dimensions.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/tests/image-dimensions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/tests/inline-image.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/tests/inline-image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/tests/text-replacement.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/compass/tests/text-replacement.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/MIT-LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/README.markdown" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/humans.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/images/misc/button-gloss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/images/misc/button-overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/images/misc/custom-form-sprites.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/images/misc/input-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/images/misc/modal-gloss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/images/misc/table-sorter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/images/orbit/bullets.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/images/orbit/left-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/images/orbit/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/images/orbit/mask-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/images/orbit/pause-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/images/orbit/right-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/images/orbit/rotator-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/images/orbit/timer-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/javascripts/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/javascripts/jquery.customforms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/javascripts/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/javascripts/jquery.orbit-1.4.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/javascripts/jquery.placeholder.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/javascripts/jquery.reveal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/javascripts/jquery.tooltips.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/javascripts/modernizr.foundation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/stylesheets/_buttons.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/stylesheets/_forms.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/stylesheets/_globals.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/stylesheets/_grid.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/stylesheets/_mobile.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/stylesheets/_orbit.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/stylesheets/_reveal.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/stylesheets/_shared.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/stylesheets/_typography.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/stylesheets/_ui.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/stylesheets/shared/_colors.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/stylesheets/shared/_mixins.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/foundation/stylesheets/shared/_settings.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/sassy_foundation.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/extensions/foundation/sassy_foundation.module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/sassy.admin.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/sassy.api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/sassy.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/sassy.install" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/sassy.module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/sassy.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/sassy/sassy_error.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/views_bootstrap/plugins/list_group/views_bootstrap_list_group_plugin_style.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/views_bootstrap/templates/list_group/theme.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/views_bootstrap/templates/list_group/views-bootstrap-list-group-plugin-style.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/views_bootstrap/views_bootstrap.install" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/themes/bootstrap/templates/webform/webform-managed-file.func.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/translations/bundle_copy-7.x-1.1.it.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/translations/date-7.x-2.10.it.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/translations/eu_cookie_compliance-7.x-1.14.it.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/all/translations/sassy-7.x-2.20.it.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/default/themes/agid/scss/BKP_TOP_MEDIA.CSS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MAINTAINERS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MAINTAINERS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/bootstrap.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/bootstrap.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/common.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/common.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/file.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/file.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/form.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/form.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/install.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/install.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/menu.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/menu.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/module.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/module.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/theme.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/theme.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/misc/tabledrag.js" beforeDir="false" afterPath="$PROJECT_DIR$/misc/tabledrag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/aggregator/aggregator.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/aggregator/aggregator.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/aggregator/tests/aggregator_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/aggregator/tests/aggregator_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/block/block.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/block/block.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/block/tests/block_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/block/tests/block_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/block/tests/themes/block_test_theme/block_test_theme.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/block/tests/themes/block_test_theme/block_test_theme.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/blog/blog.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/blog/blog.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/book/book.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/book/book.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/book/book.module" beforeDir="false" afterPath="$PROJECT_DIR$/modules/book/book.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/color/color.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/color/color.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/comment/comment.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/comment/comment.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/contact/contact.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/contact/contact.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/contextual/contextual.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/contextual/contextual.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/dashboard/dashboard.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dashboard/dashboard.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/dblog/dblog.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dblog/dblog.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/field/field.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/field.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/field/modules/field_sql_storage/field_sql_storage.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/modules/field_sql_storage/field_sql_storage.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/field/modules/list/list.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/modules/list/list.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/field/modules/list/list.install" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/modules/list/list.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/field/modules/list/tests/list_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/modules/list/tests/list_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/field/modules/number/number.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/modules/number/number.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/field/modules/options/options.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/modules/options/options.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/field/modules/text/text.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/modules/text/text.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/field/tests/field_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/tests/field_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/field_ui/field_ui.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field_ui/field_ui.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/file/file.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/file/file.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/file/tests/file_module_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/file/tests/file_module_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/filter/filter.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/filter/filter.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/forum/forum.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/forum/forum.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/help/help.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/help/help.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/image/image.admin.inc" beforeDir="false" afterPath="$PROJECT_DIR$/modules/image/image.admin.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/image/image.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/image/image.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/image/tests/image_module_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/image/tests/image_module_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/locale/locale.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/locale/locale.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/locale/locale.test" beforeDir="false" afterPath="$PROJECT_DIR$/modules/locale/locale.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/locale/tests/locale_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/locale/tests/locale_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/menu/menu.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/menu/menu.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/node/node.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/node/node.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/node/tests/node_access_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/node/tests/node_access_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/node/tests/node_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/node/tests/node_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/node/tests/node_test_exception.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/node/tests/node_test_exception.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/openid/openid.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/openid/openid.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/openid/tests/openid_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/openid/tests/openid_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/overlay/overlay.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/overlay/overlay.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/path/path.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/path/path.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/path/path.test" beforeDir="false" afterPath="$PROJECT_DIR$/modules/path/path.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/php/php.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/php/php.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/poll/poll.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/poll/poll.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/profile/profile.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/profile/profile.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/rdf/rdf.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/rdf/rdf.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/rdf/tests/rdf_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/rdf/tests/rdf_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/search/search.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/search/search.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/search/tests/search_embedded_form.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/search/tests/search_embedded_form.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/search/tests/search_extra_type.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/search/tests/search_extra_type.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/search/tests/search_node_tags.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/search/tests/search_node_tags.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/shortcut/shortcut.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/shortcut/shortcut.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/simpletest.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/simpletest.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/actions_loop_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/actions_loop_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/ajax_forms_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/ajax_forms_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/ajax_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/ajax_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/batch_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/batch_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/boot_test_1.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/boot_test_1.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/boot_test_2.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/boot_test_2.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/common_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/common_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/common_test_cron_helper.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/common_test_cron_helper.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/database_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/database_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/drupal_autoload_test/drupal_autoload_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/drupal_autoload_test/drupal_autoload_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/entity_cache_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/entity_cache_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/entity_cache_test_dependency.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/entity_cache_test_dependency.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/entity_crud_hook_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/entity_crud_hook_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/entity_query_access_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/entity_query_access_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/error_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/error_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/file.test" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/file.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/file_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/file_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/filter_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/filter_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/form.test" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/form.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/form_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/form_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/form_test.module" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/form_test.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/image.test" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/image.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/image_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/image_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/menu_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/menu_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/module_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/module_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/path_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/path_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/psr_0_test/psr_0_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/psr_0_test/psr_0_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/psr_4_test/psr_4_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/psr_4_test/psr_4_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/requirements1_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/requirements1_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/requirements2_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/requirements2_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/session_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/session_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/system_dependencies_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/system_dependencies_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_core_version_dependencies_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_core_version_dependencies_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_core_version_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_core_version_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_module_version_dependencies_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_module_version_dependencies_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_module_version_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_module_version_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/system_project_namespace_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/system_project_namespace_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/system_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/system_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/taxonomy_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/taxonomy_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/theme_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/theme_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_basetheme/test_basetheme.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_basetheme/test_basetheme.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_subtheme/test_subtheme.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_subtheme/test_subtheme.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_theme/test_theme.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_theme/test_theme.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_theme_nyan_cat/test_theme_nyan_cat.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_theme_nyan_cat/test_theme_nyan_cat.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/update_script_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/update_script_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/update_test_1.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/update_test_1.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/update_test_2.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/update_test_2.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/update_test_3.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/update_test_3.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/url_alter_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/url_alter_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/xmlrpc_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/xmlrpc_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/statistics/statistics.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/statistics/statistics.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/syslog/syslog.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/syslog/syslog.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/system/system.admin.inc" beforeDir="false" afterPath="$PROJECT_DIR$/modules/system/system.admin.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/system/system.api.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/system/system.api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/system/system.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/system/system.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/system/system.mail.inc" beforeDir="false" afterPath="$PROJECT_DIR$/modules/system/system.mail.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/system/system.tar.inc" beforeDir="false" afterPath="$PROJECT_DIR$/modules/system/system.tar.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/system/system.test" beforeDir="false" afterPath="$PROJECT_DIR$/modules/system/system.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/system/tests/cron_queue_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/system/tests/cron_queue_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/system/tests/system_cron_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/system/tests/system_cron_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/taxonomy/taxonomy.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/taxonomy/taxonomy.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/taxonomy/taxonomy.module" beforeDir="false" afterPath="$PROJECT_DIR$/modules/taxonomy/taxonomy.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/toolbar/toolbar.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/toolbar/toolbar.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/tracker/tracker.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/tracker/tracker.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/translation/tests/translation_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/translation/tests/translation_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/translation/translation.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/translation/translation.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/trigger/tests/trigger_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/trigger/tests/trigger_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/trigger/trigger.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/trigger/trigger.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/update/tests/aaa_update_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/tests/aaa_update_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/update/tests/bbb_update_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/tests/bbb_update_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/update/tests/ccc_update_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/tests/ccc_update_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/update/tests/themes/update_test_admintheme/update_test_admintheme.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/tests/themes/update_test_admintheme/update_test_admintheme.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/update/tests/themes/update_test_basetheme/update_test_basetheme.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/tests/themes/update_test_basetheme/update_test_basetheme.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/update/tests/themes/update_test_subtheme/update_test_subtheme.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/tests/themes/update_test_subtheme/update_test_subtheme.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/update/tests/update_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/tests/update_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/update/update.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/update.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/user/tests/user_form_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/tests/user_form_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/user/user.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/user.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/user/user.module" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/user.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/user/user.test" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/user.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles/minimal/minimal.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/minimal/minimal.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles/standard/standard.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/standard/standard.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles/testing/testing.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/testing.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_devel/admin_devel.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_devel/admin_devel.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu-rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu-rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.color.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.color.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.map.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.map.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.uid1.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu.uid1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu_toolbar/admin_menu_toolbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu_toolbar/admin_menu_toolbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu_toolbar/admin_menu_toolbar.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu_toolbar/admin_menu_toolbar.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu_toolbar/admin_menu_toolbar.install" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu_toolbar/admin_menu_toolbar.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu_toolbar/admin_menu_toolbar.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu_toolbar/admin_menu_toolbar.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/admin_menu/tests/admin_menu.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/admin_menu/tests/admin_menu.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/backup_migrate.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/backup_migrate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/backup_migrate.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/backup_migrate.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/backup_migrate.install" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/backup_migrate.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/backup_migrate.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/backup_migrate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/backup_migrate.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/backup_migrate.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/backup_migrate.drush.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/backup_migrate.drush.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/crud.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/crud.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.browser.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.browser.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.db.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.db.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.db.mysql.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.db.mysql.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.email.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.email.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.file.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.file.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.ftp.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.ftp.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.nodesquirrel.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.nodesquirrel.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.s3.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/destinations.s3.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/files.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/files.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/filters.backup_restore.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/filters.backup_restore.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/filters.compression.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/filters.compression.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/filters.encryption.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/filters.encryption.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/filters.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/filters.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/filters.statusnotify.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/filters.statusnotify.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/filters.utils.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/filters.utils.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/locations.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/locations.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/profiles.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/profiles.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/schedules.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/schedules.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/sources.archivesource.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/sources.archivesource.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/sources.db.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/sources.db.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/sources.db.mysql.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/sources.db.mysql.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/sources.filesource.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/sources.filesource.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/sources.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/backup_migrate/includes/sources.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/tests/BackupMigrateBasicsTest.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/backup_migrate/tests/BackupMigrateHelper.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/block_attributes" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/block_attributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/block_attributes/block_attributes.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/block_attributes/block_attributes.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/chr/chr.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/chr/chr.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/chr/chr.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/chr/chr.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/INSTALL" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/INSTALL" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/README" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/TODO" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/TODO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/Krumo/_class.krumo.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/Krumo/_class.krumo.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/Krumo/krumo.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/Krumo/krumo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/blank.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/blank.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/classtrees_Krumo.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/classtrees_Krumo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/elementindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/elementindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/elementindex_Krumo.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/elementindex_Krumo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/errors.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/errors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/li_Krumo.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/li_Krumo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/media/banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/media/banner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/media/lib/classTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/media/lib/classTree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/media/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/media/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/packages.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/packages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/ric_INSTALL.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/ric_INSTALL.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/ric_LICENSE.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/ric_LICENSE.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/ric_README.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/ric_README.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/ric_TODO.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/ric_TODO.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/ric_VERSION.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/docs/ric_VERSION.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/krumo.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/krumo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/skins/blue/skin.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/skins/blue/skin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/skins/default/skin.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/skins/default/skin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/skins/green/skin.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/skins/green/skin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/skins/orange/skin.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/skins/orange/skin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/devel/krumo/skins/white/skin.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/devel/krumo/skins/white/skin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/features/features.admin.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/features/features.admin.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/features/features.drush.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/features/features.drush.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/features/features.export.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/features/features.export.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/features/features.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/features/features.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/features/features.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/features/features.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/features/includes/features.field.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/features/includes/features.field.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/features/includes/features.image.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/features/includes/features.image.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/features/includes/features.menu.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/features/includes/features.menu.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/features/tests/features.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/features/tests/features.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/features/tests/features_test/features_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/features/tests/features_test/features_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/field_group/field_group.field_ui.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/field_group/field_group.field_ui.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/field_group/horizontal-tabs/horizontal-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/field_group/horizontal-tabs/horizontal-tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/field_group/multipage/multipage.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/field_group/multipage/multipage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.admin.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.admin.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.api.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.field.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.field.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.file.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.file.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.install" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.pages.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.pages.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.pathauto.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/file_entity/file_entity.pathauto.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/file_entity/plugins/content_types/file_display.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/file_entity/plugins/content_types/file_display.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/file_entity/tests/file_entity_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/file_entity/tests/file_entity_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/fontawesome/drush/fontawesome.drush.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/fontawesome/drush/fontawesome.drush.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/fontawesome/fontawesome.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/fontawesome/fontawesome.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/fontawesome/fontawesome.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/fontawesome/fontawesome.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/gmap/gmap_test/gmap_test.features.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/gmap/gmap_test/gmap_test.features.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/gmap/vendor/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/gmap/vendor/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/libraries/CHANGELOG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/libraries/CHANGELOG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/libraries/libraries.admin.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/libraries/libraries.admin.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/libraries/libraries.api.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/libraries/libraries.api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/libraries/libraries.drush.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/libraries/libraries.drush.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/libraries/libraries.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/libraries/libraries.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/libraries/libraries.install" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/libraries/libraries.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/libraries/libraries.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/libraries/libraries.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/libraries/tests/LibrariesAdminWebTest.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/libraries/tests/LibrariesAdminWebTest.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/libraries/tests/libraries/example_info_file.libraries.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/libraries/tests/libraries/example_info_file.libraries.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/libraries/tests/modules/libraries_test_module/libraries_test_module.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/libraries/tests/modules/libraries_test_module/libraries_test_module.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/libraries/tests/themes/libraries_test_theme/libraries_test_theme.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/libraries/tests/themes/libraries_test_theme/libraries_test_theme.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/link-rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/link-rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/link.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/link.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/link.diff.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/link.diff.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/link.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/link.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/link.install" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/link.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/link.migrate.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/link.migrate.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/link.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/link.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/tests/link.attribute.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/tests/link.attribute.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/tests/link.crud.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/tests/link.crud.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/tests/link.crud_browser.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/tests/link.crud_browser.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/tests/link.entity_token.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/tests/link.entity_token.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/tests/link.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/tests/link.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/tests/link.token.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/tests/link.token.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/tests/link.validate.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/tests/link.validate.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/views/link.views.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/views/link.views.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/views/link_views_handler_argument_target.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/views/link_views_handler_argument_target.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/link/views/link_views_handler_filter_protocol.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/link/views/link_views_handler_filter_protocol.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/linkit/includes/theme.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/linkit/includes/theme.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/location/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/location/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/masonry_views/css/masonry_views.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/masonry_views/css/masonry_views.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/includes/media.fields.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/includes/media.fields.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/media.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/media.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/media.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/media.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/media.views.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/media.views.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/modules/media_bulk_upload/includes/media_bulk_upload.pages.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/modules/media_bulk_upload/includes/media_bulk_upload.pages.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/modules/media_bulk_upload/media_bulk_upload.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/modules/media_bulk_upload/media_bulk_upload.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/modules/media_internet/media_internet.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/modules/media_internet/media_internet.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/modules/media_internet/tests/media_internet_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/modules/media_internet/tests/media_internet_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/modules/media_migrate_file_types/media_migrate_file_types.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/modules/media_migrate_file_types/media_migrate_file_types.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/modules/media_wysiwyg/includes/media_wysiwyg.filter.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/modules/media_wysiwyg/includes/media_wysiwyg.filter.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/modules/media_wysiwyg/includes/media_wysiwyg.pages.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/modules/media_wysiwyg/includes/media_wysiwyg.pages.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/modules/media_wysiwyg/media_wysiwyg.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/modules/media_wysiwyg/media_wysiwyg.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/modules/media_wysiwyg_view_mode/media_wysiwyg_view_mode.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/modules/media_wysiwyg_view_mode/media_wysiwyg_view_mode.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/modules/mediafield/mediafield.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/modules/mediafield/mediafield.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/media/tests/media_module_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/media/tests/media_module_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/menu_block/menu-block-background-display-options.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/menu_block/css/display-options-background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/menu_block/menu-block.admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/menu_block/css/menu-block.admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/menu_block/menu-block.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/menu_block/js/menu-block.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/menu_block/menu_block.admin.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/menu_block/menu_block.admin.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/menu_block/menu_block.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/menu_block/menu_block.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/menu_block/menu_block.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/menu_block/menu_block.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/menu_block/menu_block_export.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/menu_block/menu_block_export.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/menu_block/plugins/content_types/menu_tree/menu_tree.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/menu_block/plugins/content_types/menu_tree/menu_tree.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/multiform/multiform.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/multiform/multiform.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/multiform/multiform.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/multiform/multiform.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/multiform/tests/multiform.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/multiform/tests/multiform.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/multiform/tests/multiform_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/multiform/tests/multiform_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/password_policy/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/password_policy/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/password_policy/constraints/constraint_delay.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/password_policy/constraints/constraint_delay.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/password_policy/constraints/constraint_digit_placement.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/password_policy/constraints/constraint_digit_placement.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/password_policy/contrib/password_tab/password_policy_password_tab.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/password_policy/contrib/password_tab/password_policy_password_tab.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/password_policy/contrib/password_tab/password_policy_password_tab.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/password_policy/contrib/password_tab/password_policy_password_tab.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/password_policy/password_policy.admin.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/password_policy/password_policy.admin.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/password_policy/password_policy.authmap.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/password_policy/password_policy.authmap.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/password_policy/password_policy.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/password_policy/password_policy.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/password_policy/password_policy.install" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/password_policy/password_policy.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/password_policy/password_policy.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/password_policy/password_policy.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/password_policy/tests/password_policy.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/password_policy/tests/password_policy.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/password_policy/tests/password_policy_test/password_policy_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/password_policy/tests/password_policy_test/password_policy_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/password_policy/tests/password_policy_test/password_policy_test.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/password_policy/tests/password_policy_test/password_policy_test.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/securelogin/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/securelogin/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/securelogin/securelogin.admin.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/securelogin/securelogin.admin.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/securelogin/securelogin.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/securelogin/securelogin.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/securelogin/securelogin.install" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/securelogin/securelogin.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/securelogin/securelogin.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/securelogin/securelogin.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/securelogin/securelogin.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/securelogin/securelogin.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/securelogin/securelogin.variable.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/securelogin/securelogin.variable.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/twitter/twitter_views_field_handlers.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/twitter/twitter_views_field_handlers.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/book.action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/book.action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/modify.action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/modify.action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions_permissions.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions_permissions.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/js/views_bulk_operations.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/js/views_bulk_operations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/plugins/operation_types/action.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/plugins/operation_types/action.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views/views_bulk_operations_handler_field_operations.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views/views_bulk_operations_handler_field_operations.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.rules.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.rules.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/THEMING.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/THEMING.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/components/date.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/components/date.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/components/email.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/components/email.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/components/file.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/components/file.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/components/hidden.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/components/hidden.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/components/markup.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/components/markup.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/components/number.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/components/number.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/components/select.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/components/select.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/components/textarea.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/components/textarea.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/components/textfield.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/components/textfield.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/components/time.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/components/time.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/includes/exporters/webform_exporter_excel_xlsx.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/includes/exporters/webform_exporter_excel_xlsx.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/includes/webform.admin.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/includes/webform.admin.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/includes/webform.components.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/includes/webform.components.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/includes/webform.conditionals.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/includes/webform.conditionals.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/includes/webform.emails.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/includes/webform.emails.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/includes/webform.report.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/includes/webform.report.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/includes/webform.submissions.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/includes/webform.submissions.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/includes/webform.webformconditionals.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/includes/webform.webformconditionals.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/templates/webform-mail.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/templates/webform-mail.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/templates/webform-results-submissions.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/templates/webform-results-submissions.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/tests/WebformConditionalsTestCase.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/tests/WebformConditionalsTestCase.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/tests/WebformPermissionsTestCase.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/tests/WebformPermissionsTestCase.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/tests/WebformTestCase.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/tests/WebformTestCase.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_area_result_pager.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_area_result_pager.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_field_form_body.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_field_form_body.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_field_node_link_edit.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_field_node_link_edit.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_field_node_link_results.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_field_node_link_results.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_field_submission_count.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_field_submission_count.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_field_submission_data.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_field_submission_data.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_field_submission_link.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_field_submission_link.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_field_webform_status.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_field_webform_status.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_numeric_data.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_numeric_data.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_relationship_submission_data.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_handler_relationship_submission_data.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_plugin_row_submission_view.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/views/webform_plugin_row_submission_view.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/webform.api.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/webform.api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/webform.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/webform.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/webform.install" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/webform.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/webform.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/webform.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/webform/webform.tokens.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/webform/webform.tokens.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/bootstrap/bootstrap.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/bootstrap/bootstrap.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/bootstrap/includes/icons.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/bootstrap/includes/icons.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/bootstrap/templates/file/file-managed-file.func.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/bootstrap/templates/file/file-managed-file.func.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/bootstrap/templates/system/table.func.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/bootstrap/templates/system/table.func.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/modules/custom/share_button/.idea/copyright/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/modules/custom/share_button/.idea/copyright/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/modules/custom/share_button/.idea/share_button.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/modules/custom/share_button/.idea/share_button.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/modules/custom/share_button/share_button.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/modules/custom/share_button/share_button.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/modules/custom/share_button/share_button.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/modules/custom/share_button/share_button.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/modules/custom/share_button/theme/share_button-block1--block.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/modules/custom/share_button/theme/share_button-block1--block.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/agid.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/agid.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/_bootstrap-compass.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/_bootstrap-compass.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/_bootstrap-mincer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/_bootstrap-mincer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/_bootstrap-sprockets.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/_bootstrap-sprockets.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_alerts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_alerts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_badges.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_badges.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_breadcrumbs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_breadcrumbs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_button-groups.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_button-groups.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_carousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_carousel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_close.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_close.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_code.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_code.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_component-animations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_component-animations.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_dropdowns.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_dropdowns.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_glyphicons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_glyphicons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_input-groups.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_input-groups.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_jumbotron.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_jumbotron.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_labels.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_labels.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_list-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_list-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_media.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_media.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_modals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_modals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_navs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_navs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_normalize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_normalize.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_pager.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_pager.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_panels.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_panels.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_popovers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_popovers.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_print.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_print.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_progress-bars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_progress-bars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_responsive-embed.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_responsive-embed.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_responsive-utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_responsive-utilities.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_scaffolding.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_scaffolding.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_tables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_tables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_thumbnails.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_thumbnails.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_tooltip.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_tooltip.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_type.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_type.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_utilities.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_wells.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/_wells.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_alerts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_alerts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_background-variant.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_background-variant.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_border-radius.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_border-radius.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_center-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_center-block.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_clearfix.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_clearfix.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_gradients.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_gradients.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_grid-framework.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_grid-framework.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_hide-text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_hide-text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_image.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_image.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_labels.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_labels.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_list-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_list-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_nav-divider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_nav-divider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_nav-vertical-align.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_nav-vertical-align.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_opacity.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_opacity.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_panels.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_panels.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_progress-bar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_progress-bar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_reset-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_reset-filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_reset-text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_reset-text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_resize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_resize.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_responsive-visibility.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_responsive-visibility.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_size.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_size.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_tab-focus.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_tab-focus.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_table-row.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_table-row.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_text-overflow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_text-overflow.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/bootstrap-sass.gemspec" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/bootstrap-sass.gemspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/lib/bootstrap-sass.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/lib/bootstrap-sass.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/lib/bootstrap-sass/engine.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/lib/bootstrap-sass/engine.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/lib/bootstrap-sass/version.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/lib/bootstrap-sass/version.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/sache.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/sache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/bower.rake" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/bower.rake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/converter.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/converter.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/converter/char_string_scanner.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/converter/char_string_scanner.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/converter/fonts_conversion.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/converter/fonts_conversion.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/converter/js_conversion.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/converter/js_conversion.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/converter/less_conversion.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/converter/less_conversion.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/converter/logger.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/converter/logger.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/converter/network.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/tasks/converter/network.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/templates/project/_bootstrap-variables.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/templates/project/_bootstrap-variables.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/templates/project/manifest.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/templates/project/manifest.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/templates/project/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/templates/project/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/templates/project/styles.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/templates/project/styles.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/compass_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/compass_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/compilation_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/compilation_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_node_mincer/application.css.ejs.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_node_mincer/application.css.ejs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_node_mincer/application.css.ejs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_node_mincer/application.css.ejs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/README.rdoc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/README.rdoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/app/assets/stylesheets/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/app/assets/stylesheets/application.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/app/assets/stylesheets/application.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/app/controllers/pages_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/app/views/pages/root.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/app/views/pages/root.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config.ru" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config.ru" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/boot.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/boot.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/environment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/environment.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/environments/production.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/environments/test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/environments/test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/initializers/backtrace_silencers.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/initializers/backtrace_silencers.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/initializers/filter_parameter_logging.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/initializers/filter_parameter_logging.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/initializers/inflections.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/initializers/inflections.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/initializers/mime_types.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/initializers/mime_types.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/initializers/secret_token.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/initializers/secret_token.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/initializers/session_store.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/initializers/session_store.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/initializers/wrap_parameters.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/initializers/wrap_parameters.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/locales/en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/locales/en.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/locales/es.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/locales/es.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_rails/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_sass_only/compile.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_sass_only/compile.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_sass_only/import_all.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_sass_only/import_all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_sass_only/import_all.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/dummy_sass_only/import_all.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/gemfiles/rails_head.gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/gemfiles/rails_head.gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/gemfiles/sass_3_3.gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/gemfiles/sass_3_3.gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/gemfiles/sass_3_4.gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/gemfiles/sass_3_4.gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/gemfiles/sass_head.gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/gemfiles/sass_head.gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/node_mincer_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/node_mincer_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/pages_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/pages_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/sass_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/sass_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/sprockets_rails_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/sprockets_rails_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/support/dummy_rails_integration.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/support/dummy_rails_integration.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/support/reporting.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/support/reporting.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/test_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/test_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/test_helper_rails.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/bootstrap/test/test_helper_rails.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/FitVids.js-master/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/FitVids.js-master/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/VenoBox-master/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/VenoBox-master/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/VenoBox-master/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/VenoBox-master/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/RELEASENOTES.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/RELEASENOTES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/src/indicator/build.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/src/indicator/build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/src/infinite/build.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/src/infinite/build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/src/keys/build.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/src/keys/build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/src/probe/build.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/src/probe/build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/src/snap/build.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/src/snap/build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/src/wheel/build.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/src/wheel/build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/src/zoom/build.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/iscroll-master/src/zoom/build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/jPushMenu/_jpush-menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/jPushMenu/_jpush-menu.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery-match-height-master/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery-match-height-master/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery-match-height-master/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery-match-height-master/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery-match-height-master/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery-match-height-master/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery-match-height-master/matchHeight.jquery.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery-match-height-master/matchHeight.jquery.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery.easing-master/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery.easing-master/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery.easing-master/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery.easing-master/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery.easing-master/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery.easing-master/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery.scrollTo-master/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery.scrollTo-master/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery.scrollTo-master/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery.scrollTo-master/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery.scrollTo-master/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery.scrollTo-master/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery.scrollTo-master/scrollTo.jquery.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/jquery.scrollTo-master/scrollTo.jquery.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/packery-master/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/packery-master/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/packery-master/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/packery-master/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/packery-master/changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/packery-master/changelog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/packery-master/contributing.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/packery-master/contributing.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/components/packery-master/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/components/packery-master/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/css/ie8.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/css/ie8.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/css/main_bk.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/css/main_bk.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/javascripts/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/javascripts/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/js/scripts-min.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/js/scripts-min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/js/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/js/underscore.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/js/underscore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/js/vendor/___imagesloaded.pkgd.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/js/vendor/___imagesloaded.pkgd.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/scss/_drupal-boostrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/scss/_drupal-boostrap.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/block/block.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/block/block.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/book/book-navigation.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/book/book-navigation.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/field/field--field_image.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/field/field--field_image.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/location.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/location.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/node/node--evento.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/node/node--evento.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/node/node--scheda_personale.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/node/node--scheda_personale.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/node/node--struttura_organizzativa.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/node/node--struttura_organizzativa.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/node/node.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/node/node.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/search/search-block-form.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/search/search-block-form.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/search/search-result.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/search/search-result.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/system/html.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/system/html.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/system/location.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/system/location.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/system/page.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/system/page.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/system/region--navigation.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/system/region--navigation.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/system/taxonomy-term.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/system/taxonomy-term.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/views/views-bootstrap-grid-plugin-style.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/views/views-bootstrap-grid-plugin-style.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/views/views-view--galleria-media--block.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/views/views-view--galleria-media--block.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/views/views-view--galleria-media.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/views/views-view--galleria-media.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/views/views-view--news--events.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/views/views-view--news--events.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/views/views-view--news.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/views/views-view--news.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/views/views-view-unformatted--galleria-media.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/views/views-view-unformatted--galleria-media.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/templates/views/views-view-unformatted--news.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/templates/views/views-view-unformatted--news.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/themes/agid/theme-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/themes/agid/theme-settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/bartik/bartik.info" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bartik/bartik.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/garland/garland.info" beforeDir="false" afterPath="$PROJECT_DIR$/themes/garland/garland.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/seven/seven.info" beforeDir="false" afterPath="$PROJECT_DIR$/themes/seven/seven.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/stark/stark.info" beforeDir="false" afterPath="$PROJECT_DIR$/themes/stark/stark.info" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DrupalConfiguration" enabled="true" version="7">
+    <drupalPath>$PROJECT_DIR$</drupalPath>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/default/settings.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="586" column="31" selection-start-line="586" selection-start-column="31" selection-end-line="586" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ssl</find>
+      <find>https</find>
+      <find>proxy</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/sites/default/settings.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="6" />
+    <option name="y" value="23" />
+    <option name="width" value="1645" />
+    <option name="height" value="893" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="drupalcsi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupalcsi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drupalcsi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupalcsi" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drupalcsi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupalcsi" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drupalcsi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupalcsi" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drupalcsi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupalcsi" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="block_attributes" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8754f7de-2b1a-43ee-ae85-a2473f0e18f8" name="Default Changelist" comment="" />
+      <created>1548750175921</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1548750175921</updated>
+      <workItem from="1548750178006" duration="4560000" />
+    </task>
+    <task id="LOCAL-00001" summary="File orfano del block_attributes">
+      <created>1548762228488</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1548762228488</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4560000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="6" y="23" width="1645" height="893" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24953213" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32958803" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.32958803" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="File orfano del block_attributes" />
+    <option name="LAST_COMMIT_MESSAGE" value="File orfano del block_attributes" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="120" column="43" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/default/settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="586" column="31" selection-start-line="586" selection-start-column="31" selection-end-line="586" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

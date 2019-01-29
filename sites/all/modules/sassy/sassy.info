@@ -1,0 +1,17 @@
+name = 'Sassy  core SASS+SCSS compiler'
+description = 'Integrates the PHPSass library to allow automatic SASS/SCSS compilation'
+core = '7.x'
+package = 'Theming Tools'
+configure = admin/config/media/prepro
+
+files[] = sassy.test
+
+dependencies[] = libraries
+dependencies[] = prepro
+
+; Information added by Drupal.org packaging script on 2016-08-26
+version = "7.x-2.20"
+core = "7.x"
+project = "sassy"
+datestamp = "1472242441"
+

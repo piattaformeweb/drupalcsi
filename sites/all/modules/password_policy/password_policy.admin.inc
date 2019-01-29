@@ -62,6 +62,14 @@ function password_policy_admin_settings() {
     '#default_value' => variable_get('password_policy_block', 0),
     '#options' => array('0' => t('Expired accounts are blocked. Only administrators can unblock them. Once unblocked, users can log in and will be forced to change their password. If they do not log in and change their password within one day, they will be blocked again.'), '1' => t('Expired accounts are not blocked. Users whose accounts have expired will be forced to change their passwords at next login.')),
   );
+  $form['expiration']['password_policy_expired_account_entries'] = array(
+    '#type' => 'textfield',
+    '#size' => 10,
+    '#title' => t('Entries per page on expired accounts page'),
+    '#element_validate' => array('element_validate_integer_positive'),
+    '#default_value' => variable_get('password_policy_expired_account_entries', 10),
+    '#description' => t('The <a href="@expired-accounts-page">expired accounts page</a> lists all expired accounts to administrators.', array('@expired-accounts-page' => url('admin/people/expired'))),
+  );
 
   // Visibility.
   $form['visibility'] = array(
@@ -472,11 +480,18 @@ function password_policy_admin_form_validate($form, &$form_state) {
   if (empty($roles)) {
     form_set_error('roles', t('You must select at least one role for a policy to apply to.'));
   }
-  if (!empty($form_state['values']['warning']) && !preg_match('/^[0-9,]+$/', $form_state['values']['warning'])) {
-    form_set_error('warning', t('Warning must only contain digits and commas.'));
-  }
+  _password_policy_validate_expiration_warning($form_state);
   if (_password_policy_validating_new_policy($form_state)) {
     _password_policy_validate_unique_policy_name($form_state);
+  }
+}
+
+/**
+ * Validates expiration warning.
+ */
+function _password_policy_validate_expiration_warning($form_state) {
+  if (!empty($form_state['values']['warning']) && !preg_match('/^[0-9]+(,[0-9]+)*+$/', $form_state['values']['warning'])) {
+    form_set_error('warning', t('Warning must be a number of days or comma-separated numbers of days. For example, "30" or "30,7".'));
   }
 }
 

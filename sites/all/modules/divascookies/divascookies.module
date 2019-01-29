@@ -1,0 +1,415 @@
+<?php
+/**
+ * @file
+ * Cookies manager for EU/Italian Cookies Law.
+ *
+ * Date: 16/giu/2015 17:53:34
+ * File: divascookies.module
+ * Author: stefano.
+ */
+
+/**
+ * Implements hook_help().
+ *
+ * SC 16/giu/2015 17:54:51 stefano.
+ */
+function divascookies_help($path, $arg) {
+  // Declare your output variable.
+  $output = '';
+  switch ($path) {
+    case "admin/help#divascookies":
+      $output = '<p>' . t("Cookies manager for EU/Italian Cookies Law") . '</p>';
+      break;
+  }
+  return $output;
+}
+
+/**
+ * Implements hook_init().
+ *
+ * SC 23/giu/2015 15:30:50 stefano.
+ */
+function divascookies_init() {
+  module_load_include('inc', 'divascookies', 'divascookies.admin');
+
+  // Check if Divas Cookies libs aren't installed.
+  //
+  // SC 24/giu/2015 10:36:21 stefano.
+  if ($path = libraries_get_path('divascookies')) {
+    $foo = libraries_load('divascookies', variable_get_value('divascookies_css'));
+  }
+  else {
+    drupal_set_message(t('Missing the libs of Divas Cookies: please read the README.txt'), 'error', FALSE);
+  }
+}
+
+/**
+ * Implements hook_libraries_info().
+ *
+ * SC 25 giu 2015 17:25:00 stefano.
+ */
+function divascookies_libraries_info() {
+  $js_06 = array(
+    'js/jquery.divascookies-0.6.min.js' => array(
+      'group' => JS_LIBRARY,
+      'scope' => 'header',
+      'weight' => -18,
+      'every_page' => TRUE
+    ),
+    'js/prism.js' => array(
+      'group' => JS_LIBRARY,
+      'scope' => 'header',
+      'weight' => -17,
+      'every_page' => TRUE
+    )
+  );
+
+  $libraries['divascookies'] = array(
+    'name' => 'Divas Cookies',
+    'vendor url' => 'http://www.codingdivas.net/divascookies/index.php',
+    'download url' => 'http://www.codingdivas.net/divascookies/index.php#downloads',
+    'path' => 'divascookies_free_zip',
+    'version callback' => '_divascookies_version_callback',
+    'version arguments' => array(
+      'file' => 'jquery\.divascookies-.*?\.js',
+      'pattern' => '@^.*version:?\s+([0-9a-zA-Z\.-]+)\s*$@i',
+      'lines' => 10
+    ),
+    // 'cols' => 20,
+    'variant callback' => '_divascookies_variant_callback',
+    'versions' => array(
+      '0.6' => array(
+        'files' => array(
+          'js' => $js_06,
+          'css' => array('css/divascookies_style_dark_top.css', 'css/prism.css'
+          )
+        ),
+        'variants' => array(
+          'divascookies_style_dark_bottom.css' => array(
+            'files' => array(
+              'js' => $js_06,
+              'css' => array(
+                'css/divascookies_style_dark_bottom.css',
+                'css/prism.css'
+              )
+            )
+          ),
+          'divascookies_style_dark_top.css' => array(
+            'files' => array(
+              'js' => $js_06,
+              'css' => array(
+                'css/divascookies_style_dark_top.css',
+                'css/prism.css'
+              )
+            )
+          ),
+          'divascookies_style_light_bottom.css' => array(
+            'files' => array(
+              'js' => $js_06,
+              'css' => array(
+                'css/divascookies_style_light_bottom.css',
+                'css/prism.css'
+              )
+            )
+          ),
+          'divascookies_style_light_top.css' => array(
+            'files' => array(
+              'js' => $js_06,
+              'css' => array(
+                'css/divascookies_style_light_top.css',
+                'css/prism.css'
+              )
+            )
+          )
+        )
+      )
+    )
+  );
+
+  return $libraries;
+}
+
+/**
+ * Version callback function for Libraries module.
+ *
+ * SC 25 giu 2015 17:59:33 stefano.
+ */
+function _divascookies_version_callback($library, $options) {
+  // Provide defaults.
+  $options += array(
+    'file' => '',
+    'pattern' => '',
+    'lines' => 20,
+    'cols' => 200
+  );
+
+  $path = DRUPAL_ROOT . '/' . $library['library path'] . '/' . $library['path'] . '/js';
+
+  $files = scandir($path);
+
+  foreach ($files as $value) {
+    if (preg_match('@' . $options['file'] . '@', $value)) {
+      $file = $path . '/' . $value;
+      break;
+    }
+  }
+
+  if (empty($options['file']) || !file_exists($file)) {
+    return;
+  }
+  $file = fopen($file, 'r');
+  while ($options['lines'] && $line = fgets($file, $options['cols'])) {
+    if (preg_match($options['pattern'], $line, $version)) {
+      fclose($file);
+      return (string) $version[1];
+    }
+    $options['lines']--;
+  }
+  fclose($file);
+}
+
+/**
+ * Variants callback function for Libraries module.
+ *
+ * SC 07 lug 2015 23:28:01 stefano.
+ */
+function _divascookies_variant_callback($library, $variant) {
+
+  $path = DRUPAL_ROOT . '/' . $library['library path'] . '/' . $library['path'] . '/css/' . $variant;
+
+  return file_exists($path);
+}
+
+/**
+ * Implements hook_permission().
+ *
+ * SC 16/giu/2015 18:14:05 stefano.
+ */
+function divascookies_permission() {
+  return array(
+
+    'divascookies admin settings' => array(
+      'title' => t('Administer Divas Cookies settings')
+    )
+  );
+}
+
+/**
+ * Implements hook_menu().
+ *
+ * SC 16/giu/2015 18:51:08 stefano.
+ */
+function divascookies_menu() {
+  $items = array();
+
+  $items['admin/config/system/divascookies'] = array(
+
+    'title' => 'Divas Cookies',
+    'description' => 'Cookies manager for EU/Italian Cookies Law. This is the porting to Drupal of Divas Cookies jquery script by Coding Diva.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('variable_module_form', 'divascookies'
+    ),
+    'access arguments' => array('divascookies admin settings'
+    )
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_page_alter().
+ *
+ * SC 30 giu 2015 22:40:15 stefano.
+ */
+function divascookies_page_alter(&$page) {
+  if (variable_get_value('divascookies_blockScripts') == 'true' && (!isset($_COOKIE['DisplayDivasCookiesBanner']) || strtolower($_COOKIE['DisplayDivasCookiesBanner']) != 'yes')) {
+    $page['#post_render'][] = 'divascookie_processing_scripts';
+  }
+}
+
+/**
+ * The preg replace callback functions.
+ *
+ * SC 01 lug 2015 19:13:59 stefano.
+ */
+function divascookies_script_stop_externalscript($matches) {
+
+  $pattern = '@(.*type\s*=\s*[\'"]text/)javascript([\'"].*)@i';
+  if (preg_match($pattern, $matches[1])) {
+    $foo = preg_replace($pattern, '$1plain$2', $matches[1]);
+  }
+  else {
+    $foo = preg_replace('@(<script)(.+)@i', '$1 type="text/plain" $2', $matches[1]);
+  }
+
+  $pattern = '@(.*class\s*=\s*[\'"].*?)([\'"].*)@i';
+  if (preg_match($pattern, $foo)) {
+    $foo = preg_replace($pattern, '$1 divascookies-remove $2', $foo);
+  }
+  else {
+    $foo = preg_replace('@(<script)(.+)@i', '$1 class="divascookies-remove" $2', $foo);
+  }
+
+  return $foo;
+}
+
+/**
+ * The preg replace callback functions.
+ *
+ * SC 01 lug 2015 19:13:59 stefano.
+ */
+function divascookies_script_stop_inlinescript($matches) {
+  $pattern = '@(<script>)(.+?)(</script>)@im';
+
+  $foo = preg_replace($pattern, '$1if(\$.DivasCookies.optedIn()) {$2}$3', $matches[1]);
+
+  return $foo;
+}
+
+/**
+ * The preg replace callback functions.
+ *
+ * SC 01 lug 2015 19:13:59 stefano.
+ */
+function divascookies_script_stop_externalattr($matches) {
+  $pattern = '@(.*?)src(\s*=.*)@i';
+  $foo = preg_replace($pattern, '$1src-data$2', $matches[1]);
+
+  $pattern = '@(.*?class\s*=\s*[\'"].*?)([\'"].*)@i';
+  if (preg_match($pattern, $foo)) {
+    $foo = preg_replace($pattern, '$1 divascookies-remove $2', $foo);
+  }
+  else {
+    $foo = preg_replace('@(<\w+)(.+)@i', '$1 class="divascookies-remove" $2', $foo);
+  }
+
+  return $foo;
+}
+
+/**
+ * Alters the page post render to disable the code that will load some cookies.
+ *
+ * SC 30 giu 2015 22:54:03 stefano.
+ */
+function divascookie_processing_scripts($children, $elements) {
+
+  // Load the hooks.
+  //
+  // SC 30 giu 2015 09:42:35 stefano.
+  //
+  $cookies_scripts = module_invoke_all('divascookies_script_stop');
+  if (!empty($cookies_scripts['regex'])) {
+    foreach ($cookies_scripts['regex'] as $key => $regex) {
+
+      switch ($cookies_scripts['type'][$key]) {
+        case 'externalscript':
+          $children = preg_replace_callback($regex, "divascookies_script_stop_externalscript", $children);
+          break;
+
+        case 'inlinescript':
+          $children = preg_replace_callback($regex, "divascookies_script_stop_inlinescript", $children);
+          break;
+
+        case 'externalattr':
+          $children = preg_replace_callback($regex, "divascookies_script_stop_externalattr", $children);
+          break;
+      }
+    }
+  }
+
+  return $children;
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * SC 29 giu 2015 17:28:01 stefano.
+ */
+function divascookies_preprocess_page(&$variables) {
+  // Puts the Divas conf on the top of the scripts, after jquery, maybe before
+  // every other script which could create a cookie.
+  //
+  // SC 30 giu 2015 09:33:26 stefano.
+  //
+
+  // Check the output.
+  //
+  // SC 01 nov 2016 19:08:14 stefano.
+  //
+//   $banner_text = str_replace(array("\n", '"'), array('', '\"'), check_markup(variable_get_value('divascookies_bannerText'), 'filtered_html'));
+
+  $foo = check_markup(variable_get_value('divascookies_bannerText'), 'filtered_html');
+
+  $banner_text = preg_replace(array('|\n|','|"|','|^<p>(.+)</p>$|'), array('','\"','$1'), $foo);
+
+  $data = '// instantiate Divas Cookies
+$.DivasCookies({
+	bannerText				: "' . $banner_text . '",
+	cookiePolicyLink		: "' . check_url(variable_get_value('divascookies_cookiePolicyLink')) . '",
+	cookiePolicyLinkText	: "' . check_plain(variable_get_value('divascookies_cookiePolicyLinkText')) . '",
+	thirdPartyPolicyWidget	: "' . check_plain(variable_get_value('divascookies_thirdPartyPolicyWidget')) . '",
+	acceptButtonText		: "' . check_plain(variable_get_value('divascookies_acceptButtonText')) . '",
+	acceptButtonSrc			: "' . check_url(variable_get_value('divascookies_acceptButtonSrc')) . '",
+	openEffect				: "' . variable_get_value('divascookies_openEffect') . '",
+	openEffectDuration		: ' . check_plain(variable_get_value('divascookies_openEffectDuration')) . ',
+	//openEffectEasing		: "' . variable_get_value('divascookies_') . '",
+	closeEffect				: "' . variable_get_value('divascookies_closeEffect') . '",
+	closeEffectDuration		: ' . check_plain(variable_get_value('divascookies_closeEffectDuration')) . ',
+	//closeEffectEasing		: "' . variable_get_value('divascookies_') . '",
+	debugMode				: ' . variable_get_value('divascookies_debugMode') . ',
+	saveUserPreferences		: ' . variable_get_value('divascookies_saveUserPreferences') . ',
+	cookieDuration			: ' . check_plain(variable_get_value('divascookies_cookieDuration')) . ',
+	blockScripts			: ' . variable_get_value('divascookies_blockScripts') . ',
+	pageReload				: ' . variable_get_value('divascookies_pageReload') . ',
+	acceptOnScroll			: ' . variable_get_value('divascookies_acceptOnScroll') . ',
+	acceptOnClick			: ' . variable_get_value('divascookies_acceptOnClick') . ',
+	excludePolicyPage		: ' . variable_get_value('divascookies_excludePolicyPage') . '
+}); // end of Divas Cookies instantiation
+
+// any other script here';
+
+  drupal_add_js($data, array(
+    'type' => 'inline',
+    'group' => JS_LIBRARY,
+    'scope' => 'header',
+    'weight' => -17,
+    'every_page' => TRUE
+  ));
+}
+
+/**
+ * Get the css file list from library.
+ *
+ * SC 29 giu 2015 11:57:27 stefano.
+ *
+ * @return array
+ *   The CSS list.
+ */
+function _divascookie_get_css() {
+  $foo = array();
+  $library = libraries_load('divascookies');
+
+  $path = DRUPAL_ROOT . '/' . $library['library path'] . '/' . $library['path'] . '/css';
+
+  $files = scandir($path);
+
+  foreach ($files as $value) {
+    if (preg_match('@^divascookies.+\.css$@', $value)) {
+      $foo[$value] = $value;
+    }
+  }
+
+  return $foo;
+}
+
+/**
+ * Implements hook_divascookies_script_stop().
+ *
+ * SC 30 giu 2015 10:25:59 stefano.
+ */
+function divascookies_divascookies_script_stop() {
+  $foo = array('regex' => array('@regex fake to fill the array@'), 'type' => array('test'));
+
+  return $foo;
+}

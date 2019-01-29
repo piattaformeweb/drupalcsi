@@ -1,0 +1,58 @@
+<?php
+/**
+ * @file
+ * Divas Cookies manager: this disables cookies from AddThis.
+ *
+ * Date: 30 giu 2015 15:25:38
+ * File: addthis_divascookies.module
+ * Author: stefano.
+ */
+
+/**
+ * Implements hook_divascookies_scripts().
+ *
+ * SC 30 giu 2015 15:34:19 stefano.
+ */
+function addthis_divascookies_divascookies_script_stop() {
+  $file = 'addthis.js';
+
+  // Finds the filename of the aggregated contents of the js files.
+  //
+  // SC 15 lug 2015 01:14:57 stefano.
+  //
+  $map = variable_get('drupal_js_cache_files', array());
+
+  $path = drupal_get_path('module', 'addthis') . '/' . $file;
+
+  $key = hash('sha256', serialize(array(
+    $path
+  )));
+
+  if (array_key_exists($key, $map)) {
+    $foo_file = preg_replace(array(
+      '@^.+/js/(.+)$@i',
+      '@\.@'
+    ), array(
+      '$1',
+      '\.'
+    ), $map[$key]);
+  }
+  else {
+    $foo_file = 'addthis\.js';
+  }
+
+  $foo = array(
+    'regex' => array(
+      "@(<script.+?src\s*=.+?addthis\.com.+?/script>)@i",
+      "@(<img.+?src\s*=.+?addthis\.com.+?/>)@i",
+      "@(<script.+?src\s*=.+?" . $foo_file . ".+?/script>)@i"
+    ),
+    'type' => array(
+      'externalscript',
+      'externalattr',
+      'externalscript'
+    )
+  );
+
+  return $foo;
+}

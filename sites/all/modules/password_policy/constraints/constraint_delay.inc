@@ -5,9 +5,6 @@
  * Constraint callback to set a minimum delay between password changes.
  *
  * @link https://drupal.org/node/316765
- *
- * @codingStandardsIgnoreLine
- * @author David Kent Norman (https://deekayen.net/)
  */
 
 /****************************************************************************/

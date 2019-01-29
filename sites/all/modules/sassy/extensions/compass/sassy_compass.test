@@ -1,0 +1,26 @@
+<?php
+
+class SassyCompassUnitTest extends SassyBaseUnitTest {
+
+  public static function getInfo() {
+    return array(
+      'name' => 'Sassy Compass unit tests',
+        'description' => 'Tests Sassy Compass integration',
+        'group' => 'Theme',
+      );
+  }
+
+  function setUp() {
+    parent::setUp('sassy_compass');
+
+    $this->css_tests_path = drupal_get_path('module', 'sassy_compass') . '/tests/';
+  }
+
+  function testCompass() {
+    $this->runTest('compass.scss');
+    $this->runTest('image-dimensions.scss');
+    $this->runTest('inline-image.scss');
+    $this->runTest('text-replacement.scss');
+  }
+
+}

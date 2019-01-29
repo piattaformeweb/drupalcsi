@@ -103,12 +103,22 @@ class twitter_views_handler_field_web_intents extends views_handler_field {
     $this->add_additional_fields();
   }
 
+  /*
   function render($values) {
     drupal_add_js('//platform.twitter.com/widgets.js', 'external');
     return '<span><a href="https://twitter.com/intent/tweet?in_reply_to=' . $values->twitter_id . '">' . t('Reply') . '</a></span> ' .
       '<span><a href="https://twitter.com/intent/retweet?tweet_id=' . $values->twitter_id . '">' . t('Retweet') . '</a></span> ' .
       '<span><a href="https://twitter.com/intent/favorite?tweet_id=' . $values->twitter_id . '">' . t('Favorite') . '</a></span>';
   }
+  */
+
+  function render($values) {
+    drupal_add_js('//platform.twitter.com/widgets.js', 'external');
+    return '<a href="https://twitter.com/intent/tweet?in_reply_to=' . $values->twitter_id . '">' . '<img src="' . drupal_get_path('theme', 'agid') . '/img/twitter/icon-twitter-back.svg" alt="' . t('Reply') . '"></a> ' .
+      '<a href="https://twitter.com/intent/retweet?tweet_id=' . $values->twitter_id . '">' . '<img src="' . drupal_get_path('theme', 'agid') . '/img/twitter/icon-twitter-share.svg" alt="' . t('Retweet') . '"></a> ' .
+      '<a href="https://twitter.com/intent/favorite?tweet_id=' . $values->twitter_id . '">' . '<img src="' . drupal_get_path('theme', 'agid') . '/img/twitter/icon-twitter-like.svg" alt="' . t('Favorite') . '"></a>';
+  }
+
 }
 
 /**

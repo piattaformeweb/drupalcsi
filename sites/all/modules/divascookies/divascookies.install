@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * Cookies manager for EU/Italian Cookies Law.
+ *
+ * Date: 12/giu/2015 12:23:07
+ * File: divascookies.install
+ * Author: stefano.
+ */
+
+/**
+ * Implements hook_schema().
+ *
+ * SC 16/giu/2015 17:01:34 stefano.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * SC 16/giu/2015 17:41:27 stefano.
+ */
+function divascookies_install() {
+  variable_set_value('divascookies_bannerText', t('Banner text'));
+  variable_set_value('divascookies_cookiePolicyLink', '');
+  variable_set_value('divascookies_cookiePolicyLinkText', t('More info'));
+  variable_set_value('divascookies_thirdPartyPolicyWidget', '');
+  variable_set_value('divascookies_acceptButtonText', t('OK'));
+  variable_set_value('divascookies_acceptButtonSrc', '');
+  variable_set_value('divascookies_openEffect', 'slideDown');
+  variable_set_value('divascookies_openEffectDuration', 600);
+  // variable_set_value('divascookies_openEffectEasing', 'swing');
+  variable_set_value('divascookies_closeEffect', 'slideUp');
+  variable_set_value('divascookies_closeEffectDuration', 600);
+  // variable_set_value('divascookies_closeEffectEasing', 'swing');
+  variable_set_value('divascookies_saveUserPreferences', 'true');
+  variable_set_value('divascookies_cookieDuration', 30);
+  variable_set_value('divascookies_blockScripts', 'false');
+  variable_set_value('divascookies_pageReload', 'true');
+  variable_set_value('divascookies_acceptOnScroll', 'false');
+  variable_set_value('divascookies_acceptOnClick', 'true');
+  variable_set_value('divascookies_excludePolicyPage', 'false');
+  variable_set_value('divascookies_css', 'divascookies_style_dark_bottom.css');
+  variable_set_value('divascookies_debugMode', 'false');
+}
+
+/**
+ * Implements hook_uninstall().
+ *
+ * SC 16/giu/2015 17:41:44 stefano.
+ */
+function divascookies_uninstall() {
+  variable_delete('divascookies_bannerText');
+  variable_delete('divascookies_cookiePolicyLink');
+  variable_delete('divascookies_cookiePolicyLinkText');
+  variable_delete('divascookies_thirdPartyPolicyWidget');
+  variable_delete('divascookies_acceptButtonText');
+  variable_delete('divascookies_acceptButtonSrc');
+  variable_delete('divascookies_openEffect');
+  variable_delete('divascookies_openEffectDuration');
+  // variable_delete('divascookies_openEffectEasing');
+  variable_delete('divascookies_closeEffect');
+  variable_delete('divascookies_closeEffectDuration');
+  // variable_delete('divascookies_closeEffectEasing');
+  variable_delete('divascookies_saveUserPreferences');
+  variable_delete('divascookies_cookieDuration');
+  variable_delete('divascookies_blockScripts');
+  variable_delete('divascookies_pageReload');
+  variable_delete('divascookies_acceptOnScroll');
+  variable_delete('divascookies_acceptOnClick');
+  variable_delete('divascookies_excludePolicyPage');
+  variable_delete('divascookies_css');
+  variable_delete('divascookies_debugMode');
+
+}

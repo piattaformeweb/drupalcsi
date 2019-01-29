@@ -1,0 +1,244 @@
+<?php
+
+/**
+ * Base class for Sassy tests.
+ */
+class SassyBaseUnitTest extends DrupalWebTestCase {
+
+  function setUp() {
+    $modules = func_get_args();
+    if (isset($modules[0]) && is_array($modules[0])) {
+      $modules = $modules[0];
+    }
+    $modules[] = 'sassy';
+    parent::setUp($modules);
+
+    $this->requirePHPSassLibrary();
+    $this->css_tests_path = $this->phpsass_library_path . '/tests/';
+  }
+
+  /**
+   * This is the path to a directory of SASS, SCSS and CSS files used in tests.
+   */
+  var $css_tests_path;
+
+  /**
+   * This is the location of the PHPSass library being used.
+   */
+  var $phpsass_library_path;
+
+  /**
+   * Require the PHPSass Library.
+   *
+   * We try to include it from the local site if it's around, otherwise we try a
+   * few known locations, and then failing all of that we fall back to
+   * downloading it from the web.
+   */
+  function requirePHPSassLibrary() {
+
+    // Allow people to specify the library before we are called.
+    if (isset($this->phpsass_library_path)) {
+
+    }
+    // Try to use libraries first.
+    elseif (($library_path = libraries_get_path('phpsass')) && file_exists($library_path . '/SassParser.php')) {
+      $this->phpsass_library_path = $library_path;
+    }
+    elseif (file_exists(drupal_get_path('module', 'sassy') . '/phpsass/SassParser.php')) {
+      $this->phpsass_library_path = drupal_get_path('module', 'sassy') . '/phpsass';
+    }
+    else {
+      // We try to download the zipball or tarball for PHPSass.
+      // Include some files we're going to need.
+      include(DRUPAL_ROOT . '/includes/archiver.inc');
+      module_enable(array('update'));
+      module_load_include('inc', 'update', 'update.manager');
+      module_load_include('inc', 'system', 'system.archiver');
+
+      // Get details of all archivers.
+      $archiver_info = archiver_get_info();
+      $url = '';
+      if (isset($archiver_info['zip'])) {
+        $url = 'https://github.com/richthegeek/phpsass/zipball/master';
+        $extension = '.zip';
+      }
+      // It would seem that system module always declares the tar archiver, even
+      // though it's supplied by a PECL extension, which may not be around.
+      elseif (isset($archiver_info['tar'])) {
+        $url = 'https://github.com/richthegeek/phpsass/tarball/master';
+        $extension = '.tar.gz';
+      }
+      if (!empty($url) && $local_cache = update_manager_file_get($url)) {
+        $local_cache = file_unmanaged_copy($local_cache, $local_cache . '.phpsass' . $extension, FILE_EXISTS_REPLACE);
+        $extract_directory = $this->libraryExtractLocation();
+        try {
+          update_manager_archive_extract($local_cache, $extract_directory);
+          $dirs = file_scan_directory($extract_directory, '/.*/', array('recurse' => FALSE));
+          foreach ($dirs as $uri => $dir) {
+            if (file_exists($uri . '/SassParser.php')) {
+              $this->phpsass_library_path = drupal_realpath($uri);
+              break;
+            }
+          }
+        }
+        catch (Exception $e) {
+          $this->error($e->getMessage());
+        }
+      }
+
+    }
+
+    if (isset($this->phpsass_library_path)) {
+      require_once($this->phpsass_library_path . '/SassParser.php');
+    }
+    else {
+      throw new Exception('Could not find PHPSass compiler.');
+    }
+  }
+
+  /**
+   * Generate a temporary location to extract the PHPSass library to.
+   */
+  function libraryExtractLocation($create = TRUE) {
+    $directory = &drupal_static(__FUNCTION__, '');
+    if (empty($directory)) {
+      $directory = 'temporary://phpsass-library-' . substr($this->databasePrefix, 10);
+      if ($create && !file_exists($directory)) {
+        mkdir($directory);
+      }
+    }
+    return $directory;
+  }
+
+  function runTest($input, $output = FALSE, $settings = array()) {
+    $name = $input;
+
+    $path = $this->css_tests_path;
+    $output = $path . ($output ? $output : preg_replace('/\..+$/', '.css', $input));
+    $input = $path . $input;
+
+    if (!file_exists($input)) {
+      return $this->fail('Input file not found - ' . $input);
+    }
+    if (!file_exists($output)) {
+      return $this->fail('Comparison file not found - ' . $output);
+    }
+
+    $exploded = explode('.', $input);
+    try {
+      $settings = $settings + array(
+        'style' => 'nested',
+        'cache' => FALSE,
+        'syntax' => array_pop($exploded),
+        'debug' => FALSE,
+        'debug_info' => FALSE,
+        'load_path_functions' => array('sassy_load_callback'),
+        'functions' => sassy_get_functions(),
+        'callbacks' => array(
+          'debug' => array($this, 'sassParserDebug'),
+          'warn' => array($this, 'sassParserWarning'),
+        ),
+      );
+      $parser = new SassParser($settings);
+      $result = $parser->toCss($input);
+    }
+    catch (Exception $e) {
+      $this->fail(t('Exception occured when compiling file') . ': ' . ((string) $e));
+    }
+
+    $compare = file_get_contents($output);
+    if ($compare === FALSE) {
+      $this->fail('Unable to load comparison file - ' . $compare);
+    }
+
+    $_result = $this->trimResult($result);
+    $_compare = $this->trimResult($compare);
+
+    if ($_result != $_compare) {
+      $this->fail(t('Result for ' . $name . ' did not match comparison file'));
+    }
+    else {
+      $this->pass(t($name . ' compiled correctly'));
+    }
+
+    // Log the compiled result, which is very useful for debugging.
+    $this->verbose(format_string('Compiled output: <pre>@result</pre>', array('@result' => $result)));
+  }
+
+  /**
+   * Logging callback for PHPSass debug messages.
+   */
+  function sassParserDebug($message, $context) {
+    $this->verbose(format_string('Debugging message from PHPSass:<pre>@message</pre>', array('@message' => $message)));
+  }
+
+  /**
+   * Logging callback for PHPSass warning messages.
+   */
+  function sassParserWarning($message, $context) {
+    $this->verbose(format_string('Warning message from PHPSass:<pre>@message</pre>', array('@message' => $message)));
+  }
+
+  function trimResult(&$input) {
+    $trim = preg_replace('/[\s;]+/', '', $input);
+    $trim = preg_replace('/\/\*.+?\*\//m', '', $trim);
+    return $trim;
+  }
+
+}
+
+class SassyUnitTest extends SassyBaseUnitTest {
+
+  public static function getInfo() {
+    return array(
+      'name' => 'Sassy unit tests',
+      'description' => 'Tests Sassy by compiling SASS-format files and comparing them against preset CSS files',
+      'group' => 'Theme',
+    );
+  }
+
+  function testMain() {
+    $this->runTest('alt.sass');
+    $this->runTest('basic.sass');
+    $this->runTest('comments.sass');
+    $this->runTest('compact.sass');
+    $this->runTest('complex.sass');
+    $this->runTest('compressed.sass', FALSE, array('style' => 'compressed'));
+    $this->runTest('css3.scss');
+    $this->runTest('default.sass');
+    $this->runTest('each.scss');
+    $this->runTest('expanded.sass', FALSE, array('style' => 'expanded'));
+    $this->runTest('extend.sass');
+    $this->runTest('extend_placeholders.scss');
+    $this->runTest('functions.scss');
+    $this->runTest('holmes.sass');
+    $this->runTest('hsl-functions.scss');
+    $this->runTest('if.sass');
+    $this->runTest('import.sass');
+    $this->runTest('import_content.sass');
+    $this->runTest('interpolation.scss');
+    $this->runTest('introspection.scss');
+    $this->runTest('line_numbers.sass');
+    $this->runTest('list.scss');
+    $this->runTest('media.scss');
+    $this->runTest('misc-functions.scss');
+    $this->runTest('misc.scss');
+    $this->runTest('mixin-content.scss');
+    $this->runTest('mixin-ja1.sass');
+    $this->runTest('mixin-params.scss');
+    $this->runTest('mixins.sass');
+    $this->runTest('multiline.sass');
+    $this->runTest('nested.sass');
+    $this->runTest('nested_import.sass');
+    $this->runTest('number.scss');
+    $this->runTest('opacity.scss');
+    $this->runTest('parent_ref.sass');
+    $this->runTest('rgb-functions.scss');
+    $this->runTest('scss_import.scss');
+    $this->runTest('scss_importee.scss');
+    $this->runTest('string.scss');
+    $this->runTest('units.sass');
+    $this->runTest('warn.sass');
+  }
+
+}

@@ -65,7 +65,7 @@ function fontawesome_preprocess_html() {
     if (!$library['loaded']) {
       drupal_set_message($library['error message'] . t('Please make sure that '
               . 'fontawesome was download & extracted at sites/all/libraries/fontawesome directory.'
-              . 'Please check README.txt for more details.'), 
+              . 'Please check README.txt for more details.'),
               'warning');
     }
   }
@@ -178,7 +178,7 @@ function fontawesome_extract_icons() {
   }
 
   // Parse the CSS content
-  if (preg_match_all('@\.fa-(.*?):before@m', $content, $matches)) {
+  if (preg_match_all('@\.fa-([a-zA-Z0-9-]*?):before@m', $content, $matches)) {
     $icons = $matches[1];
     asort($icons);
 
