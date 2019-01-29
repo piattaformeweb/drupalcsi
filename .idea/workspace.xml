@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8754f7de-2b1a-43ee-ae85-a2473f0e18f8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/drupalcsi.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drupalcsi.sql.zip" beforeDir="false" afterPath="$PROJECT_DIR$/drupalcsi.sql.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/site.tar.gz" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,8 +60,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="drupalcsi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupalcsi" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -93,6 +101,7 @@
       <updated>1548750175921</updated>
       <workItem from="1548750178006" duration="5219000" />
       <workItem from="1548766632478" duration="576000" />
+      <workItem from="1548767232118" duration="758000" />
     </task>
     <task id="LOCAL-00001" summary="File orfano del block_attributes">
       <created>1548762228488</created>
@@ -111,12 +120,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88000" />
+    <option name="totallyTimeSpent" value="846000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="23" width="1645" height="893" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25265127" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25577044" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -129,12 +138,31 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32958803" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32958803" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32958803" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/default/settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9112">
+          <caret line="586" column="31" selection-start-line="586" selection-start-column="31" selection-end-line="586" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
