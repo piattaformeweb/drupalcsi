@@ -6,6 +6,6 @@ sites/*/files
 sites/*/private
 
 # Ignore PhpStrom files
-.idea
+*.idea
 *.git
 *.DS_Store
