@@ -4,8 +4,6 @@ sites/*/settings*.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
-
-# Ignore PhpStrom files
-*.idea
-*.git
-*.DS_Store
+.git
+.idea
+.DS_Store
