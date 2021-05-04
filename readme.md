@@ -32,6 +32,8 @@ Le seguenti librerie o componenti sono già incluse nel pacchetto distribuito:
 
 **Requisiti minimi:** vedi i requiisiti per l&#39;installazione di Drupal 7 [https://www.drupal.org/docs/7/system-requirements](https://www.drupal.org/docs/7/system-requirements)
 
+E' fortemente consigliato l'accesso alla linea di comando e l'utilizzo di git e drush.
+
 **Requisiti ulteriori consigliati:**
 
 - PHP &gt;= 5.6.x
@@ -93,29 +95,19 @@ Usato per creare moduli interattivi, come sondaggi, form di contatto etc.
 
 1. Scaricare l&#39;archivio compresso .zip (fare click in alto a destra "Clone or download")
 2. Scompattarlo nella cartella di destinazione
-3. Eliminare la cartella .idea
-4. Scompattare e caricare lo schema drupalcsi.sql.zip sul DB (eliminare poi i due file site.tar.gz e db.sql.zip)
-5. Duplicare il file /sites/default/default.settings.php in settings.php
-6. Modificare le impostazioni relative al DB nel file /sites/default/settings.php
-7. Loggarsi sul sistema come _admin/P@ssw0rd!_ e modificare le impostazioni del filesystem all'url /admin/config/media/file-system in particolare configurando la cartella dei file pubblici, quella dei file privati e quella temporanea.
+3. Scompattare il file drupalcsi.sql.zip e caricare lo schema sul DB (eliminare poi il file)
+4. Copiare il file /sites/default/default.settings.php in settings.php
+5. Inserire le impostazioni relative al DB (come spcificato da riga 55) nel file /sites/default/settings.php
+6. Inserire la seguente riga in fondo al file settings.php con il percorso fisico alla cartella temporanea del server, che  deve essere scrivibile: $conf['file_temporary_path'] = '/percorso_alla_cartella_temporanea/tmp'; 
+7. Loggarsi sul sistema all'indirizzo /user come _admin/P@ssw0rd!_
+8. Modificare le impostazioni del filesystem all'url /admin/config/media/file-system in particolare configurando la cartella dei file pubblici, quella dei file privati e quella temporanea.
 8. Consultare la pagina /admin/reports/status per eventuali anomalie
 
 ### Installazione via Git
-1. Clonare il repository
-2. Seguire le istruzioni precedenti dal punto 3 in poi
-3. Eliminare la cartella .idea (se presente)
+1. Creare la cartella nome_cartella che ospitera' il sito
+2. Clonare il repository col comando git clone https://github.com/piattaformeweb/drupalcsi.git nome_cartella
+3. Seguire le istruzioni precedenti dal punto 3 in poi
 
-### Installazione da archivio Drush
-
-1. Scaricare il file site.tar.gz e posizionarlo nella cartella di destinazione
-2. Posizionarsi nella stessa cartella
-3. Eseguire il comando seguente inserendo i parametri del DB
-
-
-`drush archive-restore site.tar.gz --db-url=mysql://user:password@ip-address/dbname`
-
-1. Loggarsi sul sistema come _admin  P@ssw0rd!_ e modificare le impostazioni del filesystem in /admin/config/media/file-system in particolare configurando la cartella dei file pubblici, quella dei file privati e quella temporanea.
-2. Consultare la pagina /admin/reports/status per eventuali anomalie
 
 ## Configurazione del sistema
 
