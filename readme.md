@@ -32,7 +32,7 @@ Le seguenti librerie o componenti sono già incluse nel pacchetto distribuito:
 
 **Requisiti minimi:** vedi i requiisiti per l&#39;installazione di Drupal 7 [https://www.drupal.org/docs/7/system-requirements](https://www.drupal.org/docs/7/system-requirements)
 
-E' fortemente consigliato l'accesso alla linea di comando e l'utilizzo di git e drush.
+**E' fortemente consigliato l'accesso alla linea di comando e l'utilizzo di git e drush**
 
 **Requisiti ulteriori consigliati:**
 
@@ -102,6 +102,7 @@ Usato per creare moduli interattivi, come sondaggi, form di contatto etc.
 7. Loggarsi sul sistema all'indirizzo /user come _admin/P@ssw0rd!_
 8. Modificare le impostazioni del filesystem all'url /admin/config/media/file-system in particolare configurando la cartella dei file pubblici, quella dei file privati e quella temporanea.
 8. Consultare la pagina /admin/reports/status per eventuali anomalie
+9. Eventualmente copiare le immagini presenti nello zip files.zip nella cartella /sites/default/files che deve essere scrivibile dal sistema.
 
 ### Installazione via Git
 1. Creare la cartella nome_cartella che ospitera' il sito
@@ -127,7 +128,7 @@ Una volta installato il sistema occorre apportare le seguenti modifiche:
 
 ## Aggiornamenti
 
-Il sistema è stato concepito per essere aggiornato con le modalità canoniche di Drupal, quindi attraverso il modulo _Update manager_ oppure via _drush_. Il core è aggiornabile solo manualmente.
+Il sistema è stato concepito per essere aggiornato con le modalità canoniche di Drupal, quindi attraverso il modulo _Update manager_ oppure via _drush_.
 
 ## Manuale d&#39;uso Drupal 7
 
