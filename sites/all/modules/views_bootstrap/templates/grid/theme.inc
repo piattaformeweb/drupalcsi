@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Preprocessors and helper functions for grid theming.
+ */
+
+/**
  * Implementation of template preprocess for the view.
  */
 function template_preprocess_views_bootstrap_grid_plugin_style(&$vars) {

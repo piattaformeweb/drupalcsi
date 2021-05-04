@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Install and uninstall tasks for Views Bootstrap.
@@ -19,7 +20,7 @@ function views_bootstrap_update_7100(&$sandbox) {
   $items_per_pass = 10;
 
   // Get the view_displays to process during this pass.
-  $result = db_query_range("SELECT vid, id, display_options FROM {views_display}", $sandbox['current'], $items_per_pass);
+  $result = db_query_range("SELECT vid, id, display_options FROM {views_display} ORDER BY vid, id", $sandbox['current'], $items_per_pass);
   while ($row = $result->fetchAssoc()) {
     // Unserialize display_options.
     $options = unserialize($row['display_options']);
@@ -74,15 +75,133 @@ function views_bootstrap_update_7100(&$sandbox) {
       $options = serialize($options);
       // Update the value in the database.
       db_update('views_display')
-      ->fields(array('display_options' => $options))
-      ->condition('vid', $row['vid'])
-      ->condition('id', $row['id'])
-      ->execute();
+        ->fields(array('display_options' => $options))
+        ->condition('vid', $row['vid'])
+        ->condition('id', $row['id'])
+        ->execute();
 
       // Output a message about this change.
       drupal_set_message(t('Updated view: @vid for view_display: @id', array('@vid' => $row['vid'], '@id' => $row['id'])));
     }
 
+    // Increment "current" by 1.
+    $sandbox['current']++;
+
+    // Set the value for finished. If current == total then finished will be 1, signifying we are done.
+    $sandbox['#finished'] = ($sandbox['current'] / $sandbox['total']);
+  }
+}
+
+/**
+ * Update Views Bootstrap style configuration.
+ */
+function views_bootstrap_update_7101(&$sandbox) {
+  // If this is the first pass through this update function then set some variables.
+  if (!isset($sandbox['total'])) {
+    $result = db_query("SELECT vid FROM {views_display}");
+    $sandbox['total'] = $result->rowCount();
+    $sandbox['current'] = 0;
+  }
+
+  // The number of view_displays to process per pass.
+  $items_per_pass = 10;
+
+  // Get the view_displays to process during this pass.
+  $result = db_query_range("SELECT vid, id, display_options FROM {views_display} ORDER BY vid, id", $sandbox['current'], $items_per_pass);
+  while ($row = $result->fetchAssoc()) {
+    // Unserialize display_options.
+    $options = unserialize($row['display_options']);
+    switch ($options['style_plugin']) {
+      case 'views_bootstrap_carousel_plugin_style':
+        // Check carousel for items per slide setting.
+        if (!isset($options['style_options']['items_per_slide'])) {
+          drupal_set_message("Updating carousel items per slide", 'status');
+          $options['style_options']['items_per_slide'] = 1;
+        }
+        // Check carousel for wrap setting.
+        if (!isset($options['style_options']['wrap'])) {
+          drupal_set_message("Updating carousel wrap", 'status');
+          $options['style_options']['wrap'] = 1;
+        }
+        break;
+
+      case 'views_bootstrap_tab_plugin_style':
+        // Check tabs justified (convert to tab_position if present).
+        if ($options['style_options']['justified']) {
+          drupal_set_message("Updating tabs position to justified", 'status');
+          $options['style_options']['tab_position'] = 'justified';
+        }
+        elseif (!isset($options['style_options']['tab_position'])) {
+          drupal_set_message("Updating tabs position to top", 'status');
+          $options['style_options']['tab_position'] = 'basic';
+        }
+        // Check tab_fade setting.
+        if (!isset($options['style_options']['tab_fade'])) {
+          $options['style_options']['tab_fade'] = 0;
+        }
+        break;
+
+      case 'views_bootstrap_accordion_plugin_style':
+        // Check accordion behavior setting, set empty to closed.
+        if (!isset($options['style_options']['behavior'])) {
+          $options['style_options']['behavior'] = 'closed';
+          drupal_set_message("Updating accordion behavior setting to default", 'status');
+        }
+        // Check accordion label setting, set undefined to empty.
+        if (!isset($options['style_options']['label_field'])) {
+          $options['style_options']['label_field'] = '';
+          drupal_set_message("Updating accordion label setting to empty", 'status');
+        }
+        break;
+
+      case 'views_bootstrap_list_group_plugin_style':
+        // Check list group for panel setting.
+        if (!isset($options['style_options']['panels'])) {
+          $options['style_options']['panels'] = 0;
+          drupal_set_message("Updating list group heading panel setting to default", 'status');
+        }
+        break;
+
+      case 'views_bootstrap_media_plugin_style':
+        // Remove media object body_field setting.
+        unset($options['style_options']['body_field']);
+        // Add image_class setting default media-left.
+        $options['style_options']['image_class'] = 'media-left';
+        // Set media object to exclude fields not set for image and heading.
+        $heading = $options['style_options']['heading_field'];
+        $image = $options['style_options']['image_field'];
+        drupal_set_message("Updating media object settings", 'status');
+        $fields = $options['fields'];
+        foreach ($fields as $field_name => $field) {
+          if (in_array($field_name, array($heading, $image))) {
+            drupal_set_message("Updating media object field $field_name", 'status');
+            $options['fields'][$field_name]['exclude'] = 1;
+          }
+        }
+        break;
+
+      case 'views_bootstrap_panel_plugin_style':
+        // Remove panel body_field setting.
+        unset($options['style_options']['body_field']);
+        // Set panel to exclude fields not set for heading and footer.
+        $heading = $options['style_options']['heading_field'];
+        $footer = $options['style_options']['footer_field'];
+        drupal_set_message("Updating panel settings", 'status');
+        $fields = $options['fields'];
+        foreach ($fields as $field_name => $field) {
+          if (in_array($field_name, array($heading, $footer))) {
+            drupal_set_message("Updating panel field $field_name", 'status');
+            $options['fields'][$field_name]['exclude'] = 1;
+          }
+        }
+    }
+    $options = serialize($options);
+    // Update the value in the database.
+    db_update('views_display')
+      ->fields(array('display_options' => $options))
+      ->condition('vid', $row['vid'])
+      ->condition('id', $row['id'])
+      ->execute();
     // Increment "current" by 1.
     $sandbox['current']++;
 

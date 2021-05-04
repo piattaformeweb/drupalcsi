@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Preprocessors and helper functions for thumbnail theming.
+ */
+
+/**
  * Implementation of template preprocess for the view.
  */
 function template_preprocess_views_bootstrap_thumbnail_plugin_style(&$vars) {
@@ -12,7 +17,8 @@ function template_preprocess_views_bootstrap_thumbnail_plugin_style(&$vars) {
  */
 function template_preprocess_views_bootstrap_thumbnail_plugin_rows(&$vars) {
   $view = &$vars['view'];
-  $row_index = $view->row_index; // Clone value because get_field will unset it.
+  // Clone value because get_field will unset it.
+  $row_index = $view->row_index;
 
   foreach ($vars['options'] as $id => $field) {
     switch ($id) {

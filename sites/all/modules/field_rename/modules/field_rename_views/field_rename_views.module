@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * Implements hook_field_rename_plugin().
+ */
+function field_rename_views_field_rename_plugin() {
+    return array('api' => 1);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function field_rename_views_form_field_rename_admin_alter(&$form, &$form_state) {
+    $form['rename_views'] = array(
+        '#type' => 'checkbox',
+        '#title' => t('Rename when used in <strong>Views</strong>'),
+        '#description' => t('Rename this field in all views stored in the database on this system.'),
+        '#weight' => 4,
+        '#default_value' => TRUE,
+    );
+}
+
+/**
+ * Implements hook_field_rename_plugin_alter().
+ */
+function field_rename_views_field_rename_plugin_alter(&$modules, &$form, &$form_state) {
+    if (empty($form_state['values']['rename_views'])) {
+        unset($modules['field_rename_views']);
+    }
+}
+
+/**
+ * Implements hook_field_rename_execute().
+ */
+function field_rename_views_field_rename_execute($fields) {
+    field_rename_views_rename_fields($fields);
+}
+
+/**
+ * Implements hook_field_rename_fields().
+ *
+ * Rename an array of fields in all views.
+ *
+ * @param $fields
+ *   Array of field names, with old names as keys and new names as values.
+ */
+function field_rename_views_rename_fields($fields) {
+    foreach ($fields as $old_field_name => $new_field_name) {
+        $all_views = views_get_all_views();
+        $options = array('fields', 'filters', 'sorts');
+
+        foreach ($all_views as $name => $view) {
+            foreach ($view->display as $display_name => &$display) {
+                $save = false;
+                foreach ($options as $option) {
+                    if (empty($display->display_options[$option])) {
+                        continue;
+                    }
+
+                    foreach ($display->display_options[$option] as $field_name => &$field_info) {
+                        if ($field_info['table'] == 'field_data_' . $old_field_name) {
+                            $field_info['id'] = str_replace($old_field_name, $new_field_name, $field_info['id']);
+                            $field_info['table'] = str_replace($old_field_name, $new_field_name, $field_info['table']);
+                            $field_info['field'] = str_replace($old_field_name, $new_field_name, $field_info['field']);
+
+                            $display->display_options[$option][$field_info['id']] = $display->display_options[$option][$field_name];
+                            unset($display->display_options[$option][$field_name]);
+                            $save = true;
+                        }
+                    }
+                }
+
+                if ($save) {
+                    $view->save();
+                    drupal_set_message('Saved changes to "' . $view->name . '" view.');
+                }
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Definition of views_bootstrap_plugin_style.
@@ -8,6 +9,7 @@
  * Class to define a style plugin handler.
  */
 class ViewsBootstrapTabPluginStyle extends views_plugin_style {
+
   /**
    * Definition.
    */
@@ -15,14 +17,15 @@ class ViewsBootstrapTabPluginStyle extends views_plugin_style {
     $options = parent::option_definition();
     $options['tab_field'] = array('default' => NULL);
     $options['tab_type'] = array('default' => 'tabs');
-    $options['justified'] = array('default' => FALSE);
+    $options['tab_position'] = array('default' => 'basic');
+    $options['tab_fade'] = array('default' => FALSE);
     return $options;
   }
 
   /**
    * Options form.
    */
-  function options_form(&$form, &$form_state) {
+  public function options_form(&$form, &$form_state) {
     parent::options_form($form, $form_state);
 
     if (isset($form['grouping'])) {
@@ -32,6 +35,11 @@ class ViewsBootstrapTabPluginStyle extends views_plugin_style {
           $options = array_merge($options, $form['grouping'][$key]['field']['#options']);
         }
       }
+
+      $form['help'] = array(
+        '#markup' => t('The Bootstrap tabs displays content with tab titles linked to dynamically displayed content (<a href="!docs">see documentation</a>).', ['!docs' => 'https://www.drupal.org/docs/7/modules/views-bootstrap/tabs']),
+        '#weight' => -99,
+      );
 
       $form['tab_field'] = array(
         '#type' => 'select',
@@ -54,12 +62,28 @@ class ViewsBootstrapTabPluginStyle extends views_plugin_style {
         '#default_value' => $this->options['tab_type'],
       );
 
-      $form['justified'] = array(
+      $form['tab_position'] = array(
+        '#type' => 'radios',
+        '#title' => t('Position of tabs'),
+        '#options' => array(
+          'basic' => t('Tabs/pills on the top'),
+          'left' => t('Tabs/pills on the left'),
+          'right' => t('Tabs/pills on the right'),
+          'below' => t('Tabs/pills on the bottom'),
+          'justified' => t('Tabs/pills justified on the top'),
+          'stacked' => t('Tabs/pills stacked'),
+        ),
+        '#required' => TRUE,
+        '#default_value' => $this->options['tab_position'] ? $this->options['tab_position'] : 'basic',
+      );
+
+      $form['tab_fade'] = array(
         '#type' => 'checkbox',
-        '#title' => t('Justified'),
-        '#default_value' => $this->options['justified'],
-        '#description' => t('Make tabs equal widths of their parent'),
+        '#title' => t('Fade Effect'),
+        '#default_value' => $this->options['tab_fade'],
+        '#description' => t('Add a fade in effect when tabs clicked'),
       );
     }
   }
+
 }

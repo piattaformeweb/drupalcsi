@@ -1,6 +1,9 @@
 <?php
+
 /**
- * @file views-bootstrap-thumbnail-plugin-style.tpl.php
+ * @file
+ * views-bootstrap-thumbnail-plugin-style.tpl.php
+ *
  * Default simple view template to display Bootstrap Thumbnails.
  *
  * - $rows contains a nested array of rows. Each row contains an array of

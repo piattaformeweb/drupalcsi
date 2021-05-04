@@ -1,31 +1,47 @@
 <?php
 
 /**
+ * @file
+ * Preprocessors and helper functions for carousel theming.
+ */
+
+/**
  * Implementation of template preprocess for the view.
  */
 function template_preprocess_views_bootstrap_carousel_plugin_style(&$vars) {
-  drupal_add_js(array(
-    'viewsBootstrap' => array(
-      'carousel' => array(
-        $vars['id'] => array(
-          'id' => $vars['id'],
-          'name' => $vars['view']->name,
-          'attributes' => array(
-            'interval' => $vars['options']['interval'] ? (int)$vars['options']['interval'] : FALSE,
-            'pause' => $vars['options']['pause'] ? 'hover' : FALSE,
-          ),
-        ),
-      ),
-    ),
-  ), 'setting');
 
-  drupal_add_js(drupal_get_path('module', 'views_bootstrap') . '/js/views-bootstrap-carousel.js');
+  if ($vars['options']['items_per_slide'] > 1) {
+    $rows = array();
+
+    foreach ($vars['rows'] as $key => $row) {
+      $mod = $key % (int) $vars['options']['items_per_slide'];
+      if ($mod == 0) {
+        $rows[] = $row;
+      }
+      else {
+        $rows[(count($rows) - 1)] .= $row;
+      }
+    }
+
+    $vars['rows'] = $rows;
+  }
 
   $vars['classes_array'][] = 'carousel slide';
-  $vars['attributes_array']['data-ride'] = 'carousel';
 
-  $vars['navigation'] = (bool)$vars['options']['navigation'];
-  $vars['indicators'] = (bool)$vars['options']['indicators'];
+  $vars['attributes_array'] = array(
+    'data-ride' => 'carousel',
+    'data-interval' => $vars['options']['interval'] ? (int) $vars['options']['interval'] : 'false',
+    'data-pause' => $vars['options']['pause'] ? 'hover' : 'false',
+    'data-wrap' => (bool) $vars['options']['wrap'] ? 'true' : 'false',
+  );
+  if (count($vars['rows']) > 1) {
+    $vars['navigation'] = (bool) $vars['options']['navigation'];
+    $vars['indicators'] = (bool) $vars['options']['indicators'];
+  }
+  else {
+    $vars['navigation'] = FALSE;
+    $vars['indicators'] = FALSE;
+  }
   $keys = array_keys($vars['rows']);
   $vars['first_key'] = reset($keys);
 }
@@ -35,7 +51,8 @@ function template_preprocess_views_bootstrap_carousel_plugin_style(&$vars) {
  */
 function template_preprocess_views_bootstrap_carousel_plugin_rows(&$vars) {
   $view = &$vars['view'];
-  $row_index = $view->row_index; // Clone value because get_field will unset it.
+  // Clone value because get_field will unset it.
+  $row_index = $view->row_index;
 
   foreach ($vars['options'] as $id => $field) {
     if (isset($view->field[$field])) {

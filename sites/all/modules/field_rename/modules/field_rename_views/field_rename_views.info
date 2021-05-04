@@ -1,0 +1,13 @@
+name = Field Rename Views
+description = Allows you to rename a field in all views.
+dependencies[] = field_rename
+dependencies[] = views
+configure = admin/reports/fields/rename
+package = Views
+core = 7.x
+
+; Information added by Drupal.org packaging script on 2020-06-06
+version = "7.x-1.0"
+core = "7.x"
+project = "field_rename"
+datestamp = "1591440441"

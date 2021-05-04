@@ -1,6 +1,42 @@
 <?php
 
 /**
+ * Implements hook_hook_info().
+ */
+function field_rename_hook_info() {
+  $hooks['field_rename_plugin'] = array(
+    'group' => 'field_rename',
+  );
+  $hooks['field_rename_pre_execute'] = array(
+    'group' => 'field_rename',
+  );
+  $hooks['field_rename_execute'] = array(
+    'group' => 'field_rename',
+  );
+  $hooks['field_rename_post_execute'] = array(
+    'group' => 'field_rename',
+  );
+  return $hooks;
+}
+
+/**
+ * Implements hook_help().
+ */
+function field_rename_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#field_rename':
+      $output = '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t("This project allows you to rename a field in the database and in <strong>Views</strong>.") . '</p>';
+      if (module_exists('advanced_help_hint')) {
+        $output .= advanced_help_hint_docs('field_rename', 'https://www.drupal.org/docs/7/modules/field-rename', TRUE);
+      }
+      else {
+        $output .= t('<p>If you install and enable <a href="https://www.drupal.org/project/advanced_help_hint"><strong>Advanced Help Hint</strong></a>, you will get more help for <strong>Field Rename</strong>.</p>');
+      }
+      return $output;
+  }
+}
+/**
  * Implements hook_menu().
  */
 function field_rename_menu() {
@@ -16,6 +52,44 @@ function field_rename_menu() {
     );
 
     return $items;
+}
+
+/**
+ * Returns all field rename plugins.
+ */
+function field_rename_get_plugins() {
+    $modules = &drupal_static(__FUNCTION__);
+    if (!isset($modules)) {
+        // Include field_rename as the default plugin
+        $modules['field_rename'] = array(
+            'api' => 1,
+            'name' => 'Field Rename',
+        ); 
+
+        // Get all plugins
+        foreach (module_implements('field_rename_plugin') as $module) {
+            $function = $module . '_field_rename_plugin';
+            $info = $function();
+
+            // Verify module information is correct
+            if (!isset($info['api']) || intval($info['api']) !== 1) {
+                $name = isset($info['name']) ? $info['name'] : $module_name;
+                drupal_set_message('Unsupported plugin ' . $name . ': not using API version 1.');
+                continue;
+            }
+
+            $modules[$module] = $info;
+        }
+    }
+
+    return $modules;
+}
+
+/**
+ * Implements hook_field_rename_execute().
+ */
+function field_rename_field_rename_execute($fields, $drop_first = FALSE) {
+    field_rename_rename_fields($fields, $drop_first);
 }
 
 /**
@@ -76,6 +150,7 @@ function field_rename_rename_fields($fields, $drop_first = FALSE) {
         );
 
         // Iterate through tables to be redefined and renamed.
+	$semaphor = 0;
         foreach ($tables as $old_table => $new_table) {
             // Iterate through the field's columns. For example, a 'text' field will
             // have columns 'value' and 'format'.
@@ -113,7 +188,11 @@ function field_rename_rename_fields($fields, $drop_first = FALSE) {
                     }
                 }
 
-                watchdog('Field Rename', 'Renamed field !old_field_name to !new_field_name.', array('!old_field_name' => $old_field_name, '!new_field_name' => $new_field_name));
+                if (!$semaphor) {
+		  // Prevent multiple log entries about the same change.
+                  watchdog('Field Rename', 'Renamed field !old_field_name to !new_field_name.', array('!old_field_name' => $old_field_name, '!new_field_name' => $new_field_name));
+		  $semaphor++;
+		}
             }
 
             // The new table may exist e.g. due to having been included in a feature
@@ -141,45 +220,6 @@ function field_rename_rename_fields($fields, $drop_first = FALSE) {
             drupal_set_message(t('Renamed field !old_field_name to !new_field_name.', array('!old_field_name' => $old_field_name, '!new_field_name' => $new_field_name)));
         } else {
             drupal_set_message(t('Errors occured while renaming field !old_field_name to !new_field_name.', array('!old_field_name' => $old_field_name, '!new_field_name' => $new_field_name)), 'error');
-        }
-    }
-}
-
-function field_rename_rename_views($fields) {
-    if (!module_exists('views')) {
-        return;
-    }
-
-    foreach ($fields as $old_field_name => $new_field_name) {
-        $all_views = views_get_all_views();
-        $options = array('fields', 'filters', 'sorts');
-
-        foreach ($all_views as $name => $view) {
-            foreach ($view->display as $display_name => &$display) {
-                $save = false;
-                foreach ($options as $option) {
-                    if (empty($display->display_options[$option])) {
-                        continue;
-                    }
-
-                    foreach ($display->display_options[$option] as $field_name => &$field_info) {
-                        if ($field_info['table'] == 'field_data_' . $old_field_name) {
-                            $field_info['id'] = str_replace($old_field_name, $new_field_name, $field_info['id']);
-                            $field_info['table'] = str_replace($old_field_name, $new_field_name, $field_info['table']);
-                            $field_info['field'] = str_replace($old_field_name, $new_field_name, $field_info['field']);
-
-                            $display->display_options[$option][$field_info['id']] = $display->display_options[$option][$field_name];
-                            unset($display->display_options[$option][$field_name]);
-                            $save = true;
-                        }
-                    }
-                }
-
-                if ($save) {
-                    $view->save();
-                    drupal_set_message('Saved changes to "' . $view->name . '" view.');
-                }
-            }
         }
     }
 }

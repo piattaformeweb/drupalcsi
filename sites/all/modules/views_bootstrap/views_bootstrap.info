@@ -17,15 +17,18 @@ files[] = plugins/accordion/views_bootstrap_accordion_plugin_style.inc
 
 files[] = plugins/tab/views_bootstrap_tab_plugin_style.inc
 
+files[] = plugins/panel/views_bootstrap_panel_plugin_style.inc
+
 files[] = plugins/media/views_bootstrap_media_plugin_style.inc
 
 files[] = plugins/table/views_bootstrap_table_plugin_style.inc
 
 files[] = plugins/list_group/views_bootstrap_list_group_plugin_style.inc
 
-; Information added by Drupal.org packaging script on 2017-09-17
-version = "7.x-3.2"
+files[] = plugins/dropdown/views_bootstrap_dropdown_plugin_style.inc
+
+; Information added by Drupal.org packaging script on 2020-10-27
+version = "7.x-3.5"
 core = "7.x"
 project = "views_bootstrap"
-datestamp = "1505670247"
-
+datestamp = "1603824297"

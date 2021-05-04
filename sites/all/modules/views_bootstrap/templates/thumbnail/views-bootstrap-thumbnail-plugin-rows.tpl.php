@@ -1,6 +1,9 @@
 <?php
+
 /**
- * @file views-bootstrap-thumbnail-plugin-rows.tpl.php
+ * @file
+ * views-bootstrap-thumbnail-plugin-rows.tpl.php
+ *
  * Default simple view template to display Bootstrap Thumbnails.
  *
  * @ingroup views_templates
